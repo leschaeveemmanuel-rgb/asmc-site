@@ -82,7 +82,7 @@ function App() {
                 </div>
               </div>
 
-              <div className="pt-10">
+              <div className="pt-5">
                 <p className="text-2xl font-serif italic text-blue-300">Bonne visite !</p>
               </div>
             </div>
