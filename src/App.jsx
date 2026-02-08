@@ -50,7 +50,7 @@ function App() {
             {/* SECTION BANNIÈRE - S'ADAPTE À LA PHOTO */}
             <div className="w-full rounded-3xl overflow-hidden glass-card p-1 shadow-2xl">
               <img 
-                src="/banner.jpg" 
+                src="/banner.png" 
                 alt="Bannière ASMC" 
                 className="w-full h-auto rounded-2xl opacity-90 block"
               />
