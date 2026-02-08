@@ -70,7 +70,7 @@ function App() {
                   Soyez les bienvenus dans l'univers de l'Avia Sport Modèle Club de Bouglainval.
                 </p>
                 
-                <div className="space-y-6 text-lg md:text-xl opacity-80 max-w-4xl mx-auto leading-relaxed text-center">
+                <div className="space-y-3 text-lg md:text-xl opacity-80 max-w-4xl mx-auto leading-relaxed text-center">
                   <p>
                     Ici, nous allons vous présenter notre passion pour les modèles réduits d'avions, 
                     en toute simplicité et avec humilité.
