@@ -7,7 +7,7 @@ function App() {
     <div className="min-h-screen p-4 md:p-8 flex flex-col items-center gap-8 text-white font-sans">
       
       {/* 1. BARRE DE NAVIGATION */}
-      <nav className="glass-card w-full max-w-6xl px-6 py-5 flex flex-wrap justify-center gap-8 text-base md:text-sm font-bold tracking-[0.2em] uppercase z-10">
+      <nav className="glass-card w-full max-w-6xl px-6 py-5 flex flex-wrap justify-center gap-8 text-base lg:text-sm font-light tracking-[0.2em] uppercase z-10">
         <button 
           onClick={() => setPage('accueil')} 
           className={`transition-all duration-300 py-2 ${page === 'accueil' ? 'text-blue-400 border-b-2 border-blue-400' : 'hover:text-blue-300'}`}
