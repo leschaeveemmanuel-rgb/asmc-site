@@ -66,7 +66,7 @@ function App() {
               </div>
 
               <div className="space-y-8">
-                <p className="text-xl md:text-2xl font-light leading-relaxed text-blue-100 max-w-4xl mx-auto">
+                <p className="text-lg md:text-xl opacity-80 max-w-4xl mx-auto leading-relaxed text-center">
                   Soyez les bienvenus dans l'univers de l'Avia Sport Modèle Club de Bouglainval.
                 </p>
                 
