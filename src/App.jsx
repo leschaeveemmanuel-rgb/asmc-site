@@ -40,110 +40,87 @@ function App() {
         </button>
       </nav>
 
-      {/* 2. ZONE DE CONTENU DYNAMIQUE */}
+      {/* 2. ZONE DE CONTENU */}
       <main className="w-full max-w-6xl flex flex-col gap-8">
         
-        {/* --- PAGE ACCUEIL AVEC BANNIÈRE --- */}
+        {/* --- PAGE ACCUEIL --- */}
         {page === 'accueil' && (
-          <div className="animate-in fade-in duration-700 flex flex-col gap-8">
+          <div className="animate-in fade-in duration-700 flex flex-col gap-8 text-center">
             
-            {/* SECTION BANNIÈRE */}
-            <div className="relative w-full h-[300px] md:h-[450px] rounded-3xl overflow-hidden glass-card p-2">
+            {/* BANNIÈRE IMAGE */}
+            <div className="relative w-full h-[250px] md:h-[400px] rounded-3xl overflow-hidden glass-card">
               <img 
-                src="/banner.jpg" 
-                alt="Bannière ASMC" 
-                className="w-full h-full object-cover rounded-2xl opacity-80"
+                src="/banner.png" 
+                alt="Bannière Club" 
+                className="w-full h-full object-cover opacity-90"
+                onError={(e) => { e.target.style.display='none'; }} // Cache l'icône si l'image manque
               />
-              <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-t from-black/60 to-transparent">
-                <h1 className="text-4xl md:text-8xl font-black tracking-tighter uppercase text-center px-4">
-                  ASMC <span className="text-blue-400 text-3xl md:text-6xl block">Bouglainval</span>
-                </h1>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent flex items-center justify-center">
+                <h1 className="text-4xl md:text-7xl font-black uppercase tracking-tighter">ASMC Bouglainval</h1>
               </div>
             </div>
 
-            {/* TEXTE DE BIENVENUE */}
-            <div className="glass-card p-8 md:p-16 text-center">
-              <p className="text-xl md:text-3xl text-blue-100 font-light leading-relaxed max-w-4xl mx-auto">
-                Bienvenue sur notre terrain virtuel. Ici, nous partageons notre passion pour l'aéromodélisme 
-                sous toutes ses formes, du planeur au moteur thermique.
+            {/* TON TEXTE ORIGINAL RETROUVÉ */}
+            <div className="glass-card p-8 md:p-16 space-y-8">
+              <p className="text-xl md:text-3xl font-light leading-relaxed text-blue-100">
+                Soyez les bienvenus dans l'univers de l'Avia Sport Modèle Club de Bouglainval.
               </p>
-              <div className="mt-12 h-1 w-24 bg-blue-400/50 mx-auto rounded-full"></div>
-              <p className="mt-8 text-lg italic opacity-60 font-serif">"Le vol est une liberté, le partage est une force."</p>
+              <p className="text-lg md:text-xl opacity-80 max-w-4xl mx-auto leading-relaxed">
+                Ici, nous allons vous présenter notre passion pour les modèles réduits d'avions, 
+                en toute simplicité et avec humilité.
+              </p>
+              <p className="text-lg md:text-xl opacity-80 max-w-4xl mx-auto leading-relaxed">
+                Avec un peu de chance, cela pourrait vous donner l'envie de nous rejoindre 
+                et de vous lancer dans l'aventure passionnante du pilotage d'avions radiocommandés.
+              </p>
+              <div className="pt-8">
+                <p className="text-2xl font-serif italic text-blue-400">Bonne visite !</p>
+              </div>
             </div>
           </div>
         )}
 
         {/* --- PAGE À PROPOS --- */}
         {page === 'apropos' && (
-          <div className="glass-card p-8 md:p-20 text-center animate-in fade-in slide-in-from-bottom-4 duration-500">
-            <h2 className="text-3xl md:text-5xl font-bold mb-12 uppercase tracking-widest">Le Club</h2>
-            <div className="grid md:grid-cols-2 gap-12 text-left max-w-4xl mx-auto">
-              <div className="space-y-4">
-                <h3 className="text-2xl font-bold text-blue-400 italic">20 ans de passion</h3>
-                <p className="opacity-80 leading-relaxed text-lg">
-                  L'Avia Sport Modèle Club est avant tout une famille de passionnés située en Eure-et-Loir. 
-                  Nous accueillons les débutants comme les experts pour faire vivre le ciel de Bouglainval.
-                </p>
-              </div>
-              <div className="space-y-4 border-l border-white/10 pl-8">
-                <h3 className="text-2xl font-bold text-blue-400 italic">Le Terrain</h3>
-                <p className="opacity-80 leading-relaxed text-lg">
-                  Notre piste est ouverte tous les jours, avec des sessions collectives le weekend. 
-                  Un cadre idéal, dégagé et convivial pour piloter en toute sécurité.
-                </p>
-              </div>
-            </div>
+          <div className="glass-card p-8 md:p-20 text-center animate-in fade-in duration-500">
+            <h2 className="text-3xl md:text-5xl font-bold mb-8 uppercase tracking-widest">Le Club</h2>
+            <p className="text-lg opacity-80 leading-relaxed max-w-3xl mx-auto">
+              L'Avia Sport Modèle Club rassemble des passionnés d'aéromodélisme depuis plus de 20 ans. 
+              Notre terrain à Bouglainval offre un cadre idéal pour la pratique du vol radiocommandé.
+            </p>
           </div>
         )}
 
         {/* --- PAGE MES AVIONS --- */}
         {page === 'avions' && (
           <div className="glass-card p-8 md:p-20 text-center animate-in fade-in duration-500">
-            <h2 className="text-3xl md:text-5xl font-bold mb-4 uppercase tracking-widest">Le Hangar</h2>
-            <p className="text-blue-300 italic mb-12">Les machines de nos membres</p>
+            <h2 className="text-3xl md:text-5xl font-bold mb-8 uppercase tracking-widest">Le Hangar</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {[1, 2, 3].map((item) => (
-                <div key={item} className="glass-card aspect-video flex items-center justify-center border-dashed border-white/20 hover:border-blue-400/50 transition-all cursor-pointer group">
-                  <span className="opacity-20 group-hover:opacity-100 transition-opacity">Photo à venir</span>
-                </div>
-              ))}
+              <div className="glass-card aspect-video flex items-center justify-center border-dashed border-white/20">
+                <span className="opacity-30">Photos à venir</span>
+              </div>
             </div>
           </div>
         )}
 
         {/* --- PAGE CALENDRIER --- */}
         {page === 'calendrier' && (
-          <div className="glass-card p-8 md:p-20 animate-in fade-in duration-500 text-center">
-            <h2 className="text-3xl md:text-5xl font-bold mb-12 uppercase">Agenda des vols</h2>
-            <div className="max-w-2xl mx-auto space-y-6">
-              <div className="flex justify-between items-center p-6 bg-white/5 rounded-2xl border-l-8 border-blue-400">
-                <div className="text-left">
-                  <p className="font-bold text-xl">Session dominicale</p>
-                  <p className="opacity-50">Terrain de Bouglainval</p>
-                </div>
-                <p className="text-blue-300 font-bold">Tous les dimanches</p>
-              </div>
-            </div>
+          <div className="glass-card p-8 md:p-20 text-center animate-in fade-in duration-500">
+            <h2 className="text-3xl md:text-5xl font-bold mb-8 uppercase">Agenda</h2>
+            <p className="text-xl">Sessions de vol tous les dimanches après-midi.</p>
           </div>
         )}
 
         {/* --- PAGE CONTACT --- */}
         {page === 'contact' && (
           <div className="glass-card p-8 md:p-20 text-center animate-in fade-in duration-500">
-            <h2 className="text-3xl md:text-5xl font-bold mb-8 uppercase">Nous trouver</h2>
-            <div className="space-y-8">
-              <p className="text-2xl">Envie de décoller avec nous ?</p>
-              <div className="p-8 bg-blue-500/10 rounded-full inline-block border border-blue-400/20">
-                <p className="text-3xl font-black text-blue-400">asmc.bouglainval@gmail.com</p>
-              </div>
-              <p className="opacity-60 italic">Réponse rapide garantie par nos membres.</p>
-            </div>
+            <h2 className="text-3xl md:text-5xl font-bold mb-8 uppercase tracking-widest">Contact</h2>
+            <p className="text-2xl text-blue-300 font-bold">asmc.bouglainval@gmail.com</p>
           </div>
         )}
 
       </main>
 
-      {/* 3. FOOTER */}
       <footer className="w-full text-center py-12 text-xs tracking-[0.4em] opacity-30 uppercase">
         © 2026 ASMC Bouglainval · Skybound Studio
       </footer>
