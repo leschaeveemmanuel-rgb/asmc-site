@@ -86,17 +86,17 @@ function App() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
               {/* CESSNA */}
               <div className="glass-card overflow-hidden group">
-                <div className="aspect-video overflow-hidden"><img src="/avion1.jpg" className="w-full h-full object-cover group-hover:scale-110 transition-transform" /></div>
+                <div className="aspect-video overflow-hidden"><img src="/cessna172.jpg" className="w-full h-full object-cover group-hover:scale-110 transition-transform" /></div>
                 <div className="p-6"><h3 className="text-xl font-bold text-blue-300 uppercase">Cessna 172</h3></div>
               </div>
               {/* EXTRA */}
               <div className="glass-card overflow-hidden group">
-                <div className="aspect-video overflow-hidden"><img src="/avion2.jpg" className="w-full h-full object-cover group-hover:scale-110 transition-transform" /></div>
+                <div className="aspect-video overflow-hidden"><img src="/extra330.jpg" className="w-full h-full object-cover group-hover:scale-110 transition-transform" /></div>
                 <div className="p-6"><h3 className="text-xl font-bold text-blue-300 uppercase">Extra 330</h3></div>
               </div>
               {/* CORSAIR */}
               <div className="glass-card overflow-hidden group">
-                <div className="aspect-video overflow-hidden"><img src="/avion3.jpg" className="w-full h-full object-cover group-hover:scale-110 transition-transform" /></div>
+                <div className="aspect-video overflow-hidden"><img src="/corsair2.jpg" className="w-full h-full object-cover group-hover:scale-110 transition-transform" /></div>
                 <div className="p-6"><h3 className="text-xl font-bold text-blue-300 uppercase">Corsair F4-U</h3></div>
               </div>
             </div>
