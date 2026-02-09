@@ -339,10 +339,89 @@ function App() {
 
         {/* --- CONTACT --- */}
         {page === 'contact' && (
-          <div className="glass-card p-8 md:p-20 text-center animate-in fade-in duration-500">
-            <h2 className="text-3xl md:text-5xl font-bold mb-8 uppercase tracking-widest text-blue-400">Contact</h2>
-            <p className="text-2xl font-bold text-blue-300">asmc.bouglainval@gmail.com</p>
+          <div className="w-full animate-in fade-in slide-in-from-bottom-4 duration-700">
+    <div className="text-center mb-12">
+      <h2 className="text-3xl md:text-5xl font-black uppercase tracking-widest text-blue-400">Nous Contacter</h2>
+      <p className="mt-4 text-blue-100 opacity-60 italic">L'équipe de l'ASMC est à votre écoute</p>
+    </div>
+
+    <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8">
+      
+      {/* 1. LES COORDONNÉES DU BUREAU */}
+      <div className="space-y-6">
+        <div className="glass-card p-8 border-t-2 border-blue-400/30">
+          <h3 className="text-xl font-bold text-blue-300 uppercase mb-6">Le Bureau</h3>
+          
+          <div className="space-y-8">
+            {/* PRÉSIDENT */}
+            <div className="space-y-2">
+              <p className="text-xs uppercase tracking-widest text-blue-400">Président</p>
+              <p className="text-lg font-bold">Jean François Albert</p>
+              <p className="text-sm opacity-70">Mail : jf.albert41@gmail.com</p>
+            </div>
+
+            {/* SECRÉTAIRE */}
+            <div className="space-y-2">
+              <p className="text-xs uppercase tracking-widest text-blue-400">Secrétaire Général</p>
+              <p className="text-lg font-bold">Alain Lernould</p>
+              <p className="text-sm opacity-70">27 rue de Grez — 28170 FONTAINE LES RIBOUTS</p>
+              <p className="text-sm opacity-70 italic">Lieu dit : BOUTRY</p>
+              <div className="pt-2">
+                <p className="text-sm">Tél : 07 7 728 02 57</p>
+                <p className="text-sm">Mail : alain.lernould95@gmail.com</p>
+              </div>
+            </div>
           </div>
+        </div>
+
+        {/* BOUTON NOUS ÉCRIRE */}
+        <a 
+          href="mailto:asmc.bouglainval@gmail.com"
+          className="glass-card w-full p-6 flex items-center justify-center gap-4 group hover:bg-blue-400/10 transition-all border-blue-400/20"
+        >
+          <span className="text-2xl">✉</span>
+          <span className="text-xl font-black uppercase tracking-[0.3em] group-hover:text-blue-400 transition-colors">Nous Écrire</span>
+        </a>
+
+        {/* SECTION FACEBOOK / QR CODE */}
+        <div className="glass-card p-6 flex items-center justify-between gap-4">
+          <div className="flex items-center gap-4">
+            <div className="w-16 h-16 bg-blue-500/10 rounded-xl overflow-hidden border border-white/10">
+              <img src="/logo-fb.png" alt="Facebook" className="w-full h-full object-contain p-2" onError={(e) => e.target.src="https://via.placeholder.com/64?text=FB"} />
+            </div>
+            <div>
+              <p className="text-sm font-bold uppercase">Suivez-nous</p>
+              <p className="text-xs opacity-50">Actualités du club</p>
+            </div>
+          </div>
+          <div className="w-20 h-20 bg-white rounded-lg p-1">
+            <img src="/qrcode-fb.png" alt="QR Code Facebook" className="w-full h-full object-contain" onError={(e) => e.target.src="https://via.placeholder.com/80?text=QR"} />
+          </div>
+        </div>
+      </div>
+
+      {/* 2. LE TERRAIN ET CARTOGRAPHIE */}
+      <div className="space-y-6">
+        <div className="glass-card p-8 space-y-6 h-full border-t-2 border-green-500/30">
+          <h3 className="text-xl font-bold text-green-300 uppercase">Localisation du Terrain</h3>
+          <p className="text-sm opacity-70">
+            Notre terrain est situé sur la commune de **Bouglainval (28130)**. 
+            Vous pouvez nous retrouver tous les week-ends pour les sessions de vol.
+          </p>
+
+          <div className="grid grid-cols-1 gap-4 mt-6">
+            <div className="aspect-video rounded-xl overflow-hidden border border-white/10 shadow-xl">
+              <img src="/carte-plan.png" alt="Carte Google Maps" className="w-full h-full object-cover" onError={(e) => e.target.src="https://via.placeholder.com/600x300/1e293b/60a5fa?text=Carte+Plan"} />
+            </div>
+            <div className="aspect-video rounded-xl overflow-hidden border border-white/10 shadow-xl">
+              <img src="/carte-satellite.png" alt="Photo Satellite" className="w-full h-full object-cover" onError={(e) => e.target.src="https://via.placeholder.com/600x300/1e293b/60a5fa?text=Photo+Satellite"} />
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
         )}
 
       </main>
