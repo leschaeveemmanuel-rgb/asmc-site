@@ -325,7 +325,7 @@ function App() {
                   <span className="text-xl font-black uppercase tracking-[0.3em] group-hover:text-blue-400 transition-colors">Nous Écrire</span>
                 </a>
 
-                <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" className="glass-card p-6 flex items-center justify-between group hover:bg-blue-600/10 border-blue-600/20 transition-all">
+                <a href="https://www.facebook.com/profile.php?id=61570488785828" target="_blank" rel="noopener noreferrer" className="glass-card p-6 flex items-center justify-between group hover:bg-blue-600/10 border-blue-600/20 transition-all">
                   <div className="flex items-center gap-4">
                     <div className="w-12 h-12 bg-blue-600/20 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
                       <img src="/logo-fb.png" className="w-8 h-8 object-contain" onError={(e) => e.target.src="https://via.placeholder.com/50?text=FB"} />
