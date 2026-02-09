@@ -116,7 +116,7 @@ function App() {
       <div className="glass-card overflow-hidden group hover:border-blue-400/50 transition-all duration-500">
         <div className="aspect-video w-full overflow-hidden bg-black/20">
           <img 
-            src="/avion1.jpg" 
+            src="public/avion1.jpg" 
             alt="Nom de l'avion" 
             className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-90"
             onError={(e) => { e.target.src = "https://via.placeholder.com/600x400/1e293b/60a5fa?text=Image+en+attente"; }}
@@ -124,23 +124,23 @@ function App() {
         </div>
         <div className="p-6 space-y-4">
           <div className="flex justify-between items-center">
-            <h3 className="text-xl font-bold tracking-wider uppercase text-blue-300">Modèle Alpha</h3>
-            <span className="text-xs bg-blue-500/20 px-2 py-1 rounded border border-blue-500/30 uppercase">Thermique</span>
+            <h3 className="text-xl font-bold tracking-wider uppercase text-blue-300">Cessna 172</h3>
+            <span className="text-xs bg-blue-500/20 px-2 py-1 rounded border border-blue-500/30 uppercase">Electrique</span>
           </div>
           
           <div className="grid grid-cols-2 gap-4 text-sm border-t border-white/5 pt-4 opacity-80">
             <div>
               <p className="text-[10px] uppercase tracking-tighter opacity-50">Envergure</p>
-              <p className="font-mono">1.60 m</p>
+              <p className="font-mono">1400 mm</p>
             </div>
             <div>
               <p className="text-[10px] uppercase tracking-tighter opacity-50">Moteur</p>
-              <p className="font-mono">OS 46 AX</p>
+              <p className="font-mono">4534</p>
             </div>
           </div>
           
           <p className="text-xs leading-relaxed opacity-60">
-            Un avion de voltige stable et précis, idéal pour les sessions du dimanche après-midi.
+            Un avion de début stable et précis, idéal pour les sessions d'apprentissage. Très bel aspect Maquette.
           </p>
         </div>
       </div>
