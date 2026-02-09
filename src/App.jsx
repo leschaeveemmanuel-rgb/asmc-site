@@ -166,7 +166,7 @@ function App() {
 
                 {/* LIEN FACEBOOK CLIQUABLE (Logo remplace QR Code) */}
                 <a 
-                  href="https://www.facebook.com/votre.page.asmc" 
+                  href="https://www.facebook.com/profile.php?id=61570488785828" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="glass-card p-6 flex items-center justify-between group hover:bg-blue-600/10 border-blue-600/20 transition-all"
