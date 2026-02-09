@@ -5,7 +5,7 @@
 body {
   margin: 0;
   padding: 0;
-  background: linear-gradient(180deg, #204d91 0%, #020357 100%);
+  background: linear-gradient(180deg, #204d91 100%, #020357 0%);
   min-height: 100vh;
   color: white;
   font-family: 'Inter', sans-serif;
