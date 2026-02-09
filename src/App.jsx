@@ -364,10 +364,10 @@ function App() {
             <div className="space-y-2">
               <p className="text-xs uppercase tracking-widest text-blue-400">Secrétaire Général</p>
               <p className="text-lg font-bold">Alain Lernould</p>
-              <p className="text-sm opacity-70">27 rue de Grez — 28170 FONTAINE LES RIBOUTS</p>
-              <p className="text-sm opacity-70 italic">Lieu dit : BOUTRY</p>
+              {/*<p className="text-sm opacity-70">27 rue de Grez — 28170 FONTAINE LES RIBOUTS</p>
+              <p className="text-sm opacity-70 italic">Lieu dit : BOUTRY</p>*/}
               <div className="pt-2">
-                <p className="text-sm">Tél : 07 7 728 02 57</p>
+                <p className="text-sm">Tél : 07 77 28 02 57</p>
                 <p className="text-sm">Mail : alain.lernould95@gmail.com</p>
               </div>
             </div>
@@ -406,15 +406,15 @@ function App() {
           <h3 className="text-xl font-bold text-green-300 uppercase">Localisation du Terrain</h3>
           <p className="text-sm opacity-70">
             Notre terrain est situé sur la commune de **Bouglainval (28130)**. 
-            Vous pouvez nous retrouver tous les week-ends pour les sessions de vol.
+            Vous êtes les bienvenus pour vos sessions de vol.
           </p>
 
           <div className="grid grid-cols-1 gap-4 mt-6">
             <div className="aspect-video rounded-xl overflow-hidden border border-white/10 shadow-xl">
-              <img src="/carte-plan.png" alt="Carte Google Maps" className="w-full h-full object-cover" onError={(e) => e.target.src="https://via.placeholder.com/600x300/1e293b/60a5fa?text=Carte+Plan"} />
+              <img src="/plangoogle.jpg" alt="Carte Google Maps" className="w-full h-full object-cover" onError={(e) => e.target.src="https://via.placeholder.com/600x300/1e293b/60a5fa?text=Carte+Plan"} />
             </div>
             <div className="aspect-video rounded-xl overflow-hidden border border-white/10 shadow-xl">
-              <img src="/carte-satellite.png" alt="Photo Satellite" className="w-full h-full object-cover" onError={(e) => e.target.src="https://via.placeholder.com/600x300/1e293b/60a5fa?text=Photo+Satellite"} />
+              <img src="/photogoogle.jpg" alt="Photo Satellite" className="w-full h-full object-cover" onError={(e) => e.target.src="https://via.placeholder.com/600x300/1e293b/60a5fa?text=Photo+Satellite"} />
             </div>
           </div>
         </div>
