@@ -241,6 +241,7 @@ function App() {
               <p className="mt-4 text-blue-100 opacity-60 italic">Les prochains rendez-vous à ne pas manquer</p>
             </div>
             <div className="max-w-5xl mx-auto space-y-6">
+              {/* --- PREMIER ÉVÉNEMENT --- */}
               <div className="glass-card p-6 flex flex-col md:flex-row items-center gap-6 hover:border-blue-400/30 transition-colors">
                 <div className="flex-shrink-0 w-24 h-24 bg-blue-500/20 rounded-2xl border border-blue-400/30 flex flex-col items-center justify-center">
                   <span className="text-xs uppercase tracking-tighter opacity-60 text-blue-100">Juillet</span>
@@ -258,6 +259,28 @@ function App() {
                 <div className="flex-shrink-0 w-24 h-24 group/img">
                   <a href="/image.png" target="_blank" rel="noopener noreferrer" className="block w-full h-full relative">
                     <img src="/image.png" alt="Affiche" className="w-full h-full object-cover rounded-xl border border-white/10 group-hover/img:border-blue-400/50 transition-all shadow-lg" onError={(e) => { e.target.src = "https://via.placeholder.com/100?text=Affiche"; }} />
+                    <div className="absolute inset-0 bg-blue-400/20 opacity-0 group-hover/img:opacity-100 flex items-center justify-center rounded-xl transition-opacity text-white text-xs font-bold">VOIR</div>
+                  </a>
+                </div>
+              </div>
+              {/* --- SECOND ÉVÉNEMENT --- */}
+              <div className="glass-card p-6 flex flex-col md:flex-row items-center gap-6 hover:border-blue-400/30 transition-colors">
+                <div className="flex-shrink-0 w-24 h-24 bg-blue-500/20 rounded-2xl border border-blue-400/30 flex flex-col items-center justify-center">
+                  <span className="text-xs uppercase tracking-tighter opacity-60 text-blue-100">Août</span>
+                  <span className="text-3xl font-black text-blue-400">22, 23, 24</span>
+                </div>
+                <div className="flex-grow text-center md:text-left space-y-2">
+                  <div className="flex flex-col md:flex-row md:items-center gap-2 md:gap-4">
+                    <h3 className="text-xl font-bold uppercase tracking-wide text-white">Rencontre GPR</h3>
+                    <span className="text-[10px] bg-blue-500/20 text-blue-300 px-2 py-1 rounded border border-blue-500/30 uppercase w-fit mx-auto md:mx-0">Annuel</span>
+                  </div>
+                  <p className="text-sm opacity-70 leading-relaxed text-blue-50">
+                    Rencontre Grand Planeurs Radiocommandés. Restauration sur place. Accès public gratuit..
+                  </p>
+                </div>
+                <div className="flex-shrink-0 w-24 h-24 group/img">
+                  <a href="/gpr.png" target="_blank" rel="noopener noreferrer" className="block w-full h-full relative">
+                    <img src="/gpr.png" alt="Affiche" className="w-full h-full object-cover rounded-xl border border-white/10 group-hover/img:border-blue-400/50 transition-all shadow-lg" onError={(e) => { e.target.src = "https://via.placeholder.com/100?text=Affiche"; }} />
                     <div className="absolute inset-0 bg-blue-400/20 opacity-0 group-hover/img:opacity-100 flex items-center justify-center rounded-xl transition-opacity text-white text-xs font-bold">VOIR</div>
                   </a>
                 </div>
