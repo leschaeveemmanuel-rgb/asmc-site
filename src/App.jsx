@@ -174,24 +174,45 @@ function App() {
 
               {/* 2. CARTE INTERACTIVE UNIQUE */}
               <div className="space-y-6">
-                <div className="glass-card p-8 h-full border-t-2 border-green-500/30">
-                  <h3 className="text-xl font-bold text-green-300 uppercase mb-4">Localisation</h3>
-                  <p className="text-sm opacity-70 mb-6">Terrain de Bouglainval (28130). Utilisez la carte pour naviguer ou zoomer.</p>
-                  
-                  <div className="w-full aspect-square md:aspect-video rounded-xl overflow-hidden border border-white/10">
-                    <iframe 
-                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15000!2d1.6111!3d48.5471!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDjCsDMyJzQ5LjYiTiAxwrAzNiczOS45IkU!5e0!3m2!1sfr!2sfr!4v1707480000000!5m2!1sfr!2sfr&z=13" 
-                      width="100%" 
-                      height="100%" 
-                      style={{ border: 0 }} 
-                      allowFullScreen="" 
-                      loading="lazy" 
-                      referrerPolicy="no-referrer-when-downgrade"
-                      className="grayscale-[20%] contrast-[1.1] opacity-90"
-                    ></iframe>
-                  </div>
-                </div>
-              </div>
+  <div className="glass-card p-8 h-full border-t-2 border-green-500/30 flex flex-col">
+    <h3 className="text-xl font-bold text-green-300 uppercase mb-4 tracking-widest">Localisation</h3>
+    
+    <p className="text-sm opacity-70 mb-6">
+      Le terrain se situe à **Bouglainval (28130)**. 
+      Utilisez la carte pour explorer les environs ou cliquez sur le bouton ci-dessous pour lancer votre itinéraire.
+    </p>
+    
+    {/* LA CARTE INTERACTIVE */}
+    <div className="w-full aspect-square md:aspect-video rounded-xl overflow-hidden border border-white/10 shadow-2xl relative group">
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10552.28919639556!2d1.6025000!3d48.5440000!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDjCsDMyJzM4LjQiTiAxwrAzNicwOS4wIkU!5e0!3m2!1sfr!2sfr!4v1707480000000!5m2!1sfr!2sfr&z=13" 
+        width="100%" 
+        height="100%" 
+        style={{ border: 0 }} 
+        allowFullScreen="" 
+        loading="lazy" 
+        referrerPolicy="no-referrer-when-downgrade"
+        className="grayscale-[20%] contrast-[1.1] opacity-90 group-hover:opacity-100 transition-opacity"
+      ></iframe>
+    </div>
+
+    {/* LE BOUTON "OUVRIR DANS GOOGLE MAPS" */}
+    <div className="mt-6">
+      <a 
+        href="https://www.google.com/maps/dir//48.544000,1.602500" 
+        target="_blank" 
+        rel="noopener noreferrer"
+        className="flex items-center justify-center gap-3 w-full p-4 rounded-xl bg-blue-500/10 border border-blue-400/30 hover:bg-blue-400/20 hover:border-blue-400 transition-all group"
+      >
+        <span className="text-xl group-hover:scale-110 transition-transform">📍</span>
+        <span className="text-sm font-bold uppercase tracking-[0.2em] text-blue-300">Ouvrir dans Google Maps / Itinéraire</span>
+      </a>
+      <p className="text-[10px] text-center mt-3 opacity-30 uppercase tracking-tighter">
+        Coordonnées GPS : 48.544000, 1.602500
+      </p>
+    </div>
+  </div>
+</div>
 
             </div>
           </div>
