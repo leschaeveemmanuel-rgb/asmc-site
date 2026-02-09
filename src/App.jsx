@@ -46,7 +46,6 @@ function App() {
         {/* --- PAGE ACCUEIL --- */}
         {page === 'accueil' && (
           <div className="animate-in fade-in duration-700 flex flex-col gap-8 text-center">
-            
             <div className="w-full rounded-3xl overflow-hidden glass-card p-1 shadow-2xl">
               <img 
                 src="/banner.png" 
@@ -64,19 +63,15 @@ function App() {
               </div>
 
               <div className="space-y-3">
-                <p className="text-lg md:text-xl opacity-80 max-w-4xl mx-auto leading-relaxed text-center">
+                <p className="text-lg md:text-xl opacity-80 max-w-4xl mx-auto leading-relaxed">
                   Soyez les bienvenus dans l'univers de l'Avia Sport Modèle Club de Bouglainval.
                 </p>
-                
-                <div className="space-y-3 text-lg md:text-xl opacity-80 max-w-4xl mx-auto leading-relaxed text-center">
+                <div className="space-y-3 text-lg md:text-xl opacity-80 max-w-4xl mx-auto leading-relaxed">
                   <p>Ici, nous allons vous présenter notre passion pour les modèles réduits d'avions, en toute simplicité et avec humilité.</p>
                   <p>Avec un peu de chance, cela pourrait vous donner l'envie de nous rejoindre et de vous lancer dans l'aventure passionnante du pilotage d'avions radiocommandés.</p>
                 </div>
               </div>
-
-              <div className="space-y-6">
-                <p className="text-2xl font-serif italic text-blue-300">Bonne visite !</p>
-              </div>
+              <p className="text-2xl font-serif italic text-blue-300">Bonne visite !</p>
             </div>
           </div>
         )}
@@ -91,7 +86,7 @@ function App() {
           </div>
         )}
 
-        {/* --- PAGE MES AVIONS (LE HANGAR) --- */}
+        {/* --- PAGE MES AVIONS --- */}
         {page === 'avions' && (
           <div className="w-full animate-in fade-in slide-in-from-bottom-4 duration-500">
             <div className="text-center mb-12">
@@ -100,11 +95,10 @@ function App() {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-              
               <div className="glass-card overflow-hidden group hover:border-blue-400/50 transition-all duration-500">
                 <div className="aspect-video w-full overflow-hidden bg-black/20">
                   <img 
-                    src="/avion1.jpg"  {/* MODIFIÉ ICI : public/ supprimé */}
+                    src="/avion1.jpg" 
                     alt="Cessna 172" 
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-90"
                     onError={(e) => { e.target.src = "https://via.placeholder.com/600x400/1e293b/60a5fa?text=Image+en+attente"; }}
@@ -115,7 +109,6 @@ function App() {
                     <h3 className="text-xl font-bold tracking-wider uppercase text-blue-300">Cessna 172</h3>
                     <span className="text-xs bg-blue-500/20 px-2 py-1 rounded border border-blue-500/30 uppercase">Electrique</span>
                   </div>
-                  
                   <div className="grid grid-cols-2 gap-4 text-sm border-t border-white/5 pt-4 opacity-80">
                     <div>
                       <p className="text-[10px] uppercase tracking-tighter opacity-50">Envergure</p>
@@ -126,7 +119,6 @@ function App() {
                       <p className="font-mono">4534</p>
                     </div>
                   </div>
-                  
                   <p className="text-xs leading-relaxed opacity-60">
                     Un avion de début stable et précis, idéal pour les sessions d'apprentissage. Très bel aspect Maquette.
                   </p>
@@ -137,7 +129,6 @@ function App() {
                 <div className="text-4xl mb-4 group-hover:scale-125 transition-transform text-blue-400">+</div>
                 <p className="text-xs uppercase tracking-widest">Ajouter un appareil</p>
               </div>
-
             </div>
           </div>
         )}
@@ -154,7 +145,7 @@ function App() {
         {page === 'contact' && (
           <div className="glass-card p-8 md:p-20 text-center animate-in fade-in duration-500">
             <h2 className="text-3xl md:text-5xl font-bold mb-8 uppercase tracking-widest text-blue-400">Contact</h2>
-            <p className="text-2xl font-bold">asmc.bouglainval@gmail.com</p>
+            <p className="text-2xl font-bold text-blue-300">asmc.bouglainval@gmail.com</p>
           </div>
         )}
 
