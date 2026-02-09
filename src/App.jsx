@@ -133,7 +133,7 @@ function App() {
               {/* CESSNA */}
               <div className="glass-card overflow-hidden group hover:border-blue-400/50 transition-all duration-500">
                 <div className="aspect-video w-full overflow-hidden bg-black/20">
-                  <img src="/avion1.jpg" alt="Cessna 172" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-90" onError={(e) => e.target.src = "https://via.placeholder.com/600x400?text=Cessna"} />
+                  <img src="/cessna172.jpg" alt="Cessna 172" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-90" onError={(e) => e.target.src = "https://via.placeholder.com/600x400?text=Cessna"} />
                 </div>
                 <div className="p-6 space-y-4">
                   <div className="flex justify-between items-center">
@@ -151,7 +151,7 @@ function App() {
               {/* EXTRA */}
               <div className="glass-card overflow-hidden group hover:border-blue-400/50 transition-all duration-500">
                 <div className="aspect-video w-full overflow-hidden bg-black/20">
-                  <img src="/avion2.jpg" alt="Extra 330" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-90" onError={(e) => e.target.src = "https://via.placeholder.com/600x400?text=Extra"} />
+                  <img src="/extra330.jpg" alt="Extra 330" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-90" onError={(e) => e.target.src = "https://via.placeholder.com/600x400?text=Extra"} />
                 </div>
                 <div className="p-6 space-y-4">
                   <div className="flex justify-between items-center">
@@ -169,7 +169,7 @@ function App() {
               {/* CORSAIR */}
               <div className="glass-card overflow-hidden group hover:border-blue-400/50 transition-all duration-500">
                 <div className="aspect-video w-full overflow-hidden bg-black/20">
-                  <img src="/avion3.jpg" alt="Corsair F4-U" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-90" onError={(e) => e.target.src = "https://via.placeholder.com/600x400?text=Corsair"} />
+                  <img src="/corsair2.jpg" alt="Corsair F4-U" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-90" onError={(e) => e.target.src = "https://via.placeholder.com/600x400?text=Corsair"} />
                 </div>
                 <div className="p-6 space-y-4">
                   <div className="flex justify-between items-center">
