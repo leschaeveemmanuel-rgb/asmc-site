@@ -98,7 +98,7 @@ function App() {
               <div className="glass-card overflow-hidden group hover:border-blue-400/50 transition-all duration-500">
                 <div className="aspect-video w-full overflow-hidden bg-black/20">
                   <img 
-                    src="/avion1.jpg" 
+                    src="/cessna172.jpg" 
                     alt="Cessna 172" 
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-90"
                     onError={(e) => { e.target.src = "https://via.placeholder.com/600x400/1e293b/60a5fa?text=Image+en+attente"; }}
