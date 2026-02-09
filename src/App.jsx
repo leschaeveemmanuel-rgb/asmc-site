@@ -269,7 +269,7 @@ function App() {
         {/* DROITE : LA VIGNETTE (Taille identique à la date : w-24 h-24) */}
         <div className="flex-shrink-0 w-24 h-24 group/img">
           <a 
-            href="/affiche-juin.jpg" 
+            href="/gpr.png" 
             target="_blank" 
             rel="noopener noreferrer"
             className="block w-full h-full relative"
