@@ -7,7 +7,7 @@ function App() {
     <div className="min-h-screen p-4 md:p-8 flex flex-col items-center gap-8 text-white font-sans">
       
       {/* 1. BARRE DE NAVIGATION */}
-      <nav className="glass-card w-full max-w-6xl px-6 py-5 flex flex-wrap justify-center gap-8 text-lg :text-sm font-bold tracking-[0.2em] uppercase z-10">
+      <nav className="glass-card w-full max-w-6xl px-6 py-5 flex flex-wrap justify-center gap-8 text-lg md:text-sm font-bold tracking-[0.2em] uppercase z-10">
         <button 
           onClick={() => setPage('accueil')} 
           className={`transition-all duration-300 py-2 ${page === 'accueil' ? 'text-blue-400 border-b-2 border-blue-400' : 'hover:text-blue-300'}`}
@@ -47,7 +47,6 @@ function App() {
         {page === 'accueil' && (
           <div className="animate-in fade-in duration-700 flex flex-col gap-8 text-center">
             
-            {/* SECTION BANNIÈRE - S'ADAPTE À LA PHOTO */}
             <div className="w-full rounded-3xl overflow-hidden glass-card p-1 shadow-2xl">
               <img 
                 src="/banner.png" 
@@ -56,7 +55,6 @@ function App() {
               />
             </div>
 
-            {/* TITRE ET TEXTE DE BIENVENUE */}
             <div className="glass-card p-8 md:p-16 space-y-10">
               <div className="space-y-2">
                 <h1 className="text-3xl md:text-5xl font-black uppercase tracking-widest text-blue-400">
@@ -71,14 +69,8 @@ function App() {
                 </p>
                 
                 <div className="space-y-3 text-lg md:text-xl opacity-80 max-w-4xl mx-auto leading-relaxed text-center">
-                  <p>
-                    Ici, nous allons vous présenter notre passion pour les modèles réduits d'avions, 
-                    en toute simplicité et avec humilité.
-                  </p>
-                  <p>
-                    Avec un peu de chance, cela pourrait vous donner l'envie de nous rejoindre 
-                    et de vous lancer dans l'aventure passionnante du pilotage d'avions radiocommandés.
-                  </p>
+                  <p>Ici, nous allons vous présenter notre passion pour les modèles réduits d'avions, en toute simplicité et avec humilité.</p>
+                  <p>Avec un peu de chance, cela pourrait vous donner l'envie de nous rejoindre et de vous lancer dans l'aventure passionnante du pilotage d'avions radiocommandés.</p>
                 </div>
               </div>
 
@@ -94,69 +86,63 @@ function App() {
           <div className="glass-card p-8 md:p-20 text-center animate-in fade-in duration-500">
             <h2 className="text-3xl md:text-5xl font-bold mb-8 uppercase tracking-widest text-blue-400">Le Club</h2>
             <p className="text-lg opacity-80 leading-relaxed max-w-3xl mx-auto">
-              L'Avia Sport Modèle Club rassemble des passionnés d'aéromodélisme depuis plus de 20 ans. 
-              Notre terrain à Bouglainval offre un cadre idéal pour la pratique du vol radiocommandé.
+              L'Avia Sport Modèle Club rassemble des passionnés d'aéromodélisme depuis plus de 20 ans. Notre terrain à Bouglainval offre un cadre idéal pour la pratique du vol radiocommandé.
             </p>
           </div>
         )}
 
-        {/* --- PAGE MES AVIONS --- */}
         {/* --- PAGE MES AVIONS (LE HANGAR) --- */}
-{page === 'avions' && (
-  <div className="w-full animate-in fade-in slide-in-from-bottom-4 duration-500">
-    <div className="text-center mb-12">
-      <h2 className="text-3xl md:text-5xl font-bold uppercase tracking-widest text-blue-400">Le Hangar</h2>
-      <p className="mt-4 text-blue-100 opacity-60 italic">Inventaire technique de la flotte ASMC</p>
-    </div>
-
-    {/* GRILLE DES AVIONS */}
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-      
-      {/* EXEMPLE AVION 1 : TU POURRAS COPIER CE BLOC POUR CHAQUE NOUVEL AVION */}
-      <div className="glass-card overflow-hidden group hover:border-blue-400/50 transition-all duration-500">
-        <div className="aspect-video w-full overflow-hidden bg-black/20">
-          <img 
-            src="public/avion1.jpg" 
-            alt="Nom de l'avion" 
-            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-90"
-            onError={(e) => { e.target.src = "https://via.placeholder.com/600x400/1e293b/60a5fa?text=Image+en+attente"; }}
-          />
-        </div>
-        <div className="p-6 space-y-4">
-          <div className="flex justify-between items-center">
-            <h3 className="text-xl font-bold tracking-wider uppercase text-blue-300">Cessna 172</h3>
-            <span className="text-xs bg-blue-500/20 px-2 py-1 rounded border border-blue-500/30 uppercase">Electrique</span>
-          </div>
-          
-          <div className="grid grid-cols-2 gap-4 text-sm border-t border-white/5 pt-4 opacity-80">
-            <div>
-              <p className="text-[10px] uppercase tracking-tighter opacity-50">Envergure</p>
-              <p className="font-mono">1400 mm</p>
+        {page === 'avions' && (
+          <div className="w-full animate-in fade-in slide-in-from-bottom-4 duration-500">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-5xl font-bold uppercase tracking-widest text-blue-400">Le Hangar</h2>
+              <p className="mt-4 text-blue-100 opacity-60 italic">Inventaire technique de la flotte ASMC</p>
             </div>
-            <div>
-              <p className="text-[10px] uppercase tracking-tighter opacity-50">Moteur</p>
-              <p className="font-mono">4534</p>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+              
+              <div className="glass-card overflow-hidden group hover:border-blue-400/50 transition-all duration-500">
+                <div className="aspect-video w-full overflow-hidden bg-black/20">
+                  <img 
+                    src="/avion1.jpg"  {/* MODIFIÉ ICI : public/ supprimé */}
+                    alt="Cessna 172" 
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-90"
+                    onError={(e) => { e.target.src = "https://via.placeholder.com/600x400/1e293b/60a5fa?text=Image+en+attente"; }}
+                  />
+                </div>
+                <div className="p-6 space-y-4">
+                  <div className="flex justify-between items-center">
+                    <h3 className="text-xl font-bold tracking-wider uppercase text-blue-300">Cessna 172</h3>
+                    <span className="text-xs bg-blue-500/20 px-2 py-1 rounded border border-blue-500/30 uppercase">Electrique</span>
+                  </div>
+                  
+                  <div className="grid grid-cols-2 gap-4 text-sm border-t border-white/5 pt-4 opacity-80">
+                    <div>
+                      <p className="text-[10px] uppercase tracking-tighter opacity-50">Envergure</p>
+                      <p className="font-mono">1400 mm</p>
+                    </div>
+                    <div>
+                      <p className="text-[10px] uppercase tracking-tighter opacity-50">Moteur</p>
+                      <p className="font-mono">4534</p>
+                    </div>
+                  </div>
+                  
+                  <p className="text-xs leading-relaxed opacity-60">
+                    Un avion de début stable et précis, idéal pour les sessions d'apprentissage. Très bel aspect Maquette.
+                  </p>
+                </div>
+              </div>
+
+              <div className="glass-card flex flex-col items-center justify-center p-8 border-dashed border-white/20 opacity-40 hover:opacity-100 transition-all cursor-pointer group">
+                <div className="text-4xl mb-4 group-hover:scale-125 transition-transform text-blue-400">+</div>
+                <p className="text-xs uppercase tracking-widest">Ajouter un appareil</p>
+              </div>
+
             </div>
           </div>
-          
-          <p className="text-xs leading-relaxed opacity-60">
-            Un avion de début stable et précis, idéal pour les sessions d'apprentissage. Très bel aspect Maquette.
-          </p>
-        </div>
-      </div>
-      {/* FIN BLOC AVION 1 */}
+        )}
 
-      {/* CASE VIDE POUR AJOUT FUTUR */}
-      <div className="glass-card flex flex-col items-center justify-center p-8 border-dashed border-white/20 opacity-40 hover:opacity-100 transition-all cursor-pointer group">
-        <div className="text-4xl mb-4 group-hover:scale-125 transition-transform text-blue-400">+</div>
-        <p className="text-xs uppercase tracking-widest">Ajouter un appareil</p>
-      </div>
-
-    </div>
-  </div>
-)}
-
-        {/* --- AUTRES PAGES (Calendrier / Contact) --- */}
+        {/* --- CALENDRIER --- */}
         {page === 'calendrier' && (
           <div className="glass-card p-8 md:p-20 text-center animate-in fade-in duration-500">
             <h2 className="text-3xl md:text-5xl font-bold mb-8 uppercase tracking-widest text-blue-400">Calendrier</h2>
@@ -164,6 +150,7 @@ function App() {
           </div>
         )}
 
+        {/* --- CONTACT --- */}
         {page === 'contact' && (
           <div className="glass-card p-8 md:p-20 text-center animate-in fade-in duration-500">
             <h2 className="text-3xl md:text-5xl font-bold mb-8 uppercase tracking-widest text-blue-400">Contact</h2>
