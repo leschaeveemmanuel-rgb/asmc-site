@@ -116,7 +116,7 @@ function App() {
           <div className="w-full animate-in fade-in slide-in-from-bottom-4 duration-700">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-5xl font-bold uppercase tracking-widest text-blue-400">Le Hangar</h2>
-              <p className="mt-4 text-blue-100 opacity-60 italic">Inventaire technique de la flotte ASMC</p>
+              <p className="mt-4 text-blue-100 opacity-60 italic">Présentation de quelques avions présents sur le terrain de l'ASMC</p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
