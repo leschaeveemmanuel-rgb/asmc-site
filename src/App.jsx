@@ -262,7 +262,7 @@ function App() {
             <span className="text-[10px] bg-blue-500/20 text-blue-300 px-2 py-1 rounded border border-blue-500/30 uppercase w-fit mx-auto md:mx-0">Événement Spécial</span>
           </div>
           <p className="text-sm opacity-70 leading-relaxed text-blue-50">
-            Grande journée portes ouvertes. Démonstrations de vol, initiation en double commande et barbecue.
+            Rencontre GPR Grands Planeurs Radiocommandés, restauration sur place, entrée gratuite.
           </p>
         </div>
 
@@ -275,7 +275,7 @@ function App() {
             className="block w-full h-full relative"
           >
             <img 
-              src="/affiche-juin.jpg" 
+              src="/gpr.png" 
               alt="Affiche événement" 
               className="w-full h-full object-cover rounded-xl border border-white/10 group-hover/img:border-blue-400/50 transition-all shadow-lg"
               onError={(e) => { e.target.src = "https://via.placeholder.com/100?text=Affiche"; }}
