@@ -24,7 +24,7 @@ function App() {
           onClick={() => setPage('avions')} 
           className={`transition-all duration-300 py-2 ${page === 'avions' ? 'text-blue-400 border-b-2 border-blue-400' : 'hover:text-blue-300'}`}
         >
-          Mes Avions
+          Le Hangar
         </button>
         <button 
           onClick={() => setPage('calendrier')} 
@@ -238,10 +238,67 @@ function App() {
 
         {/* --- CALENDRIER --- */}
         {page === 'calendrier' && (
-          <div className="glass-card p-8 md:p-20 text-center animate-in fade-in duration-500">
-            <h2 className="text-3xl md:text-5xl font-bold mb-8 uppercase tracking-widest text-blue-400">Calendrier</h2>
-            <p className="text-xl opacity-80">Retrouvez ici les dates de nos prochains événements.</p>
+          <div className="w-full animate-in fade-in slide-in-from-bottom-4 duration-700">
+    <div className="text-center mb-12">
+      <h2 className="text-3xl md:text-5xl font-black uppercase tracking-widest text-blue-400">Agenda du Club</h2>
+      <p className="mt-4 text-blue-100 opacity-60 italic">Les prochains rendez-vous à ne pas manquer</p>
+    </div>
+
+    <div className="max-w-4xl mx-auto space-y-6">
+      
+      {/* ÉVÉNEMENT 1 */}
+      <div className="glass-card p-6 flex flex-col md:flex-row items-center gap-6 hover:border-blue-400/30 transition-colors">
+        <div className="flex-shrink-0 w-24 h-24 bg-blue-500/20 rounded-2xl border border-blue-400/30 flex flex-col items-center justify-center">
+          <span className="text-xs uppercase tracking-tighter opacity-60">Févr.</span>
+          <span className="text-3xl font-black text-blue-400">15</span>
+        </div>
+        <div className="flex-grow text-center md:text-left space-y-2">
+          <div className="flex flex-col md:flex-row md:items-center gap-2 md:gap-4">
+            <h3 className="text-xl font-bold uppercase tracking-wide">Session de Vol Dominicale</h3>
+            <span className="text-[10px] bg-green-500/20 text-green-400 px-2 py-1 rounded border border-green-500/30 uppercase w-fit mx-auto md:mx-0">Confirmé</span>
           </div>
+          <p className="text-sm opacity-70 leading-relaxed">
+            Rendez-vous à partir de 14h00 sur le terrain pour une session d'entraînement. Café et convivialité au programme.
+          </p>
+        </div>
+      </div>
+
+      {/* ÉVÉNEMENT 2 */}
+      <div className="glass-card p-6 flex flex-col md:flex-row items-center gap-6 hover:border-blue-400/30 transition-colors">
+        <div className="flex-shrink-0 w-24 h-24 bg-blue-500/20 rounded-2xl border border-blue-400/30 flex flex-col items-center justify-center">
+          <span className="text-xs uppercase tracking-tighter opacity-60">Mars</span>
+          <span className="text-3xl font-black text-blue-400">08</span>
+        </div>
+        <div className="flex-grow text-center md:text-left space-y-2">
+          <div className="flex flex-col md:flex-row md:items-center gap-2 md:gap-4">
+            <h3 className="text-xl font-bold uppercase tracking-wide">Atelier Technique</h3>
+            <span className="text-[10px] bg-blue-500/20 text-blue-300 px-2 py-1 rounded border border-blue-500/30 uppercase w-fit mx-auto md:mx-0">À venir</span>
+          </div>
+          <p className="text-sm opacity-70 leading-relaxed">
+            Thème : Réglages moteur thermique et entretien des batteries LiPo. Ouvert à tous les membres.
+          </p>
+        </div>
+      </div>
+
+      {/* ÉVÉNEMENT 3 (Exemple d'événement spécial) */}
+      <div className="glass-card p-6 flex flex-col md:flex-row items-center gap-6 border-l-4 border-l-blue-400">
+        <div className="flex-shrink-0 w-24 h-24 bg-blue-400 text-white rounded-2xl flex flex-col items-center justify-center shadow-lg shadow-blue-500/20">
+          <span className="text-xs uppercase tracking-tighter opacity-80">Juin</span>
+          <span className="text-3xl font-black">21</span>
+        </div>
+        <div className="flex-grow text-center md:text-left space-y-2">
+          <div className="flex flex-col md:flex-row md:items-center gap-2 md:gap-4">
+            <h3 className="text-xl font-bold uppercase tracking-wide text-blue-300">Fête de l'Aéromodélisme</h3>
+            <span className="text-[10px] bg-blue-500/20 text-blue-300 px-2 py-1 rounded border border-blue-500/30 uppercase w-fit mx-auto md:mx-0">Événement Spécial</span>
+          </div>
+          <p className="text-sm opacity-70 leading-relaxed">
+            Grande journée portes ouvertes. Démonstrations de vol, initiation en double commande et barbecue annuel du club.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
         )}
 
         {/* --- CONTACT --- */}
