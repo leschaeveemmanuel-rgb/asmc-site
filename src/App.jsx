@@ -128,101 +128,98 @@ function App() {
         {/* --- PAGE CONTACT --- */}
         {page === 'contact' && (
           <div className="w-full animate-in fade-in slide-in-from-bottom-4 duration-700">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-5xl font-black uppercase tracking-widest text-blue-400">Nous Contacter</h2>
-              <p className="mt-4 text-blue-100 opacity-60 italic">L'équipe de l'ASMC est à votre écoute</p>
+    <div className="text-center mb-12">
+      <h2 className="text-3xl md:text-5xl font-black uppercase tracking-widest text-blue-400">Nous Contacter</h2>
+      <p className="mt-4 text-blue-100 opacity-60 italic">L'équipe de l'ASMC est à votre écoute</p>
+    </div>
+
+    <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8">
+      
+      {/* 1. BUREAU ET RESEAUX */}
+      <div className="space-y-6">
+        <div className="glass-card p-8 border-t-2 border-blue-400/30">
+          <h3 className="text-xl font-bold text-blue-300 uppercase mb-6">Le Bureau</h3>
+          <div className="space-y-8">
+            <div>
+              <p className="text-xs uppercase tracking-widest text-blue-400">Président</p>
+              <p className="text-lg font-bold">Jean François Albert</p>
+              <p className="text-sm opacity-70 italic">jf.albert41@gmail.com</p>
             </div>
+            <div>
+              <p className="text-xs uppercase tracking-widest text-blue-400">Secrétaire Général</p>
+              <p className="text-lg font-bold">Alain Lernould</p>
+              {/* ADRESSE MASQUÉE 
+              <p className="text-sm opacity-70">27 rue de Grez — 28170 FONTAINE LES RIBOUTS</p>
+              <p className="text-sm opacity-70 italic">Lieu dit : BOUTRY</p>
+              */}
+              <p className="text-sm opacity-70 mt-2">Tél : 07 77 28 02 57</p>
+              <p className="text-sm opacity-70 italic">alain.lernould95@gmail.com</p>
+            </div>
+          </div>
+        </div>
 
-            <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8">
-              
-              {/* 1. BUREAU ET RESEAUX */}
-              <div className="space-y-6">
-                <div className="glass-card p-8 border-t-2 border-blue-400/30">
-                  <h3 className="text-xl font-bold text-blue-300 uppercase mb-6">Le Bureau</h3>
-                  <div className="space-y-8">
-                    <div>
-                      <p className="text-xs uppercase tracking-widest text-blue-400">Président</p>
-                      <p className="text-lg font-bold">Jean François Albert</p>
-                      <p className="text-sm opacity-70 italic">jf.albert41@gmail.com</p>
-                    </div>
-                    <div>
-                      <p className="text-xs uppercase tracking-widest text-blue-400">Secrétaire Général</p>
-                      <p className="text-lg font-bold">Alain Lernould</p>
-                      {/* ADRESSE MASQUÉE 
-                      <p className="text-sm opacity-70">27 rue de Grez — 28170 FONTAINE LES RIBOUTS</p>
-                      <p className="text-sm opacity-70 italic">Lieu dit : BOUTRY</p>
-                      */}
-                      <p className="text-sm opacity-70 mt-2">Tél : 07 77 28 02 57</p>
-                      <p className="text-sm opacity-70 italic">alain.lernould95@gmail.com</p>
-                    </div>
-                  </div>
-                </div>
+        {/* BOUTON MAIL */}
+        <a href="mailto:asmc.bouglainval@gmail.com" className="glass-card w-full p-6 flex items-center justify-center gap-4 group hover:bg-blue-400/10 transition-all border-blue-400/20">
+          <span className="text-2xl text-blue-400">✉</span>
+          <span className="text-xl font-black uppercase tracking-[0.3em]">Nous Écrire</span>
+        </a>
 
-                {/* BOUTON NOUS ÉCRIRE */}
-                <a href="mailto:asmc.bouglainval@gmail.com" className="glass-card w-full p-6 flex items-center justify-center gap-4 group hover:bg-blue-400/10 transition-all border-blue-400/20">
-                  <span className="text-2xl text-blue-400">✉</span>
-                  <span className="text-xl font-black uppercase tracking-[0.3em]">Nous Écrire</span>
-                </a>
+        {/* LIEN FACEBOOK AVEC "CLIQUEZ ICI" */}
+        <a 
+          href="https://www.facebook.com/votre.page.asmc" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="glass-card p-6 flex items-center justify-between group hover:bg-blue-600/10 border-blue-600/20 transition-all"
+        >
+          <div className="flex items-center gap-4">
+            <div className="w-12 h-12 bg-blue-600/20 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
+              <img src="/logo-fb.png" className="w-8 h-8 object-contain" onError={(e) => e.target.src="https://via.placeholder.com/50?text=FB"} />
+            </div>
+            <div>
+              <p className="text-sm font-bold uppercase tracking-widest text-blue-100">Suivez-nous</p>
+              <p className="text-[10px] text-blue-400 font-bold uppercase tracking-tighter mt-1">Cliquez ici</p>
+            </div>
+          </div>
+          <span className="text-blue-400 opacity-0 group-hover:opacity-100 transition-opacity">↗</span>
+        </a>
+      </div>
 
-                {/* LIEN FACEBOOK CLIQUABLE (Logo remplace QR Code) */}
-                <a 
-                  href="https://www.facebook.com/profile.php?id=61570488785828" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="glass-card p-6 flex items-center justify-between group hover:bg-blue-600/10 border-blue-600/20 transition-all"
-                >
-                  <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 bg-blue-600/20 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
-                      <img src="/logo-fb.png" className="w-8 h-8 object-contain" onError={(e) => e.target.src="https://via.placeholder.com/50?text=FB"} />
-                    </div>
-                    <div>
-                      <p className="text-sm font-bold uppercase tracking-widest text-blue-100">Suivez-nous</p>
-                      <p className="text-[10px] opacity-50 uppercase tracking-tighter">Sur Facebook</p>
-                    </div>
-                  </div>
-                  <span className="text-blue-400 opacity-0 group-hover:opacity-100 transition-opacity">↗</span>
-                </a>
-              </div>
+      {/* 2. CARTE INTERACTIVE VERROUILLÉE SUR LE TERRAIN */}
+      <div className="space-y-6">
+        <div className="glass-card p-8 h-full border-t-2 border-green-500/30 flex flex-col">
+          <h3 className="text-xl font-bold text-green-300 uppercase mb-4 tracking-widest">Localisation</h3>
+          
+          <p className="text-sm opacity-70 mb-6">
+            Terrain situé à **Bouglainval (28130)**. 
+          </p>
+          
+          <div className="w-full aspect-square md:aspect-video rounded-xl overflow-hidden border border-white/10 shadow-2xl relative group">
+            {/* IFRAME AVEC COORDONNÉES FORCÉES (Zoom 14 pour voir les villages autour) */}
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d2639.8!2d1.6025!3d48.544!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDjCsDMyJzQwLjAiTiAxwrAzNicwOS4wIkU!5e0!3m2!1sfr!2sfr!4v1707480000000!5m2!1sfr!2sfr&z=14" 
+              width="100%" 
+              height="100%" 
+              style={{ border: 0 }} 
+              allowFullScreen="" 
+              loading="lazy" 
+              referrerPolicy="no-referrer-when-downgrade"
+              className="grayscale-[20%] contrast-[1.1] opacity-90 group-hover:opacity-100 transition-opacity"
+            ></iframe>
+          </div>
 
-              {/* 2. CARTE INTERACTIVE ET BOUTON GPS */}
-              <div className="space-y-6">
-                <div className="glass-card p-8 h-full border-t-2 border-green-500/30 flex flex-col">
-                  <h3 className="text-xl font-bold text-green-300 uppercase mb-4 tracking-widest">Localisation</h3>
-                  
-                  <p className="text-sm opacity-70 mb-6">
-                    Le terrain se situe à **Bouglainval (28130)**. 
-                    Utilisez la carte pour explorer les environs.
-                  </p>
-                  
-                  {/* LA CARTE INTERACTIVE */}
-                  <div className="w-full aspect-square md:aspect-video rounded-xl overflow-hidden border border-white/10 shadow-2xl relative group">
-                    <iframe 
-                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2639.46788534839!2d1.600311!3d48.544!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDjCsDMyJzM4LjQiTiAxwrAzNicwMS4xIkU!5e0!3m2!1sfr!2sfr!4v1707480000000!5m2!1sfr!2sfr&z=13" 
-                      width="100%" 
-                      height="100%" 
-                      style={{ border: 0 }} 
-                      allowFullScreen="" 
-                      loading="lazy" 
-                      referrerPolicy="no-referrer-when-downgrade"
-                      className="grayscale-[20%] contrast-[1.1] opacity-90 group-hover:opacity-100 transition-opacity"
-                    ></iframe>
-                  </div>
-
-                  {/* LE BOUTON GPS (RÉTABLI) */}
-                  <div className="mt-6">
-                    <a 
-                      href="https://www.google.com/maps/dir//48.544,1.6025" 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="flex items-center justify-center gap-3 w-full p-4 rounded-xl bg-blue-500/10 border border-blue-400/30 hover:bg-blue-400/20 hover:border-blue-400 transition-all group"
-                    >
-                      <span className="text-xl group-hover:scale-110 transition-transform">📍</span>
-                      <span className="text-sm font-bold uppercase tracking-[0.2em] text-blue-300">Ouvrir dans Google Maps / Itinéraire</span>
-                    </a>
-                  </div>
-                </div>
-              </div>
-
+          <div className="mt-6">
+            <a 
+              href="https://www.google.com/maps/dir/?api=1&destination=48.544,1.6025" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="flex items-center justify-center gap-3 w-full p-4 rounded-xl bg-blue-500/10 border border-blue-400/30 hover:bg-blue-400/20 hover:border-blue-400 transition-all group"
+            >
+              <span className="text-xl group-hover:scale-110 transition-transform">📍</span>
+              <span className="text-sm font-bold uppercase tracking-[0.2em] text-blue-300">Itinéraire vers le terrain</span>
+            </a>
+          </div>
+        </div>
+      </div>
             </div>
           </div>
         )}
