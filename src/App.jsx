@@ -81,44 +81,43 @@ function App() {
           <div className="w-full animate-in fade-in slide-in-from-bottom-4 duration-700">
     <div className="text-center mb-12">
       <h2 className="text-3xl md:text-5xl font-black uppercase tracking-widest text-blue-400">L'Esprit ASMC</h2>
-      <p className="mt-4 text-blue-100 opacity-60 italic">Plus qu'un club, une passion partagée à Bouglainval</p>
+      <p className="mt-4 text-blue-100 opacity-60 italic">Une passion partagée sur notre terrain de Bouglainval</p>
     </div>
 
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+    {/* GRILLE D'INFORMATIONS */}
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-12">
       
-      {/* COLONNE 1 : L'HISTOIRE */}
       <div className="glass-card p-8 space-y-4 border-t-2 border-blue-500/30">
         <h3 className="text-xl font-bold text-blue-300 uppercase tracking-tighter">Notre Histoire</h3>
         <p className="text-sm opacity-80 leading-relaxed">
-          Depuis plus de 20 ans, l'Avia Sport Modèle Club rassemble les passionnés de construction et de pilotage. 
-          Né de la volonté de partager un savoir-faire technique, le club a vu décoller des centaines de modèles, du planeur au Warbird.
+          Depuis plus de 20 ans, l'Avia Sport Modèle Club rassemble les passionnés d'aéromodélisme. Notre club est un lieu d'échange technique et de convivialité.
         </p>
       </div>
 
-      {/* COLONNE 2 : LE TERRAIN */}
       <div className="glass-card p-8 space-y-4 border-t-2 border-green-500/30">
         <h3 className="text-xl font-bold text-green-300 uppercase tracking-tighter">Le Terrain</h3>
         <p className="text-sm opacity-80 leading-relaxed">
-          Situé à Bouglainval, notre terrain offre un espace de vol dégagé et sécurisé. 
-          C'est ici que nous expérimentons nos réglages et que nous partageons nos sessions dominicales dans une ambiance conviviale.
+          Notre plateforme à Bouglainval offre un espace de vol dégagé, idéal pour toutes les catégories de modèles, du planeur au moteur thermique.
         </p>
       </div>
 
-      {/* COLONNE 3 : LA PHILOSOPHIE */}
       <div className="glass-card p-8 space-y-4 border-t-2 border-purple-500/30">
         <h3 className="text-xl font-bold text-purple-300 uppercase tracking-tighter">L'Apprentissage</h3>
         <p className="text-sm opacity-80 leading-relaxed">
-          La transmission est au cœur de l'ASMC. Nous accueillons les débutants pour les guider dans leurs premiers vols, 
-          en privilégiant toujours la sécurité, l'humilité et le plaisir de voir une machine prendre l'air.
+          Nous accompagnons les nouveaux pilotes dans leurs premiers vols avec bienveillance, en mettant l'accent sur la sécurité et le plaisir du pilotage.
         </p>
       </div>
-
     </div>
 
-    {/* BLOC IMAGE OPTIONNEL */}
-    <div className="mt-8 glass-card p-2 max-w-6xl mx-auto">
-      <div className="bg-black/40 rounded-xl aspect-[21/9] flex items-center justify-center italic opacity-30">
-        [Image du terrain ou photo de groupe à venir]
+    {/* AFFICHAGE DE L'IMAGE DU TERRAIN */}
+    <div className="max-w-6xl mx-auto">
+      <div className="glass-card p-2 shadow-2xl overflow-hidden">
+        <img 
+          src="/terrain.jpg" 
+          alt="Terrain de l'ASMC Bouglainval" 
+          className="w-full h-[300px] md:h-[500px] object-cover rounded-xl opacity-90"
+          onError={(e) => { e.target.src = "https://via.placeholder.com/1200x500/1e293b/60a5fa?text=Image+Terrain+en+attente"; }}
+        />
       </div>
     </div>
   </div>
