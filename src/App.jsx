@@ -250,7 +250,7 @@ function App() {
                 <div className="flex-grow text-center md:text-left space-y-2">
                   <div className="flex flex-col md:flex-row md:items-center gap-2 md:gap-4">
                     <h3 className="text-xl font-bold uppercase tracking-wide text-white">Fête du Club</h3>
-                    <span className="text-[10px] bg-blue-500/20 text-blue-300 px-2 py-1 rounded border border-blue-500/30 uppercase w-fit mx-auto md:mx-0">Annuel</span>
+                    <span className="text-[10px] bg-blue-500/20 text-blue-300 px-2 py-1 rounded border border-blue-500/30 uppercase w-fit mx-auto md:mx-0">Evènement annuel</span>
                   </div>
                   <p className="text-sm opacity-70 leading-relaxed text-blue-50">
                     Vols de découverte, démonstrations et convivialité au terrain de Bouglainval.
@@ -272,7 +272,7 @@ function App() {
                 <div className="flex-grow text-center md:text-left space-y-2">
                   <div className="flex flex-col md:flex-row md:items-center gap-2 md:gap-4">
                     <h3 className="text-xl font-bold uppercase tracking-wide text-white">Rencontre GPR</h3>
-                    <span className="text-[10px] bg-blue-500/20 text-blue-300 px-2 py-1 rounded border border-blue-500/30 uppercase w-fit mx-auto md:mx-0">Annuel</span>
+                    <span className="text-[10px] bg-blue-500/20 text-blue-300 px-2 py-1 rounded border border-blue-500/30 uppercase w-fit mx-auto md:mx-0">Evènement exceptionnel</span>
                   </div>
                   <p className="text-sm opacity-70 leading-relaxed text-blue-50">
                     Rencontre Grand Planeurs Radiocommandés. Restauration sur place. Accès public gratuit..
