@@ -183,7 +183,7 @@ function App() {
                     </div>
                   </div>
                   <p className="text-xs leading-relaxed opacity-60">
-                    Un Warbird impressionnat symbolisant une lourde histoir de l'aéronautique. Une machine superbe en vol avec une belle inertie et des lignes de vol tendues. Cet avion nécessite un peu d'expérience.
+                    Un Warbird impressionnat symbolisant une lourde histoire de l'aéronautique. Une machine superbe en vol avec une belle inertie et des lignes de vol tendues. Cet avion nécessite un peu d'expérience.
                   </p>
                 </div>
               </div>
