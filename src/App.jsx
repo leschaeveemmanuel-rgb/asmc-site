@@ -42,7 +42,7 @@ function App() {
           onClick={() => setPage('contact')} 
           className={`transition-all duration-300 py-2 ${page === 'contact' ? 'text-blue-400 border-b-2 border-blue-400' : 'hover:text-blue-300'}`}
         >
-          Contact
+          Contacts
         </button>
       </nav>
 
