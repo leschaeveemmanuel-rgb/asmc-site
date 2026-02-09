@@ -159,7 +159,7 @@ function App() {
         </div>
 
         {/* BOUTON MAIL */}
-        <a href="mailto:asmc.bouglainval@gmail.com" className="glass-card w-full p-6 flex items-center justify-center gap-4 group hover:bg-blue-400/10 transition-all border-blue-400/20">
+        <a href="mailto:alain.lernould95@gmail.com" className="glass-card w-full p-6 flex items-center justify-center gap-4 group hover:bg-blue-400/10 transition-all border-blue-400/20">
           <span className="text-2xl text-blue-400">✉</span>
           <span className="text-xl font-black uppercase tracking-[0.3em]">Nous Écrire</span>
         </a>
