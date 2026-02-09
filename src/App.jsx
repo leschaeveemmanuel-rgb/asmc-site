@@ -282,23 +282,38 @@ function App() {
 
               {/* 2. LE TERRAIN ET CARTOGRAPHIE INTERACTIVE */}
               <div className="space-y-6">
-                <div className="glass-card p-8 space-y-6 h-full border-t-2 border-green-500/30">
-                  <h3 className="text-xl font-bold text-green-300 uppercase">Localisation du Terrain</h3>
-                  <p className="text-sm opacity-70">Notre terrain est situé sur la commune de **Bouglainval (28130)**. Cliquez sur les cartes pour agrandir.</p>
+  <div className="glass-card p-8 space-y-6 h-full border-t-2 border-green-500/30">
+    <h3 className="text-xl font-bold text-green-300 uppercase tracking-widest">Localisation du Terrain</h3>
+    
+    <div className="space-y-4">
+      <p className="text-sm opacity-70">
+        Notre terrain est situé sur la commune de **Bouglainval (28130)**. 
+        Utilisez la carte ci-dessous pour zoomer ou basculer en vue satellite.
+      </p>
 
-                  <div className="grid grid-cols-1 gap-6 mt-6">
-                    {/* CARTE PLAN - CLIQUABLE */}
-                    <div className="aspect-video rounded-xl overflow-hidden border border-white/10 shadow-xl group/map">
-                      <a href="/plangoogle.jpg" target="_blank" rel="noopener noreferrer" className="block w-full h-full relative">
-                        <img src="/plangoogle.jpg" alt="Plan" className="w-full h-full object-cover group-hover/map:scale-105 transition-transform duration-500" onError={(e) => e.target.src="https://via.placeholder.com/600x300/1e293b/60a5fa?text=Plan"} />
-                        <div className="absolute inset-0 bg-blue-400/20 opacity-0 group-hover/map:opacity-100 flex items-center justify-center transition-opacity text-white text-xs font-bold tracking-widest">VOIR EN GRAND</div>
-                      </a>
-                    </div>
-                    {/* CARTE SATELLITE - CLIQUABLE */}
-                    <div className="aspect-video rounded-xl overflow-hidden border border-white/10 shadow-xl group/map">
-                      <a href="/photogoogle.jpg" target="_blank" rel="noopener noreferrer" className="block w-full h-full relative">
-                        <img src="/photogoogle.jpg" alt="Satellite" className="w-full h-full object-cover group-hover/map:scale-105 transition-transform duration-500" onError={(e) => e.target.src="https://via.placeholder.com/600x300/1e293b/60a5fa?text=Satellite"} />
-                        <div className="absolute inset-0 bg-blue-400/20 opacity-0 group-hover/map:opacity-100 flex items-center justify-center transition-opacity text-white text-xs font-bold tracking-widest">VOIR EN GRAND</div>
+      {/* CONTENEUR DE LA CARTE GOOGLE MAPS */}
+      <div className="w-full aspect-video rounded-2xl overflow-hidden border border-white/10 shadow-2xl shadow-blue-900/20">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2639.673895914619!2d1.6022!3d48.5444!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDjCsDMyJzM5LjgiTiAxwrAzNicwNy45IkU!5e0!3m2!1sfr!2sfr!4v1700000000000!5m2!1sfr!2sfr" 
+          width="100%" 
+          height="100%" 
+          style={{ border: 0 }} 
+          allowFullScreen="" 
+          loading="lazy" 
+          referrerPolicy="no-referrer-when-downgrade"
+          title="Terrain ASMC Bouglainval"
+          className="grayscale-[20%] contrast-[1.1] opacity-90 hover:opacity-100 transition-opacity"
+        ></iframe>
+      </div>
+
+      <div className="flex justify-center">
+        <a 
+          href="https://maps.google.com/?q=48.5709,1.4953"
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="text-[10px] uppercase tracking-[0.2em] text-blue-400 hover:text-blue-300 transition-colors"
+        >
+          Ouvrir dans Google Maps ↗
                       </a>
                     </div>
                   </div>
