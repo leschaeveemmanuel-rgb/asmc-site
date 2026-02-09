@@ -78,13 +78,52 @@ function App() {
 
         {/* --- PAGE À PROPOS --- */}
         {page === 'apropos' && (
-          <div className="glass-card p-8 md:p-20 text-center animate-in fade-in duration-500">
-            <h2 className="text-3xl md:text-5xl font-bold mb-8 uppercase tracking-widest text-blue-400">Le Club</h2>
-            <p className="text-lg opacity-80 leading-relaxed max-w-3xl mx-auto">
-              L'Avia Sport Modèle Club rassemble des passionnés d'aéromodélisme depuis plus de 20 ans. Notre terrain à Bouglainval offre un cadre idéal pour la pratique du vol radiocommandé.
-            </p>
-          </div>
-        )}
+          <div className="w-full animate-in fade-in slide-in-from-bottom-4 duration-700">
+    <div className="text-center mb-12">
+      <h2 className="text-3xl md:text-5xl font-black uppercase tracking-widest text-blue-400">L'Esprit ASMC</h2>
+      <p className="mt-4 text-blue-100 opacity-60 italic">Plus qu'un club, une passion partagée à Bouglainval</p>
+    </div>
+
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+      
+      {/* COLONNE 1 : L'HISTOIRE */}
+      <div className="glass-card p-8 space-y-4 border-t-2 border-blue-500/30">
+        <h3 className="text-xl font-bold text-blue-300 uppercase tracking-tighter">Notre Histoire</h3>
+        <p className="text-sm opacity-80 leading-relaxed">
+          Depuis plus de 20 ans, l'Avia Sport Modèle Club rassemble les passionnés de construction et de pilotage. 
+          Né de la volonté de partager un savoir-faire technique, le club a vu décoller des centaines de modèles, du planeur au Warbird.
+        </p>
+      </div>
+
+      {/* COLONNE 2 : LE TERRAIN */}
+      <div className="glass-card p-8 space-y-4 border-t-2 border-green-500/30">
+        <h3 className="text-xl font-bold text-green-300 uppercase tracking-tighter">Le Terrain</h3>
+        <p className="text-sm opacity-80 leading-relaxed">
+          Situé à Bouglainval, notre terrain offre un espace de vol dégagé et sécurisé. 
+          C'est ici que nous expérimentons nos réglages et que nous partageons nos sessions dominicales dans une ambiance conviviale.
+        </p>
+      </div>
+
+      {/* COLONNE 3 : LA PHILOSOPHIE */}
+      <div className="glass-card p-8 space-y-4 border-t-2 border-purple-500/30">
+        <h3 className="text-xl font-bold text-purple-300 uppercase tracking-tighter">L'Apprentissage</h3>
+        <p className="text-sm opacity-80 leading-relaxed">
+          La transmission est au cœur de l'ASMC. Nous accueillons les débutants pour les guider dans leurs premiers vols, 
+          en privilégiant toujours la sécurité, l'humilité et le plaisir de voir une machine prendre l'air.
+        </p>
+      </div>
+
+    </div>
+
+    {/* BLOC IMAGE OPTIONNEL */}
+    <div className="mt-8 glass-card p-2 max-w-6xl mx-auto">
+      <div className="bg-black/40 rounded-xl aspect-[21/9] flex items-center justify-center italic opacity-30">
+        [Image du terrain ou photo de groupe à venir]
+      </div>
+    </div>
+  </div>
+)}
+        
 
         {/* --- PAGE MES AVIONS --- */}
         {page === 'avions' && (
