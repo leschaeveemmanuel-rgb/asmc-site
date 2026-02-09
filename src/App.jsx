@@ -95,6 +95,7 @@ function App() {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+              {/*---PREMIER AVION---*/}
               <div className="glass-card overflow-hidden group hover:border-blue-400/50 transition-all duration-500">
                 <div className="aspect-video w-full overflow-hidden bg-black/20">
                   <img 
@@ -124,6 +125,39 @@ function App() {
                   </p>
                 </div>
               </div>
+
+              {/*---SECOND AVION---*/}
+              <div className="glass-card overflow-hidden group hover:border-blue-400/50 transition-all duration-500">
+                <div className="aspect-video w-full overflow-hidden bg-black/20">
+                  <img 
+                    src="/extra330.jpg" 
+                    alt="Extra 330" 
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-90"
+                    onError={(e) => { e.target.src = "https://via.placeholder.com/600x400/1e293b/60a5fa?text=Image+en+attente"; }}
+                  />
+                </div>
+                <div className="p-6 space-y-4">
+                  <div className="flex justify-between items-center">
+                    <h3 className="text-xl font-bold tracking-wider uppercase text-blue-300">Extra 330</h3>
+                    <span className="text-xs bg-blue-500/20 px-2 py-1 rounded border border-blue-500/30 uppercase">Thermique</span>
+                  </div>
+                  <div className="grid grid-cols-2 gap-4 text-sm border-t border-white/5 pt-4 opacity-80">
+                    <div>
+                      <p className="text-[10px] uppercase tracking-tighter opacity-50">Envergure</p>
+                      <p className="font-mono">1600 mm</p>
+                    </div>
+                    <div>
+                      <p className="text-[10px] uppercase tracking-tighter opacity-50">Moteur</p>
+                      <p className="font-mono">OS45</p>
+                    </div>
+                  </div>
+                  <p className="text-xs leading-relaxed opacity-60">
+                    Un avion de voltige performant et précis. Cet appareil demande expérience et dextérité.
+                  </p>
+                </div>
+              </div>
+
+              
 
               <div className="glass-card flex flex-col items-center justify-center p-8 border-dashed border-white/20 opacity-40 hover:opacity-100 transition-all cursor-pointer group">
                 <div className="text-4xl mb-4 group-hover:scale-125 transition-transform text-blue-400">+</div>
