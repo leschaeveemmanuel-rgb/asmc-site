@@ -192,7 +192,7 @@ function App() {
               <div className="glass-card p-6 border-t-2 border-blue-400/30 space-y-4">
                 <h3 className="text-xl font-bold text-blue-300 uppercase tracking-widest">Cotisations Annuelles</h3>
                 <div className="rounded-xl overflow-hidden border border-white/10 shadow-xl">
-                  <img src="/tarifs-2026.jpg" alt="Tableau des tarifs" className="w-full h-auto" onError={(e) => e.target.src="https://via.placeholder.com/600x400/1e293b/60a5fa?text=Tableau+des+Tarifs"} />
+                  <img src="/plangoogle.jpg" alt="Tableau des tarifs" className="w-full h-auto" onError={(e) => e.target.src="https://via.placeholder.com/600x400/1e293b/60a5fa?text=Tableau+des+Tarifs"} />
                 </div>
                 <p className="text-[10px] opacity-40 uppercase text-center italic">Dernière mise à jour : 2026</p>
               </div>
@@ -238,7 +238,7 @@ function App() {
           <div className="w-full animate-in fade-in slide-in-from-bottom-4 duration-700">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-5xl font-black uppercase tracking-widest text-blue-400">Agenda du Club</h2>
-              <p className="mt-4 text-blue-100 opacity-60 italic">Les prochains rendez-vous à ne pas manquer</p>
+              <p className="mt-4 text-blue-100 opacity-60 italic">Les prochains rendez-vous à ne pas manquer en 2026</p>
             </div>
             <div className="max-w-5xl mx-auto space-y-6">
               {/* --- PREMIER ÉVÉNEMENT --- */}
