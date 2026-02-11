@@ -163,6 +163,11 @@ Le dossier complet (Certificat médical, règlement, etc.) sera remis prochainem
             <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8">
               <div className="glass-card p-8 border-t-2 border-blue-400/30">
                 <form onSubmit={handleFormSubmit} className="space-y-4">
+                  {/* TEXTE D'AVERTISSEMENT AU-DESSUS DES CASES */}
+                  <p className="text-xs opacity-70 mb-4 italic">
+                    Veuillez prendre connaissance du document à télécharger "Formulaire d'inscription" pour y consulter tous les détails administratifs.
+                  </p>
+
                   <div className="grid grid-cols-2 gap-4">
                     <input required name="nom" value={formData.nom} onChange={handleInputChange} type="text" placeholder="Nom" className="bg-white/5 border border-white/10 p-3 rounded-lg focus:border-blue-400 outline-none" />
                     <input required name="prenom" value={formData.prenom} onChange={handleInputChange} type="text" placeholder="Prénom" className="bg-white/5 border border-white/10 p-3 rounded-lg focus:border-blue-400 outline-none" />
@@ -226,6 +231,7 @@ Le dossier complet (Certificat médical, règlement, etc.) sera remis prochainem
               <p className="mt-4 text-blue-100 opacity-60 italic">Les prochains rendez-vous à ne pas manquer en 2026</p>
             </div>
             <div className="max-w-5xl mx-auto space-y-6">
+              {/* EVENEMENT 1 */}
               <div className="glass-card p-6 flex flex-col items-stretch gap-6 hover:border-blue-400/30 transition-colors">
                 <div className="flex flex-col md:flex-row items-center gap-6">
                   <div className="flex-shrink-0 w-24 h-24 bg-blue-500/20 rounded-2xl border border-blue-400/30 flex flex-col items-center justify-center">
@@ -245,6 +251,7 @@ Le dossier complet (Certificat médical, règlement, etc.) sera remis prochainem
                   </div>
                 )}
               </div>
+              {/* EVENEMENT 2 */}
               <div className="glass-card p-6 flex flex-col items-stretch gap-6 hover:border-blue-400/30 transition-colors">
                 <div className="flex flex-col md:flex-row items-center gap-6">
                   <div className="flex-shrink-0 w-24 h-24 bg-blue-500/20 rounded-2xl border border-blue-400/30 flex flex-col items-center justify-center">
@@ -298,7 +305,7 @@ Le dossier complet (Certificat médical, règlement, etc.) sera remis prochainem
                   <div className="w-full aspect-square md:aspect-video rounded-xl overflow-hidden border border-white/10 shadow-2xl relative group">
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2639.231904423405!2d1.600311315664!3d48.544!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e3f898a3c8a9a1%3A0x40b82c3688c9460!2sBouglainval!5e0!3m2!1sfr!2sfr!4v1707480000000!5m2!1sfr!2sfr&z=13" width="100%" height="100%" style={{ border: 0 }} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade" className="grayscale-[20%] contrast-[1.1] opacity-90 group-hover:opacity-100 transition-opacity"></iframe>
                   </div>
-                  <div className="mt-6"><a href="https://www.google.com/maps/dir/?api=1&destination=48.544,1.6025" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-3 w-full p-4 rounded-xl bg-blue-500/10 border border-blue-400/30 hover:bg-blue-400/20 text-blue-300 font-bold uppercase text-sm">📍 Itinéraire vers le terrain</a></div>
+                  <div className="mt-6"><a href="https://www.google.com/maps/dir/?api=1&destination=48.544,1.6025" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-3 w-full p-4 rounded-xl bg-blue-500/10 border border-blue-400/30 text-blue-300 font-bold uppercase text-sm">📍 Itinéraire vers le terrain</a></div>
                 </div>
               </div>
             </div>
