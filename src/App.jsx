@@ -261,7 +261,7 @@ function App() {
                 {/* VIGNETTE LOGO */}
                 <div className="flex-shrink-0 w-32 h-32 bg-white/5 rounded-2xl border border-white/10 overflow-hidden flex items-center justify-center p-2">
                   <img 
-                    src="/sponsor1.png" 
+                    src="/sponsor1.jpg" 
                     alt="Logo Partenaire" 
                     className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500" 
                     onError={(e) => { e.target.src = "https://via.placeholder.com/150?text=LOGO"; }} 
@@ -292,7 +292,7 @@ function App() {
                 {/* VIGNETTE LOGO */}
                 <div className="flex-shrink-0 w-32 h-32 bg-white/5 rounded-2xl border border-white/10 overflow-hidden flex items-center justify-center p-2">
                   <img 
-                    src="/sponsor2.png" 
+                    src="/sponsor2.jpg" 
                     alt="Logo Partenaire" 
                     className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500" 
                     onError={(e) => { e.target.src = "https://via.placeholder.com/150?text=LOGO"; }} 
@@ -339,6 +339,9 @@ function App() {
                 </div>
                 <a href="mailto:asmc.bouglainval@gmail.com" className="glass-card w-full p-6 flex items-center justify-center gap-4 group hover:bg-blue-400/10 transition-all border-blue-400/20">
                   <span className="text-2xl text-blue-400">✉</span><span className="text-xl font-black uppercase tracking-[0.3em] group-hover:text-blue-400">Nous Écrire</span>
+                </a>
+                <a href="https://www.facebook.com/profile.php?id=61570488785828" target="_blank" rel="noopener noreferrer" className="glass-card p-6 flex items-center justify-between group hover:bg-blue-600/10 border-blue-600/20 transition-all">
+                  <div className="flex items-center gap-4"><div className="w-12 h-12 bg-blue-600/20 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform"><img src="/logo-fb.png" className="w-8 h-8 object-contain" /></div><div><p className="text-sm font-bold uppercase tracking-widest text-blue-100">Suivez-nous</p><p className="text-[10px] text-blue-400 font-bold uppercase mt-1">Cliquez ici</p></div></div><span className="text-blue-400 opacity-0 group-hover:opacity-100 transition-opacity">↗</span>
                 </a>
               </div>
               <div className="space-y-6">
