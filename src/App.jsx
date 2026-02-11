@@ -4,45 +4,6 @@ function App() {
   const [page, setPage] = useState('accueil');
   const [expandedEvent, setExpandedEvent] = useState(null);
 
-  // --- GESTION DU FORMULAIRE D'INSCRIPTION ---
-  const [formData, setFormData] = useState({
-    nom: '', prenom: '', email: '', telephone: '',
-    adresse: '', cp: '', ville: '',
-    numLicence: '', numTelepilote: '', pratique: 'Avion'
-  });
-
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
-  };
-
-  const handleFormSubmit = (e) => {
-    e.preventDefault();
-    const subject = `Demande d'inscription ASMC - ${formData.nom} ${formData.prenom}`;
-    const body = `Bonjour,
-
-Voici une nouvelle demande d'inscription pour le club ASMC :
-
-IDENTITÉ :
-- Nom : ${formData.nom}
-- Prénom : ${formData.prenom}
-- Email : ${formData.email}
-- Téléphone : ${formData.telephone}
-
-ADRESSE :
-- ${formData.adresse}
-- ${formData.cp} ${formData.ville}
-
-INFOS TECHNIQUES :
-- N° Licence FFAM : ${formData.numLicence || 'Non renseigné'}
-- N° Exploitant (AlphaTango) : ${formData.numTelepilote || 'Non renseigné'}
-- Pratique : ${formData.pratique}
-
-Le dossier complet (Certificat médical, règlement, etc.) sera remis prochainement.`;
-
-    window.location.href = `mailto:asmc.bouglainval@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-  };
-
   return (
     <div className="min-h-screen p-4 md:p-8 flex flex-col items-center gap-8 text-white font-sans">
       
@@ -158,44 +119,43 @@ Le dossier complet (Certificat médical, règlement, etc.) sera remis prochainem
           <div className="w-full animate-in fade-in slide-in-from-bottom-4 duration-700">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-5xl font-black uppercase tracking-widest text-blue-400">Rejoindre l'ASMC</h2>
-              <p className="mt-4 text-blue-100 opacity-60 italic">Remplissez votre fiche d'adhésion en ligne</p>
+              <p className="mt-4 text-blue-100 opacity-60 italic">Procédure d'adhésion</p>
             </div>
             <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8">
+              {/* BLOC DE TEXTE (REMPLACE LE FORMULAIRE) */}
               <div className="glass-card p-8 border-t-2 border-blue-400/30">
-                <form onSubmit={handleFormSubmit} className="space-y-4">
-                  {/* TEXTE D'AVERTISSEMENT AU-DESSUS DES CASES */}
-                  <p className="text-xs opacity-70 mb-4 italic">
-                    Veuillez prendre connaissance du document à télécharger "Formulaire d'inscription" pour y consulter tous les détails administratifs.
+                <div className="space-y-6 text-sm leading-relaxed opacity-90">
+                  <p className="font-bold text-blue-300 uppercase tracking-widest mb-4 text-lg text-center">Informations importantes</p>
+                  
+                  <p>
+                    Pour devenir membre de l'ASMC Bouglainval, nous vous invitons à télécharger et à prendre connaissance du document <strong>"Formulaire d'inscription"</strong> disponible ci-contre.
+                  </p>
+                  
+                  <p>
+                    Ce document regroupe tous les détails administratifs indispensables, ainsi que les engagements relatifs à la sécurité et à la vie du club.
                   </p>
 
-                  <div className="grid grid-cols-2 gap-4">
-                    <input required name="nom" value={formData.nom} onChange={handleInputChange} type="text" placeholder="Nom" className="bg-white/5 border border-white/10 p-3 rounded-lg focus:border-blue-400 outline-none" />
-                    <input required name="prenom" value={formData.prenom} onChange={handleInputChange} type="text" placeholder="Prénom" className="bg-white/5 border border-white/10 p-3 rounded-lg focus:border-blue-400 outline-none" />
-                  </div>
-                  <div className="grid grid-cols-2 gap-4">
-                    <input required name="email" value={formData.email} onChange={handleInputChange} type="email" placeholder="Email" className="bg-white/5 border border-white/10 p-3 rounded-lg focus:border-blue-400 outline-none" />
-                    <input required name="telephone" value={formData.telephone} onChange={handleInputChange} type="tel" placeholder="Téléphone" className="bg-white/5 border border-white/10 p-3 rounded-lg focus:border-blue-400 outline-none" />
-                  </div>
-                  <input name="adresse" value={formData.adresse} onChange={handleInputChange} type="text" placeholder="Adresse postale" className="w-full bg-white/5 border border-white/10 p-3 rounded-lg focus:border-blue-400 outline-none" />
-                  <div className="grid grid-cols-2 gap-4">
-                    <input name="cp" value={formData.cp} onChange={handleInputChange} type="text" placeholder="Code Postal" className="bg-white/5 border border-white/10 p-3 rounded-lg focus:border-blue-400 outline-none" />
-                    <input name="ville" value={formData.ville} onChange={handleInputChange} type="text" placeholder="Ville" className="bg-white/5 border border-white/10 p-3 rounded-lg focus:border-blue-400 outline-none" />
-                  </div>
-                  <div className="grid grid-cols-2 gap-4 pt-4 border-t border-white/5">
-                    <input name="numLicence" value={formData.numLicence} onChange={handleInputChange} type="text" placeholder="N° Licence FFAM" className="bg-white/5 border border-white/10 p-3 rounded-lg outline-none" />
-                    <input name="numTelepilote" value={formData.numTelepilote} onChange={handleInputChange} type="text" placeholder="N° Exploitant (AlphaTango)" className="bg-white/5 border border-white/10 p-3 rounded-lg outline-none" />
+                  <div className="p-6 rounded-xl bg-blue-500/5 border border-blue-400/20 italic space-y-4">
+                    <p>
+                      <strong>Note :</strong> Votre inscription ne pourra être officiellement validée qu'après la réception de votre dossier complet (formulaire papier dûment rempli, règlement de la cotisation et certificat médical à jour).
+                    </p>
+                    <p>
+                      Le dossier est à faire parvenir à l'adresse suivante :
+                    </p>
+                    <p className="not-italic font-bold text-center border-t border-blue-400/10 pt-4">
+                      M. Alain Lernould<br/>
+                      27 rue de Grez — 28170 FONTAINE LES RIBOUTS<br/>
+                      (Lieu dit : BOUTRY)
+                    </p>
                   </div>
 
-                  <div className="p-4 rounded-xl bg-blue-500/5 border border-blue-400/20 text-xs opacity-80 leading-relaxed italic mt-4">
-                    Note : Votre inscription ne sera validée qu'après réception de votre règlement et de votre certificat médical à l'adresse suivante : <br/>
-                    <strong>M. Alain Lernould - 27 rue de Grez, 28170 Fontaine les Ribouts (Lieu-dit : Boutry).</strong>
-                  </div>
-
-                  <button type="submit" className="w-full bg-blue-500 hover:bg-blue-400 text-white font-black py-4 rounded-xl transition-all shadow-lg mt-2 uppercase tracking-widest">
-                    Envoyer ma demande d'adhésion
-                  </button>
-                </form>
+                  <p className="text-center pt-4 opacity-70">
+                    N'hésitez pas à venir nous rencontrer au terrain pour échanger directement avec les membres du bureau.
+                  </p>
+                </div>
               </div>
+
+              {/* COLONNE DROITE : TARIFS ET DOCUMENTS */}
               <div className="space-y-6">
                 <div className="glass-card p-6 border-t-2 border-yellow-400/30 space-y-4">
                   <h3 className="text-xl font-bold text-yellow-300 uppercase tracking-widest">Cotisations 2026</h3>
