@@ -139,7 +139,7 @@ function App() {
                   <p className="font-bold text-blue-300 uppercase tracking-widest mb-4 text-lg text-center">Informations importantes</p>
                   
                   <p>
-                    Pour devenir membre de l'ASMC Bouglainval, nous vous invitons à télécharger et à prendre connaissance des documents <strong>"Formulaire d'inscription"</strong> et <strong>"Règlement intérieur"</strong>disponibles ci-contre.
+                    Pour devenir membre de l'ASMC Bouglainval, nous vous invitons à télécharger et à prendre connaissance des documents <strong>"Formulaire d'inscription"</strong> et <strong>"Règlement intérieur"</strong> disponibles ci-contre.
                   </p>
                   
                   <p>
@@ -272,16 +272,16 @@ function App() {
                   <div className="space-y-1">
                     <h3 className="text-xl font-bold uppercase tracking-wide text-white">NASA</h3>
                     <a 
-                      href="https://www.nasa.com" 
+                      href="https://www.nasa.gov" 
                       target="_blank" 
                       rel="noopener noreferrer" 
                       className="text-blue-400 hover:text-blue-300 text-sm font-bold transition-colors inline-block"
                     >
-                      www.nasa.com ↗
+                      www.nasa.gov ↗
                     </a>
                   </div>
                   <p className="text-sm opacity-70 leading-relaxed max-w-2xl">
-                    National Aeronautics and Space Administration. NASA. Toute l'histoire de la conquëte spatiale résumée en ces quatres lettres.
+                    National Aeronautics and Space Administration. NASA. Toute l'histoire de la conquête spatiale résumée en ces quatre lettres.
                   </p>
                 </div>
               </div>
@@ -312,7 +312,7 @@ function App() {
                     </a>
                   </div>
                   <p className="text-sm opacity-70 leading-relaxed max-w-2xl">
-                    Constructeur aéronautique américain emblématique des 60's. A l'origine de l'avion espion U2 et du chasseur furtif F-117 Night Hawk, entre autres..
+                    Constructeur aéronautique américain emblématique des 60's. A l'origine de l'avion espion U2 et du chasseur furtif F-117 Night Hawk, entre autres.
                   </p>
                 </div>
               </div>
@@ -339,9 +339,6 @@ function App() {
                 </div>
                 <a href="mailto:asmc.bouglainval@gmail.com" className="glass-card w-full p-6 flex items-center justify-center gap-4 group hover:bg-blue-400/10 transition-all border-blue-400/20">
                   <span className="text-2xl text-blue-400">✉</span><span className="text-xl font-black uppercase tracking-[0.3em] group-hover:text-blue-400">Nous Écrire</span>
-                </a>
-                <a href="https://www.facebook.com/profile.php?id=61570488785828" target="_blank" rel="noopener noreferrer" className="glass-card p-6 flex items-center justify-between group hover:bg-blue-600/10 border-blue-600/20 transition-all">
-                  <div className="flex items-center gap-4"><div className="w-12 h-12 bg-blue-600/20 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform"><img src="/logo-fb.png" className="w-8 h-8 object-contain" /></div><div><p className="text-sm font-bold uppercase tracking-widest text-blue-100">Suivez-nous</p><p className="text-[10px] text-blue-400 font-bold uppercase mt-1">Cliquez ici</p></div></div><span className="text-blue-400 opacity-0 group-hover:opacity-100 transition-opacity">↗</span>
                 </a>
               </div>
               <div className="space-y-6">
