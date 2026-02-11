@@ -239,7 +239,7 @@ function App() {
           <div className="w-full animate-in fade-in slide-in-from-bottom-4 duration-700">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-5xl font-black uppercase tracking-widest text-blue-400">Nos Partenaires</h2>
-              <p className="mt-4 text-blue-100 opacity-60 italic">Ils soutiennent l'ASMC Bouglainval et nous les remercions</p>
+              <p className="mt-4 text-blue-100 opacity-60 italic">Ils soutiennent l'ASMC Bouglainval et nous les remercions.</p>
             </div>
             <div className="max-w-5xl mx-auto space-y-6">
               {/* PARTENAIRE 1 */}
