@@ -75,6 +75,8 @@ function App() {
               <p className="mt-4 text-blue-100 opacity-60 italic">Présentation de quelques avions présents sur le terrain de l'ASMC</p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+
+              {/* NOUVEL AVION BLOC A RECOPIER*/}
               {/* CESSNA */}
               <div className="glass-card overflow-hidden group hover:border-blue-400/50 transition-all duration-500">
                 <div className="aspect-video w-full overflow-hidden bg-black/20"><img src="/cessna172.jpg" alt="Cessna 172" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-90" onError={(e) => e.target.src = "https://via.placeholder.com/600x400?text=Cessna"} /></div>
@@ -87,6 +89,9 @@ function App() {
                   <p className="text-xs leading-relaxed opacity-60 italic">Un avion de début stable et précis, idéal pour les sessions d'apprentissage.</p>
                 </div>
               </div>
+              {/* FIN DE BLOC A RECOPIER*/}
+
+              {/* NOUVEL AVION BLOC A RECOPIER*/}
               {/* EXTRA */}
               <div className="glass-card overflow-hidden group hover:border-blue-400/50 transition-all duration-500">
                 <div className="aspect-video w-full overflow-hidden bg-black/20"><img src="/extra330.jpg" alt="Extra 330" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-90" onError={(e) => e.target.src = "https://via.placeholder.com/600x400?text=Extra"} /></div>
@@ -99,6 +104,9 @@ function App() {
                   <p className="text-xs leading-relaxed opacity-60 italic">Un avion de voltige performant et précis pour pilotes confirmés.</p>
                 </div>
               </div>
+              {/* FIN DE BLOC A RECOPIER*/}
+
+              {/* NOUVEL AVION BLOC A RECOPIER*/}
               {/* CORSAIR */}
               <div className="glass-card overflow-hidden group hover:border-blue-400/50 transition-all duration-500">
                 <div className="aspect-video w-full overflow-hidden bg-black/20"><img src="/corsair2.jpg" alt="Corsair F4-U" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-90" onError={(e) => e.target.src = "https://via.placeholder.com/600x400?text=Corsair"} /></div>
@@ -111,6 +119,8 @@ function App() {
                   <p className="text-xs leading-relaxed opacity-60 italic">Un Warbird légendaire nécessitant une certaine expérience de pilotage.</p>
                 </div>
               </div>
+              {/* FIN DE BLOC A RECOPIER*/}
+
             </div>
           </div>
         )}
@@ -190,7 +200,7 @@ function App() {
               <p className="mt-4 text-blue-100 opacity-60 italic">Les prochains rendez-vous à ne pas manquer en 2026</p>
             </div>
             <div className="max-w-5xl mx-auto space-y-6">
-              {/* EVENEMENT 1 */}
+              {/* EVENEMENT 1 BLOC A RECOPIER*/}
               <div className="glass-card p-6 flex flex-col items-stretch gap-6 hover:border-blue-400/30 transition-colors">
                 <div className="flex flex-col md:flex-row items-center gap-6">
                   <div className="flex-shrink-0 w-24 h-24 bg-blue-500/20 rounded-2xl border border-blue-400/30 flex flex-col items-center justify-center">
@@ -210,7 +220,9 @@ function App() {
                   </div>
                 )}
               </div>
-              {/* EVENEMENT 2 */}
+              {/* FIN DE BLOC A RECOPIER*/}
+
+              {/* EVENEMENT 2 BLOC A RECOPIER*/}
               <div className="glass-card p-6 flex flex-col items-stretch gap-6 hover:border-blue-400/30 transition-colors">
                 <div className="flex flex-col md:flex-row items-center gap-6">
                   <div className="flex-shrink-0 w-24 h-24 bg-blue-500/20 rounded-2xl border border-blue-400/30 flex flex-col items-center justify-center">
@@ -229,6 +241,8 @@ function App() {
                     <p className="text-sm leading-relaxed opacity-90 whitespace-pre-line">L'ASMC accueille la rencontre nationale des GPR. Remorquage assuré et camping sur place. Accès gratuit pour le public.</p>
                   </div>
                 )}
+                {/* FIN DE BLOC A RECOPIER*/}
+
               </div>
             </div>
           </div>
@@ -242,7 +256,7 @@ function App() {
               <p className="mt-4 text-blue-100 opacity-60 italic">Ils soutiennent l'ASMC Bouglainval et nous les remercions.</p>
             </div>
             <div className="max-w-5xl mx-auto space-y-6">
-              {/* PARTENAIRE 1 */}
+              {/* PARTENAIRE 1 BLOC A RECOPIER*/}
               <div className="glass-card p-6 flex flex-col md:flex-row items-center gap-8 hover:border-blue-400/30 transition-colors group">
                 {/* VIGNETTE LOGO */}
                 <div className="flex-shrink-0 w-32 h-32 bg-white/5 rounded-2xl border border-white/10 overflow-hidden flex items-center justify-center p-2">
@@ -271,7 +285,9 @@ function App() {
                   </p>
                 </div>
               </div>
-              {/* PARTENAIRE 2 */}
+              {/* FIN DE BLOC A RECOPIER*/}
+
+              {/* PARTENAIRE 2 BLOC A RECOPIER */}
               <div className="glass-card p-6 flex flex-col md:flex-row items-center gap-8 hover:border-blue-400/30 transition-colors group">
                 {/* VIGNETTE LOGO */}
                 <div className="flex-shrink-0 w-32 h-32 bg-white/5 rounded-2xl border border-white/10 overflow-hidden flex items-center justify-center p-2">
@@ -300,6 +316,7 @@ function App() {
                   </p>
                 </div>
               </div>
+              {/* FIN DE BLOC A RECOPIER*/}
             </div>
           </div>
         )}
