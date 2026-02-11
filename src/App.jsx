@@ -261,7 +261,7 @@ function App() {
                 {/* VIGNETTE LOGO */}
                 <div className="flex-shrink-0 w-32 h-32 bg-white/5 rounded-2xl border border-white/10 overflow-hidden flex items-center justify-center p-2">
                   <img 
-                    src="/sponsor1.jpg" 
+                    src="/sponsor1.png" 
                     alt="Logo Partenaire" 
                     className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500" 
                     onError={(e) => { e.target.src = "https://via.placeholder.com/150?text=LOGO"; }} 
@@ -292,7 +292,7 @@ function App() {
                 {/* VIGNETTE LOGO */}
                 <div className="flex-shrink-0 w-32 h-32 bg-white/5 rounded-2xl border border-white/10 overflow-hidden flex items-center justify-center p-2">
                   <img 
-                    src="/sponsor2.jpg" 
+                    src="/sponsor2.png" 
                     alt="Logo Partenaire" 
                     className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500" 
                     onError={(e) => { e.target.src = "https://via.placeholder.com/150?text=LOGO"; }} 
