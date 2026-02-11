@@ -51,7 +51,7 @@ function App() {
               </div>
               <div className="glass-card p-8 space-y-4 border-t-2 border-green-500/30">
                 <h3 className="text-xl font-bold text-green-300 uppercase tracking-tighter">Le Terrain</h3>
-                <p className="text-sm opacity-80 leading-relaxed">Notre plateforme à Bouglainval offre un espace de vol dégagé, idéal pour toutes les catégories de modèles, du planeur au moteur thermique. Avec une piste en gazon de 150 m de long sur 15 m de large orientée Nord - Sud, nous offrons de grande possibilité d'exploitation.</p>
+                <p className="text-sm opacity-80 leading-relaxed">Notre plateforme à Bouglainval offre un espace de vol dégagé, idéal pour toutes les catégories de modèles, du planeur au moteur thermique. Avec une piste en gazon de 150 m de long sur 15 m de large orientée Nord - Sud, nous offrons de grandes possibilités d'exploitation.</p>
               </div>
               <div className="glass-card p-8 space-y-4 border-t-2 border-purple-500/30">
                 <h3 className="text-xl font-bold text-purple-300 uppercase tracking-tighter">L'Apprentissage</h3>
