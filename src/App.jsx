@@ -364,13 +364,13 @@ function App() {
                   </div>
                   <div className="flex-shrink-0 w-24 h-24 group/img">
                     <a href="/image.png" target="_blank" rel="noopener noreferrer" className="block w-full h-full relative">
-                      <img src="/image.png" alt="Affiche" className="w-full h-full object-cover rounded-xl border border-white/10" onError={(e) => { e.target.src = "https://via.placeholder.com/100?text=Affiche"; }} />
+                      <img src="/avion-ecole.jpg" alt="Affiche" className="w-full h-full object-cover rounded-xl border border-white/10" onError={(e) => { e.target.src = "https://via.placeholder.com/100?text=Affiche"; }} />
                     </a>
                   </div>
                 </div>
 
                 {/* BLOC DÉTAILLÉ (Multi-lignes) */}
-                {expandedEvent === 'fete' && (
+                {expandedEvent === 'interclub' && (
                   <div className="mt-4 p-6 rounded-xl bg-white/5 border-t border-white/10 animate-in slide-in-from-top-4 duration-300">
                     <p className="text-sm leading-relaxed opacity-90 whitespace-pre-line">
                       La traditionnelle rencontre Interclubs de l'ASMC du mois de Septembre.{"\n\n"}
