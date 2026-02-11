@@ -339,6 +339,52 @@ function App() {
                 )}
               </div>
 
+              {/* --- ÉVÉNEMENT 3 : Rencontre Interclubs --- */}
+              <div className="glass-card p-6 flex flex-col items-stretch gap-6 hover:border-blue-400/30 transition-colors">
+                <div className="flex flex-col md:flex-row items-center gap-6">
+                  <div className="flex-shrink-0 w-24 h-24 bg-blue-500/20 rounded-2xl border border-blue-400/30 flex flex-col items-center justify-center">
+                    <span className="text-xs uppercase tracking-tighter opacity-60 text-blue-100">Septembre</span>
+                    <span className="text-3xl font-black text-blue-400">12</span>
+                  </div>
+                  <div className="flex-grow text-center md:text-left space-y-2">
+                    <div className="flex flex-col md:flex-row md:items-center gap-2 md:gap-4">
+                      <h3 className="text-xl font-bold uppercase tracking-wide text-white">Rencontre Interclubs</h3>
+                      <span className="text-[10px] bg-blue-500/20 text-blue-300 px-2 py-1 rounded border border-blue-500/30 uppercase w-fit mx-auto md:mx-0">Annuel</span>
+                    </div>
+                    {/* DESCRIPTION COURTE (Vignette) */}
+                    <p className="text-sm opacity-70"> Convivialité au terrain de Bouglainval.</p>
+                    
+                    {/* LIEN EN SAVOIR PLUS */}
+                    <button 
+                      onClick={() => setExpandedEvent(expandedEvent === 'interclub' ? null : 'interclub')}
+                      className="text-[10px] font-black uppercase tracking-[0.2em] text-blue-400 hover:text-blue-300 transition-colors pt-2"
+                    >
+                      {expandedEvent === 'interclub' ? '▲ Réduire' : '▼ En savoir plus...'}
+                    </button>
+                  </div>
+                  <div className="flex-shrink-0 w-24 h-24 group/img">
+                    <a href="/image.png" target="_blank" rel="noopener noreferrer" className="block w-full h-full relative">
+                      <img src="/image.png" alt="Affiche" className="w-full h-full object-cover rounded-xl border border-white/10" onError={(e) => { e.target.src = "https://via.placeholder.com/100?text=Affiche"; }} />
+                    </a>
+                  </div>
+                </div>
+
+                {/* BLOC DÉTAILLÉ (Multi-lignes) */}
+                {expandedEvent === 'fete' && (
+                  <div className="mt-4 p-6 rounded-xl bg-white/5 border-t border-white/10 animate-in slide-in-from-top-4 duration-300">
+                    <p className="text-sm leading-relaxed opacity-90 whitespace-pre-line">
+                      La traditionnelle rencontre Interclubs de l'ASMC du mois de Septembre.{"\n\n"}
+                      Au programme :{"\n"}
+                      • Paëlla géante le midi (sur réservation){"\n"}
+                      • Vols de démonstration de vos plus beaux modèles{"\n"}
+                      • Ateliers découverte pour les enfants{"\n"}
+                      • Baptêmes de l'air en double commande{"\n\n"}
+                      Venez nombreux partager votre passion dans une ambiance familiale et conviviale.
+                    </p>
+                  </div>
+                )}
+              </div>
+
             </div>
           </div>
         )}
