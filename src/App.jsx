@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 
 function App() {
   const [page, setPage] = useState('accueil');
+  // État pour gérer l'affichage des détails du calendrier
+  const [expandedEvent, setExpandedEvent] = useState(null);
 
   return (
     <div className="min-h-screen p-4 md:p-8 flex flex-col items-center gap-8 text-white font-sans">
@@ -243,50 +245,100 @@ function App() {
               <p className="mt-4 text-blue-100 opacity-60 italic">Les prochains rendez-vous à ne pas manquer en 2026</p>
             </div>
             <div className="max-w-5xl mx-auto space-y-6">
-              {/* --- PREMIER ÉVÉNEMENT --- */}
-              <div className="glass-card p-6 flex flex-col md:flex-row items-center gap-6 hover:border-blue-400/30 transition-colors">
-                <div className="flex-shrink-0 w-24 h-24 bg-blue-500/20 rounded-2xl border border-blue-400/30 flex flex-col items-center justify-center">
-                  <span className="text-xs uppercase tracking-tighter opacity-60 text-blue-100">Juillet</span>
-                  <span className="text-3xl font-black text-blue-400">10</span>
-                </div>
-                <div className="flex-grow text-center md:text-left space-y-2">
-                  <div className="flex flex-col md:flex-row md:items-center gap-2 md:gap-4">
-                    <h3 className="text-xl font-bold uppercase tracking-wide text-white">Fête du Club</h3>
-                    <span className="text-[10px] bg-blue-500/20 text-blue-300 px-2 py-1 rounded border border-blue-500/30 uppercase w-fit mx-auto md:mx-0">Evènement annuel</span>
+              
+              {/* --- ÉVÉNEMENT 1 : FÊTE DU CLUB --- */}
+              <div className="glass-card p-6 flex flex-col items-stretch gap-6 hover:border-blue-400/30 transition-colors">
+                <div className="flex flex-col md:flex-row items-center gap-6">
+                  <div className="flex-shrink-0 w-24 h-24 bg-blue-500/20 rounded-2xl border border-blue-400/30 flex flex-col items-center justify-center">
+                    <span className="text-xs uppercase tracking-tighter opacity-60 text-blue-100">Juillet</span>
+                    <span className="text-3xl font-black text-blue-400">10</span>
                   </div>
-                  <p className="text-sm opacity-70 leading-relaxed text-blue-50">
-                    Vols de découverte, démonstrations et convivialité au terrain de Bouglainval.
-                  </p>
-                </div>
-                <div className="flex-shrink-0 w-24 h-24 group/img">
-                  <a href="/image.png" target="_blank" rel="noopener noreferrer" className="block w-full h-full relative">
-                    <img src="/image.png" alt="Affiche" className="w-full h-full object-cover rounded-xl border border-white/10 group-hover/img:border-blue-400/50 transition-all shadow-lg" onError={(e) => { e.target.src = "https://via.placeholder.com/100?text=Affiche"; }} />
-                    <div className="absolute inset-0 bg-blue-400/20 opacity-0 group-hover/img:opacity-100 flex items-center justify-center rounded-xl transition-opacity text-white text-xs font-bold">VOIR</div>
-                  </a>
-                </div>
-              </div>
-              {/* --- SECOND ÉVÉNEMENT --- */}
-              <div className="glass-card p-6 flex flex-col md:flex-row items-center gap-6 hover:border-blue-400/30 transition-colors">
-                <div className="flex-shrink-0 w-24 h-24 bg-blue-500/20 rounded-2xl border border-blue-400/30 flex flex-col items-center justify-center">
-                  <span className="text-xs uppercase tracking-tighter opacity-60 text-blue-100">Août</span>
-                  <span className="text-3xl font-black text-blue-400">22, 23, 24</span>
-                </div>
-                <div className="flex-grow text-center md:text-left space-y-2">
-                  <div className="flex flex-col md:flex-row md:items-center gap-2 md:gap-4">
-                    <h3 className="text-xl font-bold uppercase tracking-wide text-white">Rencontre GPR</h3>
-                    <span className="text-[10px] bg-blue-500/20 text-blue-300 px-2 py-1 rounded border border-blue-500/30 uppercase w-fit mx-auto md:mx-0">Evènement exceptionnel</span>
+                  <div className="flex-grow text-center md:text-left space-y-2">
+                    <div className="flex flex-col md:flex-row md:items-center gap-2 md:gap-4">
+                      <h3 className="text-xl font-bold uppercase tracking-wide text-white">Fête du Club</h3>
+                      <span className="text-[10px] bg-blue-500/20 text-blue-300 px-2 py-1 rounded border border-blue-500/30 uppercase w-fit mx-auto md:mx-0">Annuel</span>
+                    </div>
+                    {/* DESCRIPTION COURTE (Vignette) */}
+                    <p className="text-sm opacity-70">Vols de découverte, démonstrations et convivialité au terrain de Bouglainval.</p>
+                    
+                    {/* LIEN EN SAVOIR PLUS */}
+                    <button 
+                      onClick={() => setExpandedEvent(expandedEvent === 'fete' ? null : 'fete')}
+                      className="text-[10px] font-black uppercase tracking-[0.2em] text-blue-400 hover:text-blue-300 transition-colors pt-2"
+                    >
+                      {expandedEvent === 'fete' ? '▲ Réduire' : '▼ En savoir plus...'}
+                    </button>
                   </div>
-                  <p className="text-sm opacity-70 leading-relaxed text-blue-50">
-                    Rencontre Grand Planeurs Radiocommandés. Restauration sur place. Accès public gratuit..
-                  </p>
+                  <div className="flex-shrink-0 w-24 h-24 group/img">
+                    <a href="/image.png" target="_blank" rel="noopener noreferrer" className="block w-full h-full relative">
+                      <img src="/image.png" alt="Affiche" className="w-full h-full object-cover rounded-xl border border-white/10" onError={(e) => { e.target.src = "https://via.placeholder.com/100?text=Affiche"; }} />
+                    </a>
+                  </div>
                 </div>
-                <div className="flex-shrink-0 w-24 h-24 group/img">
-                  <a href="/gpr.png" target="_blank" rel="noopener noreferrer" className="block w-full h-full relative">
-                    <img src="/gpr.png" alt="Affiche" className="w-full h-full object-cover rounded-xl border border-white/10 group-hover/img:border-blue-400/50 transition-all shadow-lg" onError={(e) => { e.target.src = "https://via.placeholder.com/100?text=Affiche"; }} />
-                    <div className="absolute inset-0 bg-blue-400/20 opacity-0 group-hover/img:opacity-100 flex items-center justify-center rounded-xl transition-opacity text-white text-xs font-bold">VOIR</div>
-                  </a>
-                </div>
+
+                {/* BLOC DÉTAILLÉ (Multi-lignes) */}
+                {expandedEvent === 'fete' && (
+                  <div className="mt-4 p-6 rounded-xl bg-white/5 border-t border-white/10 animate-in slide-in-from-top-4 duration-300">
+                    <p className="text-sm leading-relaxed opacity-90 whitespace-pre-line">
+                      La traditionnelle fête de l'ASMC est le moment fort de notre saison !{"\n\n"}
+                      Au programme :{"\n"}
+                      • Barbecue géant le midi (sur réservation){"\n"}
+                      • Vols de démonstration de nos plus beaux modèles{"\n"}
+                      • Ateliers découverte pour les enfants{"\n"}
+                      • Baptêmes de l'air en double commande{"\n\n"}
+                      Venez nombreux partager votre passion dans une ambiance familiale et détendue.
+                    </p>
+                  </div>
+                )}
               </div>
+
+              {/* --- ÉVÉNEMENT 2 : RENCONTRE GPR --- */}
+              <div className="glass-card p-6 flex flex-col items-stretch gap-6 hover:border-blue-400/30 transition-colors">
+                <div className="flex flex-col md:flex-row items-center gap-6">
+                  <div className="flex-shrink-0 w-24 h-24 bg-blue-500/20 rounded-2xl border border-blue-400/30 flex flex-col items-center justify-center">
+                    <span className="text-xs uppercase tracking-tighter opacity-60 text-blue-100">Août</span>
+                    <span className="text-3xl font-black text-blue-400">22-24</span>
+                  </div>
+                  <div className="flex-grow text-center md:text-left space-y-2">
+                    <div className="flex flex-col md:flex-row md:items-center gap-2 md:gap-4">
+                      <h3 className="text-xl font-bold uppercase tracking-wide text-white">Rencontre GPR</h3>
+                      <span className="text-[10px] bg-blue-500/20 text-blue-300 px-2 py-1 rounded border border-blue-500/30 uppercase w-fit mx-auto md:mx-0">Exceptionnel</span>
+                    </div>
+                    {/* DESCRIPTION COURTE (Vignette) */}
+                    <p className="text-sm opacity-70">Rencontre Grand Planeurs Radiocommandés. Restauration sur place.</p>
+                    
+                    {/* LIEN EN SAVOIR PLUS */}
+                    <button 
+                      onClick={() => setOpenEvent(openEvent === 'gpr' ? null : 'gpr')}
+                      onClick={() => setExpandedEvent(expandedEvent === 'gpr' ? null : 'gpr')}
+                      className="text-[10px] font-black uppercase tracking-[0.2em] text-blue-400 hover:text-blue-300 transition-colors pt-2"
+                    >
+                      {expandedEvent === 'gpr' ? '▲ Réduire' : '▼ En savoir plus...'}
+                    </button>
+                  </div>
+                  <div className="flex-shrink-0 w-24 h-24 group/img">
+                    <a href="/gpr.png" target="_blank" rel="noopener noreferrer" className="block w-full h-full relative">
+                      <img src="/gpr.png" alt="Affiche" className="w-full h-full object-cover rounded-xl border border-white/10" onError={(e) => { e.target.src = "https://via.placeholder.com/100?text=Affiche"; }} />
+                    </a>
+                  </div>
+                </div>
+
+                {/* BLOC DÉTAILLÉ (Multi-lignes) */}
+                {expandedEvent === 'gpr' && (
+                  <div className="mt-4 p-6 rounded-xl bg-white/5 border-t border-white/10 animate-in slide-in-from-top-4 duration-300">
+                    <p className="text-sm leading-relaxed opacity-90 whitespace-pre-line">
+                      L'ASMC est fière d'accueillir la rencontre nationale des Grands Planeurs Radiocommandés.{"\n\n"}
+                      Informations Pilotes :{"\n"}
+                      • Remorquage assuré par nos remorqueurs thermiques puissants{"\n"}
+                      • Camping possible sur le terrain (sanitaires disponibles){"\n"}
+                      • Inscription obligatoire via le formulaire PDF section "S'inscrire"{"\n\n"}
+                      Informations Public :{"\n"}
+                      Accès gratuit pour admirer ces géants des airs (certains font plus de 6 mètres d'envergure !). Restauration rapide et buvette sur place tout le week-end.
+                    </p>
+                  </div>
+                )}
+              </div>
+
             </div>
           </div>
         )}
@@ -312,10 +364,6 @@ function App() {
                     <div>
                       <p className="text-xs uppercase tracking-widest text-blue-400">Secrétaire Général</p>
                       <p className="text-lg font-bold">Alain Lernould</p>
-                      {/* ADRESSE MASQUÉE 
-                      <p className="text-sm opacity-70">27 rue de Grez — 28170 FONTAINE LES RIBOUTS</p>
-                      <p className="text-sm opacity-70 italic">Lieu dit : BOUTRY</p>
-                      */}
                       <p className="text-sm opacity-70 mt-2">Tél : 07 77 28 02 57</p>
                       <p className="text-sm opacity-70 italic">alain.lernould95@gmail.com</p>
                     </div>
@@ -346,10 +394,10 @@ function App() {
                   <h3 className="text-xl font-bold text-green-300 uppercase mb-4 tracking-widest">Localisation</h3>
                   <p className="text-sm opacity-70 mb-6">Le terrain se situe à **Bouglainval (28130)**.</p>
                   <div className="w-full aspect-square md:aspect-video rounded-xl overflow-hidden border border-white/10 shadow-2xl relative group">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10526.476483166258!2d1.5937446732454593!3d48.541249774641975!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e403d15658e385%3A0xb30678c3b707480a!2sASMC%20Bouglainval!5e0!3m2!1sfr!2sfr!4v1739257008127!5m2!1sfr!2sfr" width="100%" height="100%" style={{ border: 0 }} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade" className="grayscale-[20%] contrast-[1.1] opacity-90 group-hover:opacity-100 transition-opacity"></iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2639.231904423405!2d1.600311315664!3d48.544!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e3f898a3c8a9a1%3A0x40b82c3688c9460!2sBouglainval!5e0!3m2!1sfr!2sfr!4v1707480000000!5m2!1sfr!2sfr&z=13" width="100%" height="100%" style={{ border: 0 }} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade" className="grayscale-[20%] contrast-[1.1] opacity-90 group-hover:opacity-100 transition-opacity"></iframe>
                   </div>
                   <div className="mt-6">
-                    <a href="https://www.google.com/maps/dir//ASMC+Bouglainval,+28130+Bouglainval/@48.5412498,1.5937447,15z/data=!4m8!4m7!1m0!1m5!1m1!1s0x47e403d15658e385:0xb30678c3b707480a!2m2!1d1.6025001!2d48.5440003?entry=ttu&g_ep=EgoyMDI1MDIwNS4xIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-3 w-full p-4 rounded-xl bg-blue-500/10 border border-blue-400/30 hover:bg-blue-400/20 hover:border-blue-400 transition-all group">
+                    <a href="https://www.google.com/maps/dir/?api=1&destination=48.544,1.6025" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-3 w-full p-4 rounded-xl bg-blue-500/10 border border-blue-400/30 hover:bg-blue-400/20 hover:border-blue-400 transition-all group">
                       <span className="text-xl group-hover:scale-110 transition-transform">📍</span>
                       <span className="text-sm font-bold uppercase tracking-[0.2em] text-blue-300">Itinéraire vers le terrain</span>
                     </a>
