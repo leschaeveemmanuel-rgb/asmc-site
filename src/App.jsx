@@ -137,14 +137,13 @@ function App() {
 
                   <div className="p-6 rounded-xl bg-blue-500/5 border border-blue-400/20 italic space-y-4">
                     <p>
-                      <strong>Note :</strong> Votre inscription au Club ASMC Bouglainval et la prise de licence Fédération Française d'Aéromodélisme s'effectue UNIQUEMENT depuis le site officiel de la FFAM. Nous vous invitons à prendre connaissance des conditions sur la page dédiée.
+                      <strong>Note :</strong> Votre inscription au Club ASMC Bouglainval et la prise de licence Fédération Française d'Aéromodélisme s'effectuent EXCLUSIVEMENT depuis le site officiel de la FFAM. Nous vous invitons à prendre connaissance des conditions sur la page dédiée.
                     </p>
                     
                     <p className="not-italic font-bold text-center border-t border-blue-400/10 pt-4">
                       Pour toutes questions, vous pouvez contacter<br/>
                       M. Alain Lernould<br/>
-                      27 rue de Grez — 28170 FONTAINE LES RIBOUTS<br/>
-                      (Lieu dit : BOUTRY)
+                      alain.lernould@gmail.com
                     </p>
                   </div>
 
