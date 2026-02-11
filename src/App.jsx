@@ -128,21 +128,20 @@ function App() {
                   <p className="font-bold text-blue-300 uppercase tracking-widest mb-4 text-lg text-center">Informations importantes</p>
                   
                   <p>
-                    Pour devenir membre de l'ASMC Bouglainval, nous vous invitons à télécharger et à prendre connaissance du document <strong>"Formulaire d'inscription"</strong> disponible ci-contre.
+                    Pour devenir membre de l'ASMC Bouglainval, nous vous invitons à télécharger et à prendre connaissance des documents <strong>"Formulaire d'inscription"</strong> et <strong>"Règlement intérieur"</strong>disponibles ci-contre.
                   </p>
                   
                   <p>
-                    Ce document regroupe tous les détails administratifs indispensables, ainsi que les engagements relatifs à la sécurité et à la vie du club.
+                    Ces documents regroupent tous les détails administratifs indispensables, ainsi que les engagements relatifs à la sécurité et à la vie du club.
                   </p>
 
                   <div className="p-6 rounded-xl bg-blue-500/5 border border-blue-400/20 italic space-y-4">
                     <p>
-                      <strong>Note :</strong> Votre inscription ne pourra être officiellement validée qu'après la réception de votre dossier complet (formulaire papier dûment rempli, règlement de la cotisation et certificat médical à jour).
+                      <strong>Note :</strong> Votre inscription au Club ASMC Bouglainval et la prise de licence Fédération Française d'Aéromodélisme s'effectue UNIQUEMENT depuis le site officiel de la FFAM. Nous vous invitons à prendre connaissance des conditions sur la page dédiée.
                     </p>
-                    <p>
-                      Le dossier est à faire parvenir à l'adresse suivante :
-                    </p>
+                    
                     <p className="not-italic font-bold text-center border-t border-blue-400/10 pt-4">
+                      Pour toutes questions, vous pouvez contacter<br/>
                       M. Alain Lernould<br/>
                       27 rue de Grez — 28170 FONTAINE LES RIBOUTS<br/>
                       (Lieu dit : BOUTRY)
