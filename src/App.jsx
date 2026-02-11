@@ -14,6 +14,7 @@ function App() {
         <button onClick={() => setPage('avions')} className={`transition-all duration-300 py-2 ${page === 'avions' ? 'text-blue-400 border-b-2 border-blue-400' : 'hover:text-blue-300'}`}>Le Hangar</button>
         <button onClick={() => setPage('inscription')} className={`transition-all duration-300 py-2 ${page === 'inscription' ? 'text-blue-400 border-b-2 border-blue-400' : 'hover:text-blue-300'}`}>S'inscrire</button>
         <button onClick={() => setPage('calendrier')} className={`transition-all duration-300 py-2 ${page === 'calendrier' ? 'text-blue-400 border-b-2 border-blue-400' : 'hover:text-blue-300'}`}>Calendrier</button>
+        <button onClick={() => setPage('partenaires')} className={`transition-all duration-300 py-2 ${page === 'partenaires' ? 'text-blue-400 border-b-2 border-blue-400' : 'hover:text-blue-300'}`}>Partenaires</button>
         <button onClick={() => setPage('contact')} className={`transition-all duration-300 py-2 ${page === 'contact' ? 'text-blue-400 border-b-2 border-blue-400' : 'hover:text-blue-300'}`}>Contacts</button>
       </nav>
 
@@ -228,6 +229,47 @@ function App() {
                     <p className="text-sm leading-relaxed opacity-90 whitespace-pre-line">L'ASMC accueille la rencontre nationale des GPR. Remorquage assuré et camping sur place. Accès gratuit pour le public.</p>
                   </div>
                 )}
+              </div>
+            </div>
+          </div>
+        )}
+
+        {/* --- PAGE PARTENAIRES --- */}
+        {page === 'partenaires' && (
+          <div className="w-full animate-in fade-in slide-in-from-bottom-4 duration-700">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-5xl font-black uppercase tracking-widest text-blue-400">Nos Partenaires</h2>
+              <p className="mt-4 text-blue-100 opacity-60 italic">Ils soutiennent l'ASMC Bouglainval</p>
+            </div>
+            <div className="max-w-5xl mx-auto space-y-6">
+              {/* PARTENAIRE 1 */}
+              <div className="glass-card p-6 flex flex-col md:flex-row items-center gap-8 hover:border-blue-400/30 transition-colors group">
+                {/* VIGNETTE LOGO */}
+                <div className="flex-shrink-0 w-32 h-32 bg-white/5 rounded-2xl border border-white/10 overflow-hidden flex items-center justify-center p-2">
+                  <img 
+                    src="/sponsor1.jpg" 
+                    alt="Logo Partenaire" 
+                    className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500" 
+                    onError={(e) => { e.target.src = "https://via.placeholder.com/150?text=LOGO"; }} 
+                  />
+                </div>
+                {/* CONTENU DESCRIPTION */}
+                <div className="flex-grow text-center md:text-left space-y-3">
+                  <div className="space-y-1">
+                    <h3 className="text-xl font-bold uppercase tracking-wide text-white">Nom de l'Entreprise</h3>
+                    <a 
+                      href="https://www.site-partenaire.com" 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="text-blue-400 hover:text-blue-300 text-sm font-bold transition-colors inline-block"
+                    >
+                      www.site-partenaire.com ↗
+                    </a>
+                  </div>
+                  <p className="text-sm opacity-70 leading-relaxed max-w-2xl">
+                    Description de l'activité du partenaire. Présentez ici en quelques lignes les services ou produits proposés par l'entreprise qui soutient le club. Vous pouvez également préciser la nature du partenariat.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
