@@ -303,7 +303,16 @@ Le dossier complet (Certificat médical, règlement, etc.) sera remis prochainem
                   <h3 className="text-xl font-bold text-green-300 uppercase mb-4 tracking-widest">Localisation</h3>
                   <p className="text-sm opacity-70 mb-6">Le terrain se situe à **Bouglainval (28130)**.</p>
                   <div className="w-full aspect-square md:aspect-video rounded-xl overflow-hidden border border-white/10 shadow-2xl relative group">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2219.9964047900944!2d1.496325068196813!3d48.57086848593413!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e4054f6111963d%3A0xc2320d0b5a67bc7c!2sNouveau%20terrain%20ASMC!5e0!3m2!1sfr!2sfr!4v1770806956045!5m2!1sfr!2sfr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" width="100%" height="100%" style={{ border: 0 }} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade" className="grayscale-[20%] contrast-[1.1] opacity-90 group-hover:opacity-100 transition-opacity"></iframe>
+                    <iframe 
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2219.9964047900944!2d1.496325068196813!3d48.57086848593413!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e4054f6111963d%3A0xc2320d0b5a67bc7c!2sNouveau%20terrain%20ASMC!5e0!3m2!1sfr!2sfr!4v1770806956045!5m2!1sfr!2sfr" 
+                      width="100%" 
+                      height="100%" 
+                      style={{ border: 0 }} 
+                      allowFullScreen="" 
+                      loading="lazy" 
+                      referrerPolicy="no-referrer-when-downgrade" 
+                      className="grayscale-[20%] contrast-[1.1] opacity-90 group-hover:opacity-100 transition-opacity"
+                    ></iframe>
                   </div>
                   <div className="mt-6"><a href="https://www.google.com/maps/dir/?api=1&destination=48.544,1.6025" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-3 w-full p-4 rounded-xl bg-blue-500/10 border border-blue-400/30 text-blue-300 font-bold uppercase text-sm">📍 Itinéraire vers le terrain</a></div>
                 </div>
