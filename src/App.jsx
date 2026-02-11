@@ -247,7 +247,7 @@ function App() {
                 {/* VIGNETTE LOGO */}
                 <div className="flex-shrink-0 w-32 h-32 bg-white/5 rounded-2xl border border-white/10 overflow-hidden flex items-center justify-center p-2">
                   <img 
-                    src="/sponsor1.jpg" 
+                    src="/sponsor1.png" 
                     alt="Logo Partenaire" 
                     className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500" 
                     onError={(e) => { e.target.src = "https://via.placeholder.com/150?text=LOGO"; }} 
@@ -256,14 +256,14 @@ function App() {
                 {/* CONTENU DESCRIPTION */}
                 <div className="flex-grow text-center md:text-left space-y-3">
                   <div className="space-y-1">
-                    <h3 className="text-xl font-bold uppercase tracking-wide text-white">Nom de l'Entreprise</h3>
+                    <h3 className="text-xl font-bold uppercase tracking-wide text-white">NASA</h3>
                     <a 
-                      href="https://www.site-partenaire.com" 
+                      href="https://www.nasa.com" 
                       target="_blank" 
                       rel="noopener noreferrer" 
                       className="text-blue-400 hover:text-blue-300 text-sm font-bold transition-colors inline-block"
                     >
-                      www.site-partenaire.com ↗
+                      www.nasa.com ↗
                     </a>
                   </div>
                   <p className="text-sm opacity-70 leading-relaxed max-w-2xl">
