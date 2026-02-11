@@ -271,6 +271,35 @@ function App() {
                   </p>
                 </div>
               </div>
+              {/* PARTENAIRE 2 */}
+              <div className="glass-card p-6 flex flex-col md:flex-row items-center gap-8 hover:border-blue-400/30 transition-colors group">
+                {/* VIGNETTE LOGO */}
+                <div className="flex-shrink-0 w-32 h-32 bg-white/5 rounded-2xl border border-white/10 overflow-hidden flex items-center justify-center p-2">
+                  <img 
+                    src="/sponsor2.png" 
+                    alt="Logo Partenaire" 
+                    className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500" 
+                    onError={(e) => { e.target.src = "https://via.placeholder.com/150?text=LOGO"; }} 
+                  />
+                </div>
+                {/* CONTENU DESCRIPTION */}
+                <div className="flex-grow text-center md:text-left space-y-3">
+                  <div className="space-y-1">
+                    <h3 className="text-xl font-bold uppercase tracking-wide text-white">LOCKHEED</h3>
+                    <a 
+                      href="https://www.lockheedmartin.com" 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="text-blue-400 hover:text-blue-300 text-sm font-bold transition-colors inline-block"
+                    >
+                      www.lockheedmartin.com ↗
+                    </a>
+                  </div>
+                  <p className="text-sm opacity-70 leading-relaxed max-w-2xl">
+                    Constructeur aéronautique américain emblèmatiquee des 60's. A l'origine de l'avion espion U2 et du chasseur furtif F-117 Night Hawk, entre autres..
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         )}
