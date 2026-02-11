@@ -192,7 +192,9 @@ function App() {
               <div className="glass-card p-6 border-t-2 border-blue-400/30 space-y-4">
                 <h3 className="text-xl font-bold text-blue-300 uppercase tracking-widest">Cotisations Annuelles</h3>
                 <div className="rounded-xl overflow-hidden border border-white/10 shadow-xl">
-                  <img src="/tarifs-2026.jpg" alt="Tableau des tarifs" className="w-full h-auto" onError={(e) => e.target.src="https://via.placeholder.com/600x400/1e293b/60a5fa?text=Tableau+des+Tarifs"} />
+                  <a href="/tarifs-2026.jpg" target="_blank" rel="noopener noreferrer">
+                    <img src="/tarifs-2026.jpg" alt="Tableau des tarifs" className="w-full h-auto cursor-pointer hover:opacity-80 transition-opacity" onError={(e) => e.target.src="https://via.placeholder.com/600x400/1e293b/60a5fa?text=Tableau+des+Tarifs"} />
+                  </a>
                 </div>
                 <p className="text-[10px] opacity-40 uppercase text-center italic">Dernière mise à jour : 2026</p>
               </div>
@@ -344,10 +346,10 @@ function App() {
                   <h3 className="text-xl font-bold text-green-300 uppercase mb-4 tracking-widest">Localisation</h3>
                   <p className="text-sm opacity-70 mb-6">Le terrain se situe à **Bouglainval (28130)**.</p>
                   <div className="w-full aspect-square md:aspect-video rounded-xl overflow-hidden border border-white/10 shadow-2xl relative group">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2639.421453268886!2d1.6003113156643247!3d48.544000000000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDjCsDMyJzM4LjQiTiAxwrAzNicwMS4xIkU!5e0!3m2!1sfr!2sfr!4v1707480000000!5m2!1sfr!2sfr&z=14" width="100%" height="100%" style={{ border: 0 }} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade" className="grayscale-[20%] contrast-[1.1] opacity-90 group-hover:opacity-100 transition-opacity"></iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10526.476483166258!2d1.5937446732454593!3d48.541249774641975!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e403d15658e385%3A0xb30678c3b707480a!2sASMC%20Bouglainval!5e0!3m2!1sfr!2sfr!4v1739257008127!5m2!1sfr!2sfr" width="100%" height="100%" style={{ border: 0 }} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade" className="grayscale-[20%] contrast-[1.1] opacity-90 group-hover:opacity-100 transition-opacity"></iframe>
                   </div>
                   <div className="mt-6">
-                    <a href="https://www.google.com/maps/dir/?api=1&destination=48.544000,1.602500" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-3 w-full p-4 rounded-xl bg-blue-500/10 border border-blue-400/30 hover:bg-blue-400/20 hover:border-blue-400 transition-all group">
+                    <a href="https://www.google.com/maps/dir//ASMC+Bouglainval,+28130+Bouglainval/@48.5412498,1.5937447,15z/data=!4m8!4m7!1m0!1m5!1m1!1s0x47e403d15658e385:0xb30678c3b707480a!2m2!1d1.6025001!2d48.5440003?entry=ttu&g_ep=EgoyMDI1MDIwNS4xIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-3 w-full p-4 rounded-xl bg-blue-500/10 border border-blue-400/30 hover:bg-blue-400/20 hover:border-blue-400 transition-all group">
                       <span className="text-xl group-hover:scale-110 transition-transform">📍</span>
                       <span className="text-sm font-bold uppercase tracking-[0.2em] text-blue-300">Itinéraire vers le terrain</span>
                     </a>
