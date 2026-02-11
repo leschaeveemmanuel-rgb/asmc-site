@@ -246,7 +246,7 @@ function App() {
                   <h3 className="text-xl font-bold text-blue-300 uppercase mb-6">Le Bureau</h3>
                   <div className="space-y-8">
                     <div><p className="text-xs uppercase tracking-widest text-blue-400">Président</p><p className="text-lg font-bold">Jean François Albert</p><p className="text-sm opacity-70 italic">jf.albert41@gmail.com</p></div>
-                    <div><p className="text-xs uppercase tracking-widest text-blue-400">Secrétaire Général</p><p className="text-lg font-bold">Alain Lernould</p>{/*<p className="text-sm opacity-70">27 rue de Grez — 28170 FONTAINE LES RIBOUTS</p><p className="text-sm opacity-70 italic">Lieu dit : BOUTRY</p><p className="text-sm opacity-70 mt-2">Tél : 07 77 28 02 57</p>*/}<p className="text-sm opacity-70 italic">alain.lernould95@gmail.com</p></div>
+                    <div><p className="text-xs uppercase tracking-widest text-blue-400">Secrétaire Général</p><p className="text-lg font-bold">Alain Lernould</p><p className="text-sm opacity-70 italic">alain.lernould95@gmail.com</p></div>
                   </div>
                 </div>
                 <a href="mailto:asmc.bouglainval@gmail.com" className="glass-card w-full p-6 flex items-center justify-center gap-4 group hover:bg-blue-400/10 transition-all border-blue-400/20">
