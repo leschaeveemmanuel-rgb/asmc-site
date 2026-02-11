@@ -309,10 +309,9 @@ function App() {
                     
                     {/* LIEN EN SAVOIR PLUS */}
                     <button 
-                      onClick={() => setOpenEvent(openEvent === 'gpr' ? null : 'gpr')}
                       onClick={() => setExpandedEvent(expandedEvent === 'gpr' ? null : 'gpr')}
                       className="text-[10px] font-black uppercase tracking-[0.2em] text-blue-400 hover:text-blue-300 transition-colors pt-2"
-                    >
+                      >
                       {expandedEvent === 'gpr' ? '▲ Réduire' : '▼ En savoir plus...'}
                     </button>
                   </div>
@@ -363,7 +362,7 @@ function App() {
                     </button>
                   </div>
                   <div className="flex-shrink-0 w-24 h-24 group/img">
-                    <a href="/image.png" target="_blank" rel="noopener noreferrer" className="block w-full h-full relative">
+                    <a href="/avion-ecole.jpg" target="_blank" rel="noopener noreferrer" className="block w-full h-full relative">
                       <img src="/avion-ecole.jpg" alt="Affiche" className="w-full h-full object-cover rounded-xl border border-white/10" onError={(e) => { e.target.src = "https://via.placeholder.com/100?text=Affiche"; }} />
                     </a>
                   </div>
