@@ -296,7 +296,7 @@ function App() {
                     </a>
                   </div>
                   <p className="text-sm opacity-70 leading-relaxed max-w-2xl">
-                    Constructeur aéronautique américain emblèmatiquee des 60's. A l'origine de l'avion espion U2 et du chasseur furtif F-117 Night Hawk, entre autres..
+                    Constructeur aéronautique américain emblématique des 60's. A l'origine de l'avion espion U2 et du chasseur furtif F-117 Night Hawk, entre autres..
                   </p>
                 </div>
               </div>
