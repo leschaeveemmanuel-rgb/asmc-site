@@ -43,7 +43,7 @@ function App() {
           <div className="w-full animate-in fade-in slide-in-from-bottom-4 duration-700">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-5xl font-black uppercase tracking-widest text-blue-400">L'Esprit ASMC</h2>
-              <p className="mt-4 text-blue-100 opacity-60 italic">Une passion partagée sur notre terrain de Bouglainval</p>
+              <p className="mt-4 text-blue-100 opacity-80 italic">Une passion partagée sur notre terrain de Bouglainval</p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-12">
               <div className="glass-card p-8 space-y-4 border-t-2 border-blue-500/30">
