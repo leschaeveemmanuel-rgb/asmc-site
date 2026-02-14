@@ -369,7 +369,7 @@ function App() {
 
       </main>
 
-      <footer className="w-full text-center py-12 text-xs tracking-[0.4em] opacity-50 uppercase">
+      <footer className="w-full text-center py-12 text-xs tracking-[0.4em] opacity-30 uppercase">
         © 2026 ASMC Bouglainval · Skybound Studio
       </footer>
 
