@@ -24,7 +24,7 @@ function App() {
         {page === 'accueil' && (
           <div className="animate-in fade-in duration-700 flex flex-col gap-8 text-center">
             <div className="w-full rounded-3xl overflow-hidden glass-card p-1 shadow-2xl">
-              <img src="/banner.png" alt="Bannière ASMC" className="w-full h-auto rounded-2xl opacity-90 block" />
+              <img src="/banner.jpg" alt="Bannière ASMC" className="w-full h-auto rounded-2xl opacity-90 block" />
             </div>
             <div className="glass-card p-8 md:p-16 space-y-10">
               <h1 className="text-3xl md:text-5xl font-black uppercase tracking-widest text-blue-400">ASMC Bouglainval</h1>
