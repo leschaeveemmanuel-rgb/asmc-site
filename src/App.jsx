@@ -72,7 +72,7 @@ function App() {
           <div className="w-full animate-in fade-in slide-in-from-bottom-4 duration-700">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-5xl font-bold uppercase tracking-widest text-blue-400">Le Hangar</h2>
-              <p className="mt-4 text-blue-100 opacity-60 italic">Présentation de quelques avions présents sur le terrain de l'ASMC</p>
+              <p className="mt-4 text-blue-100 opacity-80 italic">Présentation de quelques avions présents sur le terrain de l'ASMC</p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
 
@@ -86,7 +86,7 @@ function App() {
                     <div><p className="text-[10px] uppercase tracking-tighter opacity-50">Envergure</p><p className="font-mono">1400 mm</p></div>
                     <div><p className="text-[10px] uppercase tracking-tighter opacity-50">Moteur</p><p className="font-mono">4534</p></div>
                   </div>
-                  <p className="text-xs leading-relaxed opacity-60 italic">Un avion de début stable et précis, idéal pour les sessions d'apprentissage.</p>
+                  <p className="text-xs leading-relaxed opacity-80 italic">Un avion de début stable et précis, idéal pour les sessions d'apprentissage.</p>
                 </div>
               </div>
               {/* FIN DE BLOC A RECOPIER*/}
@@ -101,7 +101,7 @@ function App() {
                     <div><p className="text-[10px] uppercase tracking-tighter opacity-50">Envergure</p><p className="font-mono">1600 mm</p></div>
                     <div><p className="text-[10px] uppercase tracking-tighter opacity-50">Moteur</p><p className="font-mono">OS45</p></div>
                   </div>
-                  <p className="text-xs leading-relaxed opacity-60 italic">Un avion de voltige performant et précis pour pilotes confirmés.</p>
+                  <p className="text-xs leading-relaxed opacity-80 italic">Un avion de voltige performant et précis pour pilotes confirmés.</p>
                 </div>
               </div>
               {/* FIN DE BLOC A RECOPIER*/}
@@ -116,7 +116,7 @@ function App() {
                     <div><p className="text-[10px] uppercase tracking-tighter opacity-50">Envergure</p><p className="font-mono">1400 mm</p></div>
                     <div><p className="text-[10px] uppercase tracking-tighter opacity-50">Moteur</p><p className="font-mono">5544</p></div>
                   </div>
-                  <p className="text-xs leading-relaxed opacity-60 italic">Un Warbird légendaire nécessitant une certaine expérience de pilotage.</p>
+                  <p className="text-xs leading-relaxed opacity-80 italic">Un Warbird légendaire nécessitant une certaine expérience de pilotage.</p>
                 </div>
               </div>
               {/* FIN DE BLOC A RECOPIER*/}
@@ -130,7 +130,7 @@ function App() {
           <div className="w-full animate-in fade-in slide-in-from-bottom-4 duration-700">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-5xl font-black uppercase tracking-widest text-blue-400">Rejoindre l'ASMC</h2>
-              <p className="mt-4 text-blue-100 opacity-60 italic">Procédure d'adhésion</p>
+              <p className="mt-4 text-blue-100 opacity-80 italic">Procédure d'adhésion</p>
             </div>
             <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8">
               {/* BLOC DE TEXTE (REMPLACE LE FORMULAIRE) */}
@@ -158,7 +158,7 @@ function App() {
                     </p>
                   </div>
 
-                  <p className="text-center pt-4 opacity-70">
+                  <p className="text-center pt-4 opacity-80">
                     N'hésitez pas à venir nous rencontrer au terrain pour échanger directement avec les membres du bureau.
                   </p>
                 </div>
@@ -197,19 +197,19 @@ function App() {
           <div className="w-full animate-in fade-in slide-in-from-bottom-4 duration-700">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-5xl font-black uppercase tracking-widest text-blue-400">Agenda du Club</h2>
-              <p className="mt-4 text-blue-100 opacity-60 italic">Les prochains rendez-vous à ne pas manquer en 2026</p>
+              <p className="mt-4 text-blue-100 opacity-80 italic">Les prochains rendez-vous à ne pas manquer en 2026</p>
             </div>
             <div className="max-w-5xl mx-auto space-y-6">
               {/* EVENEMENT 1 BLOC A RECOPIER*/}
               <div className="glass-card p-6 flex flex-col items-stretch gap-6 hover:border-blue-400/30 transition-colors">
                 <div className="flex flex-col md:flex-row items-center gap-6">
                   <div className="flex-shrink-0 w-24 h-24 bg-blue-500/20 rounded-2xl border border-blue-400/30 flex flex-col items-center justify-center">
-                    <span className="text-xs uppercase tracking-tighter opacity-60 text-blue-100">Juillet</span>
+                    <span className="text-xs uppercase tracking-tighter opacity-80 text-blue-100">Juillet</span>
                     <span className="text-3xl font-black text-blue-400">10</span>
                   </div>
                   <div className="flex-grow text-center md:text-left space-y-2">
                     <div className="flex flex-col md:flex-row md:items-center gap-2 md:gap-4"><h3 className="text-xl font-bold uppercase tracking-wide text-white">Fête du Club</h3><span className="text-[10px] bg-blue-500/20 text-blue-300 px-2 py-1 rounded border border-blue-500/30 uppercase w-fit mx-auto md:mx-0">Annuel</span></div>
-                    <p className="text-sm opacity-70">Vols de découverte, démonstrations et convivialité au terrain de Bouglainval.</p>
+                    <p className="text-sm opacity-80">Vols de découverte, démonstrations et convivialité au terrain de Bouglainval.</p>
                     <button onClick={() => setExpandedEvent(expandedEvent === 'fete' ? null : 'fete')} className="text-[10px] font-black uppercase tracking-[0.2em] text-blue-400 hover:text-blue-300 transition-colors pt-2">{expandedEvent === 'fete' ? '▲ Réduire' : '▼ En savoir plus...'}</button>
                   </div>
                   <div className="flex-shrink-0 w-24 h-24 group/img"><a href="/avion-ecole.jpg" target="_blank" rel="noopener noreferrer" className="block w-full h-full relative"><img src="/avion-ecole.jpg" alt="Affiche" className="w-full h-full object-cover rounded-xl border border-white/10" /></a></div>
@@ -226,12 +226,12 @@ function App() {
               <div className="glass-card p-6 flex flex-col items-stretch gap-6 hover:border-blue-400/30 transition-colors">
                 <div className="flex flex-col md:flex-row items-center gap-6">
                   <div className="flex-shrink-0 w-24 h-24 bg-blue-500/20 rounded-2xl border border-blue-400/30 flex flex-col items-center justify-center">
-                    <span className="text-xs uppercase tracking-tighter opacity-60 text-blue-100">Août</span>
+                    <span className="text-xs uppercase tracking-tighter opacity-80 text-blue-100">Août</span>
                     <span className="text-3xl font-black text-blue-400">22-24</span>
                   </div>
                   <div className="flex-grow text-center md:text-left space-y-2">
                     <div className="flex flex-col md:flex-row md:items-center gap-2 md:gap-4"><h3 className="text-xl font-bold uppercase tracking-wide text-white">Rencontre GPR</h3><span className="text-[10px] bg-blue-500/20 text-blue-300 px-2 py-1 rounded border border-blue-500/30 uppercase w-fit mx-auto md:mx-0">Exceptionnel</span></div>
-                    <p className="text-sm opacity-70">Rencontre Grand Planeurs Radiocommandés. Restauration sur place.</p>
+                    <p className="text-sm opacity-80">Rencontre Grand Planeurs Radiocommandés. Restauration sur place.</p>
                     <button onClick={() => setExpandedEvent(expandedEvent === 'gpr' ? null : 'gpr')} className="text-[10px] font-black uppercase tracking-[0.2em] text-blue-400 hover:text-blue-300 transition-colors pt-2">{expandedEvent === 'gpr' ? '▲ Réduire' : '▼ En savoir plus...'}</button>
                   </div>
                   <div className="flex-shrink-0 w-24 h-24 group/img"><a href="/gpr.png" target="_blank" rel="noopener noreferrer" className="block w-full h-full relative"><img src="/gpr.png" alt="Affiche" className="w-full h-full object-cover rounded-xl border border-white/10" /></a></div>
@@ -253,7 +253,7 @@ function App() {
           <div className="w-full animate-in fade-in slide-in-from-bottom-4 duration-700">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-5xl font-black uppercase tracking-widest text-blue-400">Nos Partenaires</h2>
-              <p className="mt-4 text-blue-100 opacity-60 italic">Ils soutiennent l'ASMC Bouglainval et nous les remercions.</p>
+              <p className="mt-4 text-blue-100 opacity-80 italic">Ils soutiennent l'ASMC Bouglainval et nous les remercions.</p>
             </div>
             <div className="max-w-5xl mx-auto space-y-6">
               {/* PARTENAIRE 1 BLOC A RECOPIER*/}
@@ -280,7 +280,7 @@ function App() {
                       www.nasa.gov ↗
                     </a>
                   </div>
-                  <p className="text-sm opacity-70 leading-relaxed max-w-2xl">
+                  <p className="text-sm opacity-80 leading-relaxed max-w-2xl">
                     National Aeronautics and Space Administration. NASA. Toute l'histoire de la conquête spatiale résumée en ces quatre lettres.
                   </p>
                 </div>
@@ -311,7 +311,7 @@ function App() {
                       www.lockheedmartin.com ↗
                     </a>
                   </div>
-                  <p className="text-sm opacity-70 leading-relaxed max-w-2xl">
+                  <p className="text-sm opacity-80 leading-relaxed max-w-2xl">
                     Constructeur aéronautique américain emblématique des 60's. A l'origine de l'avion espion U2 et du chasseur furtif F-117 Night Hawk, entre autres.
                   </p>
                 </div>
@@ -326,7 +326,7 @@ function App() {
           <div className="w-full animate-in fade-in slide-in-from-bottom-4 duration-700">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-5xl font-black uppercase tracking-widest text-blue-400">Nous Contacter</h2>
-              <p className="mt-4 text-blue-100 opacity-60 italic">L'équipe de l'ASMC est à votre écoute</p>
+              <p className="mt-4 text-blue-100 opacity-80 italic">L'équipe de l'ASMC est à votre écoute</p>
             </div>
             <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8">
               <div className="space-y-6">
@@ -347,7 +347,7 @@ function App() {
               <div className="space-y-6">
                 <div className="glass-card p-8 h-full border-t-2 border-green-500/30 flex flex-col">
                   <h3 className="text-xl font-bold text-green-300 uppercase mb-4 tracking-widest">Localisation</h3>
-                  <p className="text-sm opacity-70 mb-6">Le terrain se situe à Bouglainval (28130), à 7 km de Maintenon, 17 km de Chartres et 24 km de Dreux .</p>
+                  <p className="text-sm opacity-80 mb-6">Le terrain se situe à Bouglainval (28130), à 7 km de Maintenon, 17 km de Chartres et 24 km de Dreux .</p>
                   <div className="w-full aspect-square md:aspect-video rounded-xl overflow-hidden border border-white/10 shadow-2xl relative group">
                     <iframe 
                       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2219.9964047900944!2d1.496325068196813!3d48.57086848593413!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e4054f6111963d%3A0xc2320d0b5a67bc7c!2sNouveau%20terrain%20ASMC!5e0!3m2!1sfr!2sfr!4v1770806956045!5m2!1sfr!2sfr" 
