@@ -369,8 +369,20 @@ function App() {
 
       </main>
 
-      <footer className="w-full text-center py-12 text-xs tracking-[0.4em] opacity-30 uppercase">
-        © 2026 ASMC Bouglainval · Skybound Studio
+      
+      <footer className="w-full text-center py-12 flex flex-col gap-6 text-[10px] tracking-[0.3em] opacity-30 uppercase">
+        {/* Liens Légaux */}
+        <div className="flex flex-wrap justify-center gap-x-8 gap-y-2">
+          <a href="/mentions-legales.html" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition-colors">Mentions légales</a>
+          <a href="/politique-confidentialite.html" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition-colors">Confidentialité</a>
+          <a href="/cgu.html" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition-colors">CGU</a>
+          <a href="/cookies.html" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition-colors">Cookies</a>
+        </div>
+        
+        {/* Copyright */}
+        <div className="tracking-[0.4em]">
+          © 2026 ASMC Bouglainval · Skybound Studio
+        </div>
       </footer>
 
     </div>
