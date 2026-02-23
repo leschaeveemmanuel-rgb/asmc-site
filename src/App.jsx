@@ -360,7 +360,7 @@ function App() {
                       className="grayscale-[20%] contrast-[1.1] opacity-90 group-hover:opacity-100 transition-opacity"
                     ></iframe>
                   </div>
-                  <div className="mt-6"><a href="https://www.google.com/maps/dir/?api=1&destination=48.544,1.6025" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-3 w-full p-4 rounded-xl bg-blue-500/10 border border-blue-400/30 text-blue-300 font-bold uppercase text-sm">📍 Itinéraire vers le terrain</a></div>
+                  <div className="mt-6"><a href="https://www.google.com/maps/dir/?api=1&destination=48.5709,1.4955" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-3 w-full p-4 rounded-xl bg-blue-500/10 border border-blue-400/30 text-blue-300 font-bold uppercase text-sm">📍 Itinéraire vers le terrain</a></div>
                 </div>
               </div>
             </div>
