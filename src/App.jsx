@@ -12,6 +12,7 @@ function App() {
         <button onClick={() => setPage('accueil')} className={`transition-all duration-300 py-2 ${page === 'accueil' ? 'text-blue-400 border-b-2 border-blue-400' : 'hover:text-blue-300'}`}>Accueil</button>
         <button onClick={() => setPage('apropos')} className={`transition-all duration-300 py-2 ${page === 'apropos' ? 'text-blue-400 border-b-2 border-blue-400' : 'hover:text-blue-300'}`}>À Propos</button>
         <button onClick={() => setPage('avions')} className={`transition-all duration-300 py-2 ${page === 'avions' ? 'text-blue-400 border-b-2 border-blue-400' : 'hover:text-blue-300'}`}>Le Hangar</button>
+        <button onClick={() => setPage('occasions')} className={`transition-all duration-300 py-2 ${page === 'occasions' ? 'text-blue-400 border-b-2 border-blue-400' : 'hover:text-blue-300'}`}>Occasions</button>
         <button onClick={() => setPage('inscription')} className={`transition-all duration-300 py-2 ${page === 'inscription' ? 'text-blue-400 border-b-2 border-blue-400' : 'hover:text-blue-300'}`}>S'inscrire</button>
         <button onClick={() => setPage('calendrier')} className={`transition-all duration-300 py-2 ${page === 'calendrier' ? 'text-blue-400 border-b-2 border-blue-400' : 'hover:text-blue-300'}`}>Calendrier</button>
         <button onClick={() => setPage('partenaires')} className={`transition-all duration-300 py-2 ${page === 'partenaires' ? 'text-blue-400 border-b-2 border-blue-400' : 'hover:text-blue-300'}`}>Nos Partenaires</button>
@@ -125,6 +126,53 @@ function App() {
           </div>
         )}
 
+        {/* --- PAGE OCCASIONS --- */}
+        {page === 'occasions' && (
+          <div className="w-full animate-in fade-in slide-in-from-bottom-4 duration-700">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-5xl font-bold uppercase tracking-widest text-blue-400">Petites Annonces</h2>
+              <p className="mt-4 text-blue-100 opacity-80 italic">Matériel d'occasion proposé par les membres du club</p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+
+              {/* NOUVELLE ANNONCE BLOC A RECOPIER*/}
+              <div className="glass-card overflow-hidden group hover:border-blue-400/50 transition-all duration-500">
+                <div className="aspect-video w-full overflow-hidden bg-black/20 flex items-center justify-center italic opacity-40">Photo à venir</div>
+                <div className="p-6 space-y-4">
+                  <div className="flex justify-between items-center">
+                    <h3 className="text-xl font-bold tracking-wider uppercase text-blue-300">Radio Spektrum DX8</h3>
+                    <span className="text-sm font-bold text-yellow-400">150 €</span>
+                  </div>
+                  <p className="text-xs leading-relaxed opacity-80 italic">Très bon état, livrée avec récepteur et valise de transport.</p>
+                  <div className="pt-2 border-t border-white/5 flex justify-between items-center">
+                    <span className="text-[10px] uppercase opacity-50">Vendu par : Jean-Paul</span>
+                    <button className="text-[10px] font-bold text-blue-400 uppercase tracking-widest hover:text-blue-300 transition-colors">Détails →</button>
+                  </div>
+                </div>
+              </div>
+              {/* FIN DE BLOC A RECOPIER*/}
+
+              {/* NOUVELLE ANNONCE BLOC A RECOPIER*/}
+              <div className="glass-card overflow-hidden group hover:border-blue-400/50 transition-all duration-500">
+                <div className="aspect-video w-full overflow-hidden bg-black/20 flex items-center justify-center italic opacity-40">Photo à venir</div>
+                <div className="p-6 space-y-4">
+                  <div className="flex justify-between items-center">
+                    <h3 className="text-xl font-bold tracking-wider uppercase text-blue-300">Moteur OS 46 AX</h3>
+                    <span className="text-sm font-bold text-yellow-400">80 €</span>
+                  </div>
+                  <p className="text-xs leading-relaxed opacity-80 italic">Moteur thermique rodé, excellente compression. Vendu avec silencieux.</p>
+                  <div className="pt-2 border-t border-white/5 flex justify-between items-center">
+                    <span className="text-[10px] uppercase opacity-50">Vendu par : Marc</span>
+                    <button className="text-[10px] font-bold text-blue-400 uppercase tracking-widest hover:text-blue-300 transition-colors">Détails →</button>
+                  </div>
+                </div>
+              </div>
+              {/* FIN DE BLOC A RECOPIER*/}
+
+            </div>
+          </div>
+        )}
+
         {/* --- PAGE S'INSCRIRE --- */}
         {page === 'inscription' && (
           <div className="w-full animate-in fade-in slide-in-from-bottom-4 duration-700">
@@ -197,196 +245,23 @@ function App() {
           <div className="w-full animate-in fade-in slide-in-from-bottom-4 duration-700">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-5xl font-black uppercase tracking-widest text-blue-400">Agenda du Club</h2>
-              <p className="mt-4 text-blue-100 opacity-80 italic">Les prochains rendez-vous à ne pas manquer en 2026</p>
+              <p className="mt-4 text-blue-100 opacity-60 italic">Les prochains rendez-vous à ne pas manquer en 2026</p>
             </div>
             <div className="max-w-5xl mx-auto space-y-6">
               {/* EVENEMENT 1 BLOC A RECOPIER*/}
               <div className="glass-card p-6 flex flex-col items-stretch gap-6 hover:border-blue-400/30 transition-colors">
                 <div className="flex flex-col md:flex-row items-center gap-6">
                   <div className="flex-shrink-0 w-24 h-24 bg-blue-500/20 rounded-2xl border border-blue-400/30 flex flex-col items-center justify-center">
-                    <span className="text-xs uppercase tracking-tighter opacity-80 text-blue-100">Juillet</span>
+                    <span className="text-xs uppercase tracking-tighter opacity-60 text-blue-100">Juillet</span>
                     <span className="text-3xl font-black text-blue-400">10</span>
                   </div>
                   <div className="flex-grow text-center md:text-left space-y-2">
                     <div className="flex flex-col md:flex-row md:items-center gap-2 md:gap-4"><h3 className="text-xl font-bold uppercase tracking-wide text-white">Fête du Club</h3><span className="text-[10px] bg-blue-500/20 text-blue-300 px-2 py-1 rounded border border-blue-500/30 uppercase w-fit mx-auto md:mx-0">Annuel</span></div>
-                    <p className="text-sm opacity-80">Vols de découverte, démonstrations et convivialité au terrain de Bouglainval.</p>
+                    <p className="text-sm opacity-70">Vols de découverte, démonstrations et convivialité au terrain de Bouglainval.</p>
                     <button onClick={() => setExpandedEvent(expandedEvent === 'fete' ? null : 'fete')} className="text-[10px] font-black uppercase tracking-[0.2em] text-blue-400 hover:text-blue-300 transition-colors pt-2">{expandedEvent === 'fete' ? '▲ Réduire' : '▼ En savoir plus...'}</button>
                   </div>
                   <div className="flex-shrink-0 w-24 h-24 group/img"><a href="/avion-ecole.jpg" target="_blank" rel="noopener noreferrer" className="block w-full h-full relative"><img src="/avion-ecole.jpg" alt="Affiche" className="w-full h-full object-cover rounded-xl border border-white/10" /></a></div>
                 </div>
                 {expandedEvent === 'fete' && (
                   <div className="mt-4 p-6 rounded-xl bg-white/5 border-t border-white/10 animate-in slide-in-from-top-4 duration-300">
-                    <p className="text-sm leading-relaxed opacity-90 whitespace-pre-line">La traditionnelle fête de l'ASMC est le moment fort de notre saison !{"\n\n"}Au programme : Barbecue géant, vols de démonstration, ateliers enfants et baptêmes de l'air.</p>
-                  </div>
-                )}
-              </div>
-              {/* FIN DE BLOC A RECOPIER*/}
-
-              {/* EVENEMENT 2 BLOC A RECOPIER*/}
-              <div className="glass-card p-6 flex flex-col items-stretch gap-6 hover:border-blue-400/30 transition-colors">
-                <div className="flex flex-col md:flex-row items-center gap-6">
-                  <div className="flex-shrink-0 w-24 h-24 bg-blue-500/20 rounded-2xl border border-blue-400/30 flex flex-col items-center justify-center">
-                    <span className="text-xs uppercase tracking-tighter opacity-80 text-blue-100">Août</span>
-                    <span className="text-3xl font-black text-blue-400">22-24</span>
-                  </div>
-                  <div className="flex-grow text-center md:text-left space-y-2">
-                    <div className="flex flex-col md:flex-row md:items-center gap-2 md:gap-4"><h3 className="text-xl font-bold uppercase tracking-wide text-white">Rencontre GPR</h3><span className="text-[10px] bg-blue-500/20 text-blue-300 px-2 py-1 rounded border border-blue-500/30 uppercase w-fit mx-auto md:mx-0">Exceptionnel</span></div>
-                    <p className="text-sm opacity-80">Rencontre Grand Planeurs Radiocommandés. Restauration sur place.</p>
-                    <button onClick={() => setExpandedEvent(expandedEvent === 'gpr' ? null : 'gpr')} className="text-[10px] font-black uppercase tracking-[0.2em] text-blue-400 hover:text-blue-300 transition-colors pt-2">{expandedEvent === 'gpr' ? '▲ Réduire' : '▼ En savoir plus...'}</button>
-                  </div>
-                  <div className="flex-shrink-0 w-24 h-24 group/img"><a href="/gpr.png" target="_blank" rel="noopener noreferrer" className="block w-full h-full relative"><img src="/gpr.png" alt="Affiche" className="w-full h-full object-cover rounded-xl border border-white/10" /></a></div>
-                </div>
-                {expandedEvent === 'gpr' && (
-                  <div className="mt-4 p-6 rounded-xl bg-white/5 border-t border-white/10 animate-in slide-in-from-top-4 duration-300">
-                    <p className="text-sm leading-relaxed opacity-90 whitespace-pre-line">L'ASMC accueille la rencontre nationale des GPR. Remorquage assuré et camping sur place. Accès gratuit pour le public.</p>
-                  </div>
-                )}
-                {/* FIN DE BLOC A RECOPIER*/}
-
-              </div>
-            </div>
-          </div>
-        )}
-
-        {/* --- PAGE PARTENAIRES --- */}
-        {page === 'partenaires' && (
-          <div className="w-full animate-in fade-in slide-in-from-bottom-4 duration-700">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-5xl font-black uppercase tracking-widest text-blue-400">Nos Partenaires</h2>
-              <p className="mt-4 text-blue-100 opacity-80 italic">Ils soutiennent l'ASMC Bouglainval et nous les remercions.</p>
-            </div>
-            <div className="max-w-5xl mx-auto space-y-6">
-              {/* PARTENAIRE 1 BLOC A RECOPIER*/}
-              <div className="glass-card p-6 flex flex-col md:flex-row items-center gap-8 hover:border-blue-400/30 transition-colors group">
-                {/* VIGNETTE LOGO */}
-                <div className="flex-shrink-0 w-32 h-32 bg-white/5 rounded-2xl border border-white/10 overflow-hidden flex items-center justify-center p-2">
-                  <img 
-                    src="/sponsor1.png" 
-                    alt="Logo Partenaire" 
-                    className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500" 
-                    onError={(e) => { e.target.src = "https://via.placeholder.com/150?text=LOGO"; }} 
-                  />
-                </div>
-                {/* CONTENU DESCRIPTION */}
-                <div className="flex-grow text-center md:text-left space-y-3">
-                  <div className="space-y-1">
-                    <h3 className="text-xl font-bold uppercase tracking-wide text-white">NASA</h3>
-                    <a 
-                      href="https://www.nasa.gov" 
-                      target="_blank" 
-                      rel="noopener noreferrer" 
-                      className="text-blue-400 hover:text-blue-300 text-sm font-bold transition-colors inline-block"
-                    >
-                      www.nasa.gov ↗
-                    </a>
-                  </div>
-                  <p className="text-sm opacity-80 leading-relaxed max-w-2xl">
-                    National Aeronautics and Space Administration. NASA. Toute l'histoire de la conquête spatiale résumée en ces quatre lettres.
-                  </p>
-                </div>
-              </div>
-              {/* FIN DE BLOC A RECOPIER*/}
-
-              {/* PARTENAIRE 2 BLOC A RECOPIER */}
-              <div className="glass-card p-6 flex flex-col md:flex-row items-center gap-8 hover:border-blue-400/30 transition-colors group">
-                {/* VIGNETTE LOGO */}
-                <div className="flex-shrink-0 w-32 h-32 bg-white/5 rounded-2xl border border-white/10 overflow-hidden flex items-center justify-center p-2">
-                  <img 
-                    src="/sponsor2.png" 
-                    alt="Logo Partenaire" 
-                    className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500" 
-                    onError={(e) => { e.target.src = "https://via.placeholder.com/150?text=LOGO"; }} 
-                  />
-                </div>
-                {/* CONTENU DESCRIPTION */}
-                <div className="flex-grow text-center md:text-left space-y-3">
-                  <div className="space-y-1">
-                    <h3 className="text-xl font-bold uppercase tracking-wide text-white">LOCKHEED</h3>
-                    <a 
-                      href="https://www.lockheedmartin.com" 
-                      target="_blank" 
-                      rel="noopener noreferrer" 
-                      className="text-blue-400 hover:text-blue-300 text-sm font-bold transition-colors inline-block"
-                    >
-                      www.lockheedmartin.com ↗
-                    </a>
-                  </div>
-                  <p className="text-sm opacity-80 leading-relaxed max-w-2xl">
-                    Constructeur aéronautique américain emblématique des 60's. A l'origine de l'avion espion U2 et du chasseur furtif F-117 Night Hawk, entre autres.
-                  </p>
-                </div>
-              </div>
-              {/* FIN DE BLOC A RECOPIER*/}
-            </div>
-          </div>
-        )}
-
-        {/* --- PAGE CONTACT --- */}
-        {page === 'contact' && (
-          <div className="w-full animate-in fade-in slide-in-from-bottom-4 duration-700">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-5xl font-black uppercase tracking-widest text-blue-400">Nous Contacter</h2>
-              <p className="mt-4 text-blue-100 opacity-80 italic">L'équipe de l'ASMC est à votre écoute</p>
-            </div>
-            <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8">
-              <div className="space-y-6">
-                <div className="glass-card p-8 border-t-2 border-blue-400/30">
-                  <h3 className="text-xl font-bold text-blue-300 uppercase mb-6">Le Bureau</h3>
-                  <div className="space-y-8">
-                    <div><p className="text-xs uppercase tracking-widest text-blue-400">Président</p><p className="text-lg font-bold">Jean François Albert</p><p className="text-sm opacity-70 italic">jf.albert41@gmail.com</p></div>
-                    <div><p className="text-xs uppercase tracking-widest text-blue-400">Secrétaire Général</p><p className="text-lg font-bold">Alain Lernould</p><p className="text-sm opacity-70 italic">alain.lernould95@gmail.com</p></div>
-                  </div>
-                </div>
-                <a href="mailto:asmc.bouglainval@gmail.com" className="glass-card w-full p-6 flex items-center justify-center gap-4 group hover:bg-blue-400/10 transition-all border-blue-400/20">
-                  <span className="text-2xl text-blue-400">✉</span><span className="text-xl font-black uppercase tracking-[0.3em] group-hover:text-blue-400">Nous Écrire</span>
-                </a>
-                <a href="https://www.facebook.com/profile.php?id=61570488785828" target="_blank" rel="noopener noreferrer" className="glass-card p-6 flex items-center justify-between group hover:bg-blue-600/10 border-blue-600/20 transition-all">
-                  <div className="flex items-center gap-4"><div className="w-12 h-12 bg-blue-600/20 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform"><img src="/logo-fb.png" className="w-8 h-8 object-contain" /></div><div><p className="text-sm font-bold uppercase tracking-widest text-blue-100">Suivez-nous</p><p className="text-[10px] text-blue-400 font-bold uppercase mt-1">Cliquez ici</p></div></div><span className="text-blue-400 opacity-0 group-hover:opacity-100 transition-opacity">↗</span>
-                </a>
-              </div>
-              <div className="space-y-6">
-                <div className="glass-card p-8 h-full border-t-2 border-green-500/30 flex flex-col">
-                  <h3 className="text-xl font-bold text-green-300 uppercase mb-4 tracking-widest">Localisation</h3>
-                  <p className="text-sm opacity-80 mb-6">Le terrain se situe à Bouglainval (28130), à 7 km de Maintenon, 17 km de Chartres et 24 km de Dreux .</p>
-                  <div className="w-full aspect-square md:aspect-video rounded-xl overflow-hidden border border-white/10 shadow-2xl relative group">
-                    <iframe 
-                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2219.9964047900944!2d1.496325068196813!3d48.57086848593413!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e4054f6111963d%3A0xc2320d0b5a67bc7c!2sNouveau%20terrain%20ASMC!5e0!3m2!1sfr!2sfr!4v1770806956045!5m2!1sfr!2sfr" 
-                      width="100%" 
-                      height="100%" 
-                      style={{ border: 0 }} 
-                      allowFullScreen="" 
-                      loading="lazy" 
-                      referrerPolicy="no-referrer-when-downgrade" 
-                      className="grayscale-[20%] contrast-[1.1] opacity-90 group-hover:opacity-100 transition-opacity"
-                    ></iframe>
-                  </div>
-                  <div className="mt-6"><a href="https://www.google.com/maps/dir/?api=1&destination=48.5709,1.4955" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-3 w-full p-4 rounded-xl bg-blue-500/10 border border-blue-400/30 text-blue-300 font-bold uppercase text-sm">📍 Itinéraire vers le terrain</a></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        )}
-
-      </main>
-
-      
-      <footer className="w-full text-center py-12 flex flex-col gap-6 text-[10px] tracking-[0.3em] opacity-30 uppercase">
-        {/* Liens Légaux */}
-        <div className="flex flex-wrap justify-center gap-x-8 gap-y-2">
-          <a href="/mentions-legales.html" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition-colors">Mentions légales</a>
-          <a href="/politique-confidentialite.html" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition-colors">Confidentialité</a>
-          <a href="/cgu.html" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition-colors">CGU</a>
-          <a href="/cookies.html" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition-colors">Cookies</a>
-        </div>
-        
-        {/* Copyright */}
-        <div className="tracking-[0.4em]">
-          © 2026 ASMC Bouglainval · Skybound Studio
-        </div>
-      </footer>
-
-    </div>
-  );
-}
-
-export default App;
+                    <p className="text-sm leading-relaxed opacity-90 whitespace-pre-line">La traditionnelle fête de l'ASMC
