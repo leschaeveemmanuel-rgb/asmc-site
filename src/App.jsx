@@ -226,41 +226,119 @@ function App() {
           <div className="w-full animate-in fade-in slide-in-from-bottom-4 duration-700">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-5xl font-black uppercase tracking-widest text-blue-400">Agenda du Club</h2>
-              <p className="mt-4 text-blue-100 opacity-80 italic">Les prochains rendez-vous en 2026</p>
+              <p className="mt-4 text-blue-100 opacity-80 italic">Les prochains rendez-vous à ne pas manquer en 2026</p>
             </div>
             <div className="max-w-5xl mx-auto space-y-6">
+              {/* EVENEMENT 1 BLOC A RECOPIER*/}
               <div className="glass-card p-6 flex flex-col items-stretch gap-6 hover:border-blue-400/30 transition-colors">
                 <div className="flex flex-col md:flex-row items-center gap-6">
-                  <div className="flex-shrink-0 w-24 h-24 bg-blue-500/20 rounded-2xl border border-blue-400/30 flex flex-col items-center justify-center"><span className="text-xs uppercase tracking-tighter opacity-60 text-blue-100">Juillet</span><span className="text-3xl font-black text-blue-400">10</span></div>
+                  <div className="flex-shrink-0 w-24 h-24 bg-blue-500/20 rounded-2xl border border-blue-400/30 flex flex-col items-center justify-center">
+                    <span className="text-xs uppercase tracking-tighter opacity-80 text-blue-100">Juillet</span>
+                    <span className="text-3xl font-black text-blue-400">10</span>
+                  </div>
                   <div className="flex-grow text-center md:text-left space-y-2">
-                    <div className="flex flex-col md:flex-row md:items-center gap-2 md:gap-4"><h3 className="text-xl font-bold uppercase tracking-wide text-white">Fête du Club</h3><span className="text-[10px] bg-blue-500/20 text-blue-300 px-2 py-1 rounded border border-blue-500/30 uppercase">Annuel</span></div>
-                    <p className="text-sm opacity-70">Vols de découverte, démonstrations et convivialité au terrain de Bouglainval.</p>
+                    <div className="flex flex-col md:flex-row md:items-center gap-2 md:gap-4"><h3 className="text-xl font-bold uppercase tracking-wide text-white">Fête du Club</h3><span className="text-[10px] bg-blue-500/20 text-blue-300 px-2 py-1 rounded border border-blue-500/30 uppercase w-fit mx-auto md:mx-0">Annuel</span></div>
+                    <p className="text-sm opacity-80">Vols de découverte, démonstrations et convivialité au terrain de Bouglainval.</p>
                     <button onClick={() => setExpandedEvent(expandedEvent === 'fete' ? null : 'fete')} className="text-[10px] font-black uppercase tracking-[0.2em] text-blue-400 hover:text-blue-300 transition-colors pt-2">{expandedEvent === 'fete' ? '▲ Réduire' : '▼ En savoir plus...'}</button>
                   </div>
                   <div className="flex-shrink-0 w-24 h-24 group/img"><a href="/avion-ecole.jpg" target="_blank" rel="noopener noreferrer" className="block w-full h-full relative"><img src="/avion-ecole.jpg" alt="Affiche" className="w-full h-full object-cover rounded-xl border border-white/10" /></a></div>
                 </div>
-                {expandedEvent === 'fete' && <div className="mt-4 p-6 rounded-xl bg-white/5 border-t border-white/10 animate-in slide-in-from-top-4 duration-300"><p className="text-sm leading-relaxed opacity-90 whitespace-pre-line">La traditionnelle fête de l'ASMC est le moment fort de notre saison !{"\n\n"}Au programme : Barbecue géant, démonstrations et ateliers.</p></div>}
+                {expandedEvent === 'fete' && (
+                  <div className="mt-4 p-6 rounded-xl bg-white/5 border-t border-white/10 animate-in slide-in-from-top-4 duration-300">
+                    <p className="text-sm leading-relaxed opacity-90 whitespace-pre-line">La traditionnelle fête de l'ASMC est le moment fort de notre saison !{"\n\n"}Au programme : Barbecue géant, vols de démonstration, ateliers enfants et baptêmes de l'air.</p>
+                  </div>
+                )}
+              </div>
+              {/* FIN DE BLOC A RECOPIER*/}
+
+              {/* EVENEMENT 2 BLOC A RECOPIER*/}
+              <div className="glass-card p-6 flex flex-col items-stretch gap-6 hover:border-blue-400/30 transition-colors">
+                <div className="flex flex-col md:flex-row items-center gap-6">
+                  <div className="flex-shrink-0 w-24 h-24 bg-blue-500/20 rounded-2xl border border-blue-400/30 flex flex-col items-center justify-center">
+                    <span className="text-xs uppercase tracking-tighter opacity-80 text-blue-100">Août</span>
+                    <span className="text-3xl font-black text-blue-400">22-24</span>
+                  </div>
+                  <div className="flex-grow text-center md:text-left space-y-2">
+                    <div className="flex flex-col md:flex-row md:items-center gap-2 md:gap-4"><h3 className="text-xl font-bold uppercase tracking-wide text-white">Rencontre GPR</h3><span className="text-[10px] bg-blue-500/20 text-blue-300 px-2 py-1 rounded border border-blue-500/30 uppercase w-fit mx-auto md:mx-0">Exceptionnel</span></div>
+                    <p className="text-sm opacity-80">Rencontre Grand Planeurs Radiocommandés. Restauration sur place.</p>
+                    <button onClick={() => setExpandedEvent(expandedEvent === 'gpr' ? null : 'gpr')} className="text-[10px] font-black uppercase tracking-[0.2em] text-blue-400 hover:text-blue-300 transition-colors pt-2">{expandedEvent === 'gpr' ? '▲ Réduire' : '▼ En savoir plus...'}</button>
+                  </div>
+                  <div className="flex-shrink-0 w-24 h-24 group/img"><a href="/gpr.png" target="_blank" rel="noopener noreferrer" className="block w-full h-full relative"><img src="/gpr.png" alt="Affiche" className="w-full h-full object-cover rounded-xl border border-white/10" /></a></div>
+                </div>
+                {expandedEvent === 'gpr' && (
+                  <div className="mt-4 p-6 rounded-xl bg-white/5 border-t border-white/10 animate-in slide-in-from-top-4 duration-300">
+                    <p className="text-sm leading-relaxed opacity-90 whitespace-pre-line">L'ASMC accueille la rencontre nationale des GPR. Remorquage assuré et camping sur place. Accès gratuit pour le public.</p>
+                  </div>
+                )}
+                {/* FIN DE BLOC A RECOPIER*/}
+
               </div>
             </div>
           </div>
         )}
 
-        {/* --- PAGE PARTENAIRES --- */}
-        {page === 'partenaires' && (
-          <div className="w-full animate-in fade-in slide-in-from-bottom-4 duration-700">
-            <div className="text-center mb-12"><h2 className="text-3xl md:text-5xl font-black uppercase tracking-widest text-blue-400">Nos Partenaires</h2><p className="mt-4 text-blue-100 opacity-60 italic">Ils soutiennent l'ASMC Bouglainval</p></div>
-            <div className="max-w-5xl mx-auto space-y-6">
+
+        {/* PARTENAIRE 1 BLOC A RECOPIER*/}
               <div className="glass-card p-6 flex flex-col md:flex-row items-center gap-8 hover:border-blue-400/30 transition-colors group">
-                <div className="flex-shrink-0 w-32 h-32 bg-white/5 rounded-2xl border border-white/10 overflow-hidden flex items-center justify-center p-2"><img src="/sponsor1.jpg" alt="Logo Partenaire" className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500" onError={(e) => { e.target.src = "https://via.placeholder.com/150?text=NASA"; }} /></div>
+                {/* VIGNETTE LOGO */}
+                <div className="flex-shrink-0 w-32 h-32 bg-white/5 rounded-2xl border border-white/10 overflow-hidden flex items-center justify-center p-2">
+                  <img 
+                    src="/sponsor1.png" 
+                    alt="Logo Partenaire" 
+                    className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500" 
+                    onError={(e) => { e.target.src = "https://via.placeholder.com/150?text=LOGO"; }} 
+                  />
+                </div>
+                {/* CONTENU DESCRIPTION */}
                 <div className="flex-grow text-center md:text-left space-y-3">
-                  <h3 className="text-xl font-bold uppercase tracking-wide text-white">NASA</h3>
-                  <a href="https://www.nasa.gov" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 text-sm font-bold transition-colors inline-block">www.nasa.gov ↗</a>
-                  <p className="text-sm opacity-70 leading-relaxed max-w-2xl">National Aeronautics and Space Administration. NASA. Toute l'histoire de la conquête spatiale résumée en ces quatre lettres.</p>
+                  <div className="space-y-1">
+                    <h3 className="text-xl font-bold uppercase tracking-wide text-white">NASA</h3>
+                    <a 
+                      href="https://www.nasa.gov" 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="text-blue-400 hover:text-blue-300 text-sm font-bold transition-colors inline-block"
+                    >
+                      www.nasa.gov ↗
+                    </a>
+                  </div>
+                  <p className="text-sm opacity-80 leading-relaxed max-w-2xl">
+                    National Aeronautics and Space Administration. NASA. Toute l'histoire de la conquête spatiale résumée en ces quatre lettres.
+                  </p>
                 </div>
               </div>
-            </div>
-          </div>
-        )}
+              {/* FIN DE BLOC A RECOPIER*/}
+
+              {/* PARTENAIRE 2 BLOC A RECOPIER */}
+              <div className="glass-card p-6 flex flex-col md:flex-row items-center gap-8 hover:border-blue-400/30 transition-colors group">
+                {/* VIGNETTE LOGO */}
+                <div className="flex-shrink-0 w-32 h-32 bg-white/5 rounded-2xl border border-white/10 overflow-hidden flex items-center justify-center p-2">
+                  <img 
+                    src="/sponsor2.png" 
+                    alt="Logo Partenaire" 
+                    className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500" 
+                    onError={(e) => { e.target.src = "https://via.placeholder.com/150?text=LOGO"; }} 
+                  />
+                </div>
+                {/* CONTENU DESCRIPTION */}
+                <div className="flex-grow text-center md:text-left space-y-3">
+                  <div className="space-y-1">
+                    <h3 className="text-xl font-bold uppercase tracking-wide text-white">LOCKHEED</h3>
+                    <a 
+                      href="https://www.lockheedmartin.com" 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="text-blue-400 hover:text-blue-300 text-sm font-bold transition-colors inline-block"
+                    >
+                      www.lockheedmartin.com ↗
+                    </a>
+                  </div>
+                  <p className="text-sm opacity-80 leading-relaxed max-w-2xl">
+                    Constructeur aéronautique américain emblématique des 60's. A l'origine de l'avion espion U2 et du chasseur furtif F-117 Night Hawk, entre autres.
+                  </p>
+                </div>
+              </div>
+              {/* FIN DE BLOC A RECOPIER*/}
 
         {/* --- PAGE CONTACT --- */}
         {page === 'contact' && (
