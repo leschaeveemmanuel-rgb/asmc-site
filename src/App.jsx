@@ -123,7 +123,7 @@ function App() {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
               
-              {/* ANNONCE 1 */}
+              {/* ANNONCE 1, photo 1200 x 675px*/}
               <div className="glass-card overflow-hidden group hover:border-blue-400/50 transition-all duration-500">
                 <div className="aspect-video w-full overflow-hidden bg-black/20">
                     <img 
@@ -151,7 +151,7 @@ function App() {
                 </div>
               </div>
 
-              {/* ANNONCE 2 */}
+              {/* ANNONCE 2, photo 1200 x 675px*/}
               <div className="glass-card overflow-hidden group hover:border-blue-400/50 transition-all duration-500">
                 <div className="aspect-video w-full overflow-hidden bg-black/20">
                     <img 
