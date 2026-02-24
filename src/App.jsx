@@ -123,15 +123,17 @@ function App() {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
               
-              {/* ANNONCE 1, photo 1200 x 675px*/}
+              {/* ANNONCE 1, photo 1200 x 675px 200Ko */}
               <div className="glass-card overflow-hidden group hover:border-blue-400/50 transition-all duration-500">
                 <div className="aspect-video w-full overflow-hidden bg-black/20">
+                  <a href="/radio1.jpg" target="_blank" rel="noopener noreferrer" className="cursor-zoom-in">
                     <img 
                         src="/radio1.jpg" 
                         alt="Radio Spektrum DX8" 
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                         onError={(e) => { e.target.src = "https://via.placeholder.com/600x400/1e293b/60a5fa?text=Radio+DX8"; }}
                     />
+                  </a>
                 </div>
                 <div className="p-6 space-y-4">
                   <div className="flex justify-between items-center"><h3 className="text-xl font-bold tracking-wider uppercase text-blue-300">Radio Spektrum DX8</h3><span className="text-sm font-bold text-yellow-400">150 €</span></div>
@@ -151,15 +153,17 @@ function App() {
                 </div>
               </div>
 
-              {/* ANNONCE 2, photo 1200 x 675px*/}
+              {/* ANNONCE 2, photo 1200 x 675px 200Ko */}
               <div className="glass-card overflow-hidden group hover:border-blue-400/50 transition-all duration-500">
                 <div className="aspect-video w-full overflow-hidden bg-black/20">
+                  <a href="/moteur-os46.jpg" target="_blank" rel="noopener noreferrer" className="cursor-zoom-in">
                     <img 
                         src="/moteur-os46.jpg" 
                         alt="Moteur OS 46 AX" 
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                         onError={(e) => { e.target.src = "https://via.placeholder.com/600x400/1e293b/60a5fa?text=Moteur+OS46"; }}
                     />
+                  </a>
                 </div>
                 <div className="p-6 space-y-4">
                   <div className="flex justify-between items-center"><h3 className="text-xl font-bold tracking-wider uppercase text-blue-300">Moteur OS 46 AX</h3><span className="text-sm font-bold text-yellow-400">80 €</span></div>
