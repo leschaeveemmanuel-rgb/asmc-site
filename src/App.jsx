@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 function App() {
   const [page, setPage] = useState('accueil');
   const [expandedEvent, setExpandedEvent] = useState(null);
+  const [expandedOccasion, setExpandedOccasion] = useState(null); // Ajout de l'état pour les occasions
 
   return (
     <div className="min-h-screen p-4 md:p-8 flex flex-col items-center gap-8 text-white font-sans">
@@ -124,22 +125,46 @@ function App() {
               <p className="mt-4 text-blue-100 opacity-80 italic">Matériel d'occasion proposé par les membres du club</p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+              
               {/* ANNONCE 1 */}
               <div className="glass-card overflow-hidden group hover:border-blue-400/50 transition-all duration-500">
                 <div className="aspect-video w-full overflow-hidden bg-black/20 flex items-center justify-center italic opacity-40">Photo à venir</div>
                 <div className="p-6 space-y-4">
                   <div className="flex justify-between items-center"><h3 className="text-xl font-bold tracking-wider uppercase text-blue-300">Radio Spektrum DX8</h3><span className="text-sm font-bold text-yellow-400">150 €</span></div>
                   <p className="text-xs leading-relaxed opacity-80 italic">Très bon état, livrée avec récepteur et valise de transport.</p>
-                  <div className="pt-2 border-t border-white/5 flex justify-between items-center"><span className="text-[10px] uppercase opacity-50">Vendu par : Jean-Paul</span><button className="text-[10px] font-bold text-blue-400 uppercase tracking-widest hover:text-blue-300 transition-colors">Détails →</button></div>
+                  <div className="pt-2 border-t border-white/5 flex justify-between items-center">
+                    <span className="text-[10px] uppercase opacity-50">Vendu par : Jean-Paul</span>
+                    <button onClick={() => setExpandedOccasion(expandedOccasion === 'radio1' ? null : 'radio1')} className="text-[10px] font-bold text-blue-400 uppercase tracking-widest hover:text-blue-300 transition-colors">
+                      {expandedOccasion === 'radio1' ? 'Fermer ▲' : 'Détails →'}
+                    </button>
+                  </div>
+                  {expandedOccasion === 'radio1' && (
+                    <div className="mt-4 p-4 rounded-xl bg-white/5 border-t border-white/10 animate-in slide-in-from-top-4 duration-300 text-xs space-y-2">
+                      <p><strong>État :</strong> Occasion (très bon état)</p>
+                      <p><strong>Description :</strong> Radio programmée pour plusieurs modèles, batterie LiPo incluse. Possibilité de démonstration au terrain.</p>
+                    </div>
+                  )}
                 </div>
               </div>
+
               {/* ANNONCE 2 */}
               <div className="glass-card overflow-hidden group hover:border-blue-400/50 transition-all duration-500">
                 <div className="aspect-video w-full overflow-hidden bg-black/20 flex items-center justify-center italic opacity-40">Photo à venir</div>
                 <div className="p-6 space-y-4">
                   <div className="flex justify-between items-center"><h3 className="text-xl font-bold tracking-wider uppercase text-blue-300">Moteur OS 46 AX</h3><span className="text-sm font-bold text-yellow-400">80 €</span></div>
                   <p className="text-xs leading-relaxed opacity-80 italic">Moteur thermique rodé, excellente compression. Vendu avec silencieux.</p>
-                  <div className="pt-2 border-t border-white/5 flex justify-between items-center"><span className="text-[10px] uppercase opacity-50">Vendu par : Marc</span><button className="text-[10px] font-bold text-blue-400 uppercase tracking-widest hover:text-blue-300 transition-colors">Détails →</button></div>
+                  <div className="pt-2 border-t border-white/5 flex justify-between items-center">
+                    <span className="text-[10px] uppercase opacity-50">Vendu par : Marc</span>
+                    <button onClick={() => setExpandedOccasion(expandedOccasion === 'moteur1' ? null : 'moteur1')} className="text-[10px] font-bold text-blue-400 uppercase tracking-widest hover:text-blue-300 transition-colors">
+                      {expandedOccasion === 'moteur1' ? 'Fermer ▲' : 'Détails →'}
+                    </button>
+                  </div>
+                  {expandedOccasion === 'moteur1' && (
+                    <div className="mt-4 p-4 rounded-xl bg-white/5 border-t border-white/10 animate-in slide-in-from-top-4 duration-300 text-xs space-y-2">
+                      <p><strong>État :</strong> Rodé, peu d'heures de vol.</p>
+                      <p><strong>Description :</strong> Moteur fiable et puissant pour avions de classe 40-46. Vendu car passage à l'électrique.</p>
+                    </div>
+                  )}
                 </div>
               </div>
             </div>
