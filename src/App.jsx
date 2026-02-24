@@ -278,7 +278,15 @@ function App() {
         )}
 
 
-        {/* PARTENAIRE 1 BLOC A RECOPIER*/}
+        {/* --- PAGE PARTENAIRES --- */}
+        {page === 'partenaires' && (
+          <div className="w-full animate-in fade-in slide-in-from-bottom-4 duration-700">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-5xl font-black uppercase tracking-widest text-blue-400">Nos Partenaires</h2>
+              <p className="mt-4 text-blue-100 opacity-80 italic">Ils soutiennent l'ASMC Bouglainval et nous les remercions.</p>
+            </div>
+            <div className="max-w-5xl mx-auto space-y-6">
+              {/* PARTENAIRE 1 BLOC A RECOPIER*/}
               <div className="glass-card p-6 flex flex-col md:flex-row items-center gap-8 hover:border-blue-400/30 transition-colors group">
                 {/* VIGNETTE LOGO */}
                 <div className="flex-shrink-0 w-32 h-32 bg-white/5 rounded-2xl border border-white/10 overflow-hidden flex items-center justify-center p-2">
@@ -339,6 +347,10 @@ function App() {
                 </div>
               </div>
               {/* FIN DE BLOC A RECOPIER*/}
+            </div>
+          </div>
+        )}
+
 
         {/* --- PAGE CONTACT --- */}
         {page === 'contact' && (
