@@ -127,7 +127,7 @@ function App() {
               <div className="glass-card overflow-hidden group hover:border-blue-400/50 transition-all duration-500">
                 <div className="aspect-video w-full overflow-hidden bg-black/20">
                     <img 
-                        src="/radio-dx8.jpg" 
+                        src="/radio1.jpg" 
                         alt="Radio Spektrum DX8" 
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                         onError={(e) => { e.target.src = "https://via.placeholder.com/600x400/1e293b/60a5fa?text=Radio+DX8"; }}
