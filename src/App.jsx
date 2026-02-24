@@ -128,7 +128,14 @@ function App() {
               
               {/* ANNONCE 1 */}
               <div className="glass-card overflow-hidden group hover:border-blue-400/50 transition-all duration-500">
-                <div className="aspect-video w-full overflow-hidden bg-black/20 flex items-center justify-center italic opacity-40">Photo à venir</div>
+                <div className="aspect-video w-full overflow-hidden bg-black/20">
+                <img 
+                src="/radio1.jpg" 
+                alt="Radio Spektrum DX8" 
+                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-90" 
+                onError={(e) => { e.target.src = "https://via.placeholder.com/600x400?text=Image+Indisponible"; }}
+              />
+              </div>
                 <div className="p-6 space-y-4">
                   <div className="flex justify-between items-center"><h3 className="text-xl font-bold tracking-wider uppercase text-blue-300">Radio Spektrum DX8</h3><span className="text-sm font-bold text-yellow-400">150 €</span></div>
                   <p className="text-xs leading-relaxed opacity-80 italic">Très bon état, livrée avec récepteur et valise de transport.</p>
