@@ -17,7 +17,7 @@ function App() {
         <button onClick={() => setPage('inscription')} className={`transition-all duration-300 py-2 ${page === 'inscription' ? 'text-blue-400 border-b-2 border-blue-400' : 'hover:text-blue-300'}`}>S'inscrire</button>
         <button onClick={() => setPage('calendrier')} className={`transition-all duration-300 py-2 ${page === 'calendrier' ? 'text-blue-400 border-b-2 border-blue-400' : 'hover:text-blue-300'}`}>Calendrier</button>
         <button onClick={() => setPage('partenaires')} className={`transition-all duration-300 py-2 ${page === 'partenaires' ? 'text-blue-400 border-b-2 border-blue-400' : 'hover:text-blue-300'}`}>Nos Partenaires</button>
-        <button onClick={() => setPage('contact')} className={`transition-all duration-300 py-2 ${page === 'contact' ? 'text-blue-400 border-b-2 border-blue-400' : 'hover:text-blue-300'}`}>Contacts</button>
+        <button onClick={() => setPage('contact')} className={`transition-all duration-300 py-2 ${page === 'contact' ? 'text-blue-400 border-b-2 border-blue-400' : 'hover:text-blue-300'}`}>Contact</button>
       </nav>
 
       <main className="w-full max-w-6xl flex flex-col gap-8">
