@@ -311,7 +311,7 @@ function App() {
                     </a>
                   </div>
                   <p className="text-sm opacity-80 leading-relaxed max-w-2xl">
-                    National Aeronautics and Space Administration. NASA. Toute l'histoire de la conquête spatiale résumée en ces quatre lettres.
+                    National Aeronautics and Space Administration. NASA. Toute l'histoire de la conquête spatiale américaine résumée en quatre lettres.
                   </p>
                 </div>
               </div>
