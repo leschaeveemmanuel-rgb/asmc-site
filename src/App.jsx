@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 function App() {
   const [page, setPage] = useState('accueil');
   const [expandedEvent, setExpandedEvent] = useState(null);
-  const [expandedOccasion, setExpandedOccasion] = useState(null); // Ajout de l'état pour les occasions
+  const [expandedOccasion, setExpandedOccasion] = useState(null);
 
   return (
     <div className="min-h-screen p-4 md:p-8 flex flex-col items-center gap-8 text-white font-sans">
@@ -74,10 +74,9 @@ function App() {
           <div className="w-full animate-in fade-in slide-in-from-bottom-4 duration-700">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-5xl font-bold uppercase tracking-widest text-blue-400">Le Hangar</h2>
-              <p className="mt-4 text-blue-100 opacity-80 italic">Présentation de quelques avions présents sur le terrain de l'ASMC</p>
+              <p className="mt-4 text-blue-100 opacity-60 italic">Présentation de quelques avions présents sur le terrain de l'ASMC</p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-              {/* CESSNA */}
               <div className="glass-card overflow-hidden group hover:border-blue-400/50 transition-all duration-500">
                 <div className="aspect-video w-full overflow-hidden bg-black/20"><img src="/cessna172.jpg" alt="Cessna 172" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-90" onError={(e) => e.target.src = "https://via.placeholder.com/600x400?text=Cessna"} /></div>
                 <div className="p-6 space-y-4">
@@ -89,7 +88,6 @@ function App() {
                   <p className="text-xs leading-relaxed opacity-80 italic">Un avion de début stable et précis, idéal pour les sessions d'apprentissage.</p>
                 </div>
               </div>
-              {/* EXTRA */}
               <div className="glass-card overflow-hidden group hover:border-blue-400/50 transition-all duration-500">
                 <div className="aspect-video w-full overflow-hidden bg-black/20"><img src="/extra330.jpg" alt="Extra 330" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-90" onError={(e) => e.target.src = "https://via.placeholder.com/600x400?text=Extra"} /></div>
                 <div className="p-6 space-y-4">
@@ -101,7 +99,6 @@ function App() {
                   <p className="text-xs leading-relaxed opacity-80 italic">Un avion de voltige performant et précis pour pilotes confirmés.</p>
                 </div>
               </div>
-              {/* CORSAIR */}
               <div className="glass-card overflow-hidden group hover:border-blue-400/50 transition-all duration-500">
                 <div className="aspect-video w-full overflow-hidden bg-black/20"><img src="/corsair2.jpg" alt="Corsair F4-U" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-90" onError={(e) => e.target.src = "https://via.placeholder.com/600x400?text=Corsair"} /></div>
                 <div className="p-6 space-y-4">
@@ -129,13 +126,13 @@ function App() {
               {/* ANNONCE 1 */}
               <div className="glass-card overflow-hidden group hover:border-blue-400/50 transition-all duration-500">
                 <div className="aspect-video w-full overflow-hidden bg-black/20">
-                <img 
-                src="/radio1.jpg" 
-                alt="Radio Spektrum DX8" 
-                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-90" 
-                onError={(e) => { e.target.src = "https://via.placeholder.com/600x400?text=Image+Indisponible"; }}
-              />
-              </div>
+                    <img 
+                        src="/radio-dx8.jpg" 
+                        alt="Radio Spektrum DX8" 
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                        onError={(e) => { e.target.src = "https://via.placeholder.com/600x400/1e293b/60a5fa?text=Radio+DX8"; }}
+                    />
+                </div>
                 <div className="p-6 space-y-4">
                   <div className="flex justify-between items-center"><h3 className="text-xl font-bold tracking-wider uppercase text-blue-300">Radio Spektrum DX8</h3><span className="text-sm font-bold text-yellow-400">150 €</span></div>
                   <p className="text-xs leading-relaxed opacity-80 italic">Très bon état, livrée avec récepteur et valise de transport.</p>
@@ -156,7 +153,14 @@ function App() {
 
               {/* ANNONCE 2 */}
               <div className="glass-card overflow-hidden group hover:border-blue-400/50 transition-all duration-500">
-                <div className="aspect-video w-full overflow-hidden bg-black/20 flex items-center justify-center italic opacity-40">Photo à venir</div>
+                <div className="aspect-video w-full overflow-hidden bg-black/20">
+                    <img 
+                        src="/moteur-os46.jpg" 
+                        alt="Moteur OS 46 AX" 
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                        onError={(e) => { e.target.src = "https://via.placeholder.com/600x400/1e293b/60a5fa?text=Moteur+OS46"; }}
+                    />
+                </div>
                 <div className="p-6 space-y-4">
                   <div className="flex justify-between items-center"><h3 className="text-xl font-bold tracking-wider uppercase text-blue-300">Moteur OS 46 AX</h3><span className="text-sm font-bold text-yellow-400">80 €</span></div>
                   <p className="text-xs leading-relaxed opacity-80 italic">Moteur thermique rodé, excellente compression. Vendu avec silencieux.</p>
@@ -218,7 +222,7 @@ function App() {
           <div className="w-full animate-in fade-in slide-in-from-bottom-4 duration-700">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-5xl font-black uppercase tracking-widest text-blue-400">Agenda du Club</h2>
-              <p className="mt-4 text-blue-100 opacity-60 italic">Les prochains rendez-vous en 2026</p>
+              <p className="mt-4 text-blue-100 opacity-80 italic">Les prochains rendez-vous en 2026</p>
             </div>
             <div className="max-w-5xl mx-auto space-y-6">
               <div className="glass-card p-6 flex flex-col items-stretch gap-6 hover:border-blue-400/30 transition-colors">
